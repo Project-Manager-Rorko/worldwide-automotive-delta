@@ -1,0 +1,11 @@
+{
+  "local_base": "http://wwa.local",
+  "live_base": "https://vipaccounts.org/WWA",
+  "pages": [
+    "home",
+    "about",
+    "leadership",
+    "mini"
+  ],
+  "version": "1.0.0"
+}

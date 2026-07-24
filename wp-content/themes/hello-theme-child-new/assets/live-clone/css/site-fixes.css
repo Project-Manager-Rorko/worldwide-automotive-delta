@@ -1,0 +1,825 @@
+/**
+ * Site-wide design fixes for live-clone parity.
+ * Footer (reference), FAQ accordion, leadership bio, refurbished layouts, Geist.
+ */
+
+/* ——— Geist only ——— */
+body.wwa-live-clone,
+body.wwa-live-clone *,
+body.wwa-live-clone .elementor-heading-title,
+body.wwa-live-clone .elementor-button,
+body.wwa-live-clone .elementor-icon-list-text,
+body.wwa-live-clone .elementor-tab-title,
+body.wwa-live-clone input,
+body.wwa-live-clone textarea,
+body.wwa-live-clone select {
+	font-family: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif !important;
+}
+
+/* =========================================================
+   1) FOOTER — live Elementor layout (post-737) parity
+   Uses Elementor --width / --display variables; no equal-column overrides.
+   ========================================================= */
+
+/* Show animated containers without Elementor frontend JS */
+body.wwa-live-clone footer.elementor-location-footer .elementor-invisible,
+body.wwa-live-clone footer.elementor-737 .elementor-invisible {
+	opacity: 1 !important;
+	visibility: visible !important;
+	transform: none !important;
+	animation: none !important;
+}
+
+/* Ensure Elementor containers honor CSS variables (live kit).
+   Do NOT override .elementor-hidden-* (would show desktop+mobile footers). */
+body.wwa-live-clone footer.elementor-737 .e-con:not(.elementor-hidden-desktop):not(.elementor-hidden-mobile):not(.elementor-hidden-tablet) {
+	--display: flex;
+	display: var(--display, flex) !important;
+	flex-direction: var(--flex-direction, column);
+	justify-content: var(--justify-content, initial);
+	align-items: var(--align-items, initial);
+	gap: var(--row-gap, 0) var(--column-gap, 0);
+	width: var(--width, 100%);
+	max-width: min(100%, var(--width, 100%));
+	box-sizing: border-box;
+}
+body.wwa-live-clone footer.elementor-737 .e-con.e-flex > .e-con-inner {
+	display: flex;
+	flex-direction: var(--flex-direction, column);
+	justify-content: var(--justify-content, initial);
+	align-items: var(--align-items, initial);
+	flex-wrap: var(--flex-wrap, nowrap);
+	gap: var(--row-gap, 0) var(--column-gap, 0);
+	width: 100%;
+}
+
+/* Hard-hide mobile footer variant if it remains in markup */
+body.wwa-live-clone footer.elementor-737 .elementor-hidden-desktop,
+body.wwa-live-clone footer.elementor-737 .elementor-element-1a36801 {
+	display: none !important;
+}
+@media (max-width: 1024px) {
+	/* If only desktop markup remains after strip, keep it visible on mobile too */
+	body.wwa-live-clone footer.elementor-737 .elementor-hidden-mobile,
+	body.wwa-live-clone footer.elementor-737 .elementor-hidden-tablet {
+		display: var(--display, flex) !important;
+	}
+}
+
+/* Live column widths (desktop) — from post-737 */
+body.wwa-live-clone footer .elementor-element-4af97d8 {
+	--width: 25% !important;
+	width: 25% !important;
+} /* logo */
+body.wwa-live-clone footer .elementor-element-91c1305 {
+	--width: 43% !important;
+	width: 43% !important;
+} /* blurb */
+body.wwa-live-clone footer .elementor-element-519a0bb {
+	--width: 20% !important;
+	width: 20% !important;
+} /* CTA */
+
+body.wwa-live-clone footer .elementor-element-1e740dc {
+	--width: 15% !important;
+	width: 15% !important;
+} /* Quick Links */
+body.wwa-live-clone footer .elementor-element-e0cf75e {
+	--width: 18% !important;
+	width: 18% !important;
+} /* Our Businesses */
+body.wwa-live-clone footer .elementor-element-13adc7a {
+	--width: 30% !important;
+	width: 30% !important;
+} /* Contact Us */
+
+body.wwa-live-clone footer .elementor-element-0afbc38 {
+	--width: 40% !important;
+	width: 40% !important;
+} /* copyright */
+body.wwa-live-clone footer .elementor-element-69f8ecb {
+	--width: 30% !important;
+	width: 30% !important;
+} /* social */
+body.wwa-live-clone footer .elementor-element-e40db9b {
+	--width: 30% !important;
+	width: 30% !important;
+} /* legal */
+
+/* Rows: keep Elementor row direction */
+body.wwa-live-clone footer .footer-sect-head,
+body.wwa-live-clone footer .elementor-element-1427a5d {
+	--flex-direction: row !important;
+	--justify-content: space-between !important;
+	--align-items: center !important;
+	flex-direction: row !important;
+	justify-content: space-between !important;
+	align-items: center !important;
+	width: 100% !important;
+	max-width: 100% !important;
+}
+
+body.wwa-live-clone footer .footer-main-sec-rt,
+body.wwa-live-clone footer .elementor-element-1d46b54 {
+	--flex-direction: row !important;
+	--justify-content: space-evenly !important;
+	--align-items: flex-start !important;
+	--width: 100% !important;
+	flex-direction: row !important;
+	justify-content: space-evenly !important;
+	align-items: flex-start !important;
+	width: 100% !important;
+	max-width: 100% !important;
+}
+
+body.wwa-live-clone footer .footer-sect-btm,
+body.wwa-live-clone footer .elementor-element-67411de {
+	--flex-direction: row !important;
+	--justify-content: space-between !important;
+	--align-items: center !important;
+	flex-direction: row !important;
+	justify-content: space-between !important;
+	align-items: center !important;
+	width: 100% !important;
+	max-width: 100% !important;
+}
+
+/* Shell padding / background */
+body.wwa-live-clone footer.elementor-location-footer,
+body.wwa-live-clone footer.elementor-737 {
+	background-color: #1a1a2e !important;
+	color: #fff !important;
+	width: 100%;
+}
+body.wwa-live-clone footer .footer-sec-mains {
+	background-color: #1a1a2e !important;
+	width: 100% !important;
+	max-width: 100% !important;
+}
+body.wwa-live-clone footer .footer-sec-main.pdng-lt-rt {
+	padding-left: clamp(24px, 5vw, 80px) !important;
+	padding-right: clamp(24px, 5vw, 80px) !important;
+	padding-top: 48px !important;
+	padding-bottom: 32px !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	box-sizing: border-box;
+}
+
+/* Typography + contrast (live colors) */
+body.wwa-live-clone footer.elementor-location-footer .elementor-heading-title,
+body.wwa-live-clone footer.elementor-location-footer .elementor-icon-list-text,
+body.wwa-live-clone footer.elementor-location-footer a,
+body.wwa-live-clone footer.elementor-location-footer p {
+	color: #fff !important;
+	font-family: "Geist", sans-serif !important;
+}
+
+body.wwa-live-clone footer .footer-sect-btm-blk-logo img {
+	max-width: 200px;
+	height: auto;
+	display: block;
+}
+
+body.wwa-live-clone footer .footer-sect-btm-blk-cnt p,
+body.wwa-live-clone footer .footer-sect-btm-blk-cnt .elementor-heading-title {
+	font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem) !important;
+	line-height: 1.55 !important;
+	font-weight: 400 !important;
+	margin: 0 !important;
+	color: #fff !important;
+}
+
+/* Connect With Team — live red pill */
+body.wwa-live-clone footer .footer-sect-btm-blk-btn {
+	--align-items: flex-end !important;
+	align-items: flex-end !important;
+	justify-content: flex-end !important;
+}
+body.wwa-live-clone footer .footer-sect-btm-blk-btn .elementor-button {
+	background-color: #ec2633 !important;
+	border: 1px solid #ec2633 !important;
+	border-radius: 100px !important;
+	color: #fff !important;
+	padding: 10px 16px !important;
+	font-size: 15px !important;
+	font-weight: 500 !important;
+	white-space: nowrap;
+	display: inline-flex !important;
+	align-items: center;
+	transition: 0.5s;
+}
+body.wwa-live-clone footer .footer-sect-btm-blk-btn .elementor-button:hover {
+	background-color: transparent !important;
+	color: #fff !important;
+	border-color: #ec2633 !important;
+}
+
+/* Column headings + lists */
+body.wwa-live-clone footer .footer-main-sec-rt .elementor-heading-title {
+	font-size: 18px !important;
+	font-weight: 500 !important;
+	margin: 0 0 14px !important;
+	color: #fff !important;
+}
+body.wwa-live-clone footer .footer-main-sec-rt .elementor-icon-list-item {
+	padding: 0 !important;
+}
+body.wwa-live-clone footer .footer-main-sec-rt .elementor-icon-list-text,
+body.wwa-live-clone footer .footer-main-sec-rt .elementor-icon-list-item > a {
+	font-size: 16px !important;
+	font-weight: 400 !important;
+	line-height: 1.55 !important;
+	color: #fff !important;
+	text-decoration: none !important;
+	text-transform: capitalize;
+}
+body.wwa-live-clone footer .footer-main-sec-rt .elementor-icon-list-item > a:hover {
+	opacity: 0.85;
+}
+
+/* Contact column — red pin/phone/mail icons (live) */
+body.wwa-live-clone footer .footer-main-sec-rt-4 .elementor-icon-list-icon {
+	color: #ec2633 !important;
+}
+body.wwa-live-clone footer .footer-main-sec-rt-4 .elementor-icon-list-icon svg path {
+	fill: #ec2633 !important;
+}
+body.wwa-live-clone footer .footer-main-sec-rt-4 .elementor-icon-list-items:not(.elementor-inline-items)
+	.elementor-icon-list-item {
+	align-items: flex-start;
+}
+
+/* Bottom bar text */
+body.wwa-live-clone footer .footer-sect-btm p,
+body.wwa-live-clone footer .footer-sect-btm a,
+body.wwa-live-clone footer .footer-sect-btm .elementor-icon-list-text {
+	font-size: clamp(0.8125rem, 0.79rem + 0.09vw, 0.875rem) !important;
+	line-height: 1.5 !important;
+	color: #fff !important;
+}
+
+/* Social icons — circular white outline (live style) */
+body.wwa-live-clone footer .elementor-inline-items {
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	gap: 12px !important;
+	flex-wrap: wrap;
+	margin: 0 !important;
+}
+body.wwa-live-clone footer .elementor-inline-items .elementor-icon-list-item {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+body.wwa-live-clone footer .elementor-inline-items .elementor-icon-list-icon {
+	width: 36px !important;
+	height: 36px !important;
+	border: 1.5px solid rgba(255, 255, 255, 0.9);
+	border-radius: 50%;
+	display: inline-flex !important;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	padding: 0 !important;
+}
+body.wwa-live-clone footer .elementor-inline-items .elementor-icon-list-icon svg {
+	width: 18px !important;
+	height: 18px !important;
+	display: block;
+}
+body.wwa-live-clone footer .elementor-inline-items .elementor-icon-list-icon svg path {
+	fill: #fff !important;
+}
+/* Prefer first 3 social icons (LinkedIn, Facebook, Instagram) */
+body.wwa-live-clone footer .elementor-inline-items .elementor-icon-list-item:nth-child(n + 4) {
+	display: none !important;
+}
+
+/* Legal links right-aligned like live */
+body.wwa-live-clone footer .elementor-element-e40db9b {
+	--align-items: flex-end !important;
+	align-items: flex-end !important;
+	text-align: right;
+}
+body.wwa-live-clone footer .elementor-element-e40db9b .elementor-icon-list-items {
+	justify-content: flex-end;
+}
+
+/* Dividers */
+body.wwa-live-clone footer .elementor-widget-divider {
+	--divider-color: rgba(255, 255, 255, 0.22) !important;
+}
+
+/* CTA row spacing under logo row */
+body.wwa-live-clone footer .footer-sect-head {
+	margin-bottom: 8px;
+}
+body.wwa-live-clone footer .footer-main-sec-rt {
+	padding-top: 12px;
+	padding-bottom: 24px;
+}
+body.wwa-live-clone footer .footer-sect-btm {
+	padding-top: 20px;
+	border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Mobile / tablet footer (live has separate mobile block) */
+@media (max-width: 1024px) {
+	body.wwa-live-clone footer .elementor-element-4af97d8,
+	body.wwa-live-clone footer .elementor-element-91c1305,
+	body.wwa-live-clone footer .elementor-element-519a0bb,
+	body.wwa-live-clone footer .elementor-element-1e740dc,
+	body.wwa-live-clone footer .elementor-element-e0cf75e,
+	body.wwa-live-clone footer .elementor-element-13adc7a,
+	body.wwa-live-clone footer .elementor-element-0afbc38,
+	body.wwa-live-clone footer .elementor-element-69f8ecb,
+	body.wwa-live-clone footer .elementor-element-e40db9b {
+		--width: 100% !important;
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+	body.wwa-live-clone footer .footer-sect-head,
+	body.wwa-live-clone footer .footer-main-sec-rt,
+	body.wwa-live-clone footer .footer-sect-btm,
+	body.wwa-live-clone footer .elementor-element-1427a5d,
+	body.wwa-live-clone footer .elementor-element-1d46b54,
+	body.wwa-live-clone footer .elementor-element-67411de {
+		--flex-direction: column !important;
+		flex-direction: column !important;
+		align-items: flex-start !important;
+		justify-content: flex-start !important;
+	}
+	body.wwa-live-clone footer .footer-sect-btm-blk-btn,
+	body.wwa-live-clone footer .elementor-element-519a0bb,
+	body.wwa-live-clone footer .elementor-element-e40db9b {
+		align-items: flex-start !important;
+		text-align: left;
+	}
+	body.wwa-live-clone footer .elementor-element-e40db9b .elementor-icon-list-items {
+		justify-content: flex-start;
+	}
+}
+
+/* =========================================================
+   2) Leadership bio panel — 50% width, no extra team padding
+   ========================================================= */
+body.elementor-page-1648 .e-con:has(> .team-card-updated),
+body.elementor-page-1648 .e-con:has(.team-card-updated),
+body.elementor-page-1648 .elementor.elementor-1648 > .e-con.e-parent:last-of-type {
+	padding-bottom: 0 !important;
+}
+
+.wwa-bio-overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 99999;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+.wwa-bio-overlay.is-open {
+	opacity: 1;
+	visibility: visible;
+}
+.wwa-bio-panel {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 50vw;
+	max-width: 50vw;
+	height: 100%;
+	background: #fff;
+	z-index: 100000;
+	transform: translateX(100%);
+	transition: transform 0.4s ease;
+	overflow-y: auto;
+	padding: 56px 48px 48px;
+	box-shadow: -8px 0 40px rgba(0, 0, 0, 0.2);
+	font-family: "Geist", sans-serif !important;
+	box-sizing: border-box;
+}
+@media (max-width: 767px) {
+	.wwa-bio-panel {
+		width: 100vw;
+		max-width: 100vw;
+	}
+}
+.wwa-bio-overlay.is-open .wwa-bio-panel {
+	transform: translateX(0);
+}
+.wwa-bio-panel.is-closing {
+	transform: translateX(100%);
+}
+.wwa-bio-close {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	width: 40px;
+	height: 40px;
+	border: 0;
+	border-radius: 50%;
+	background: #f0f3f7;
+	cursor: pointer;
+	font-size: 22px;
+	line-height: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.wwa-bio-panel h3 {
+	font-family: "Geist", sans-serif !important;
+	font-size: 28px;
+	margin: 0 0 8px;
+	color: #1a1a2e;
+}
+.wwa-bio-panel .wwa-bio-role {
+	font-size: 16px;
+	color: #666;
+	margin: 0 0 20px;
+}
+.wwa-bio-panel .wwa-bio-body {
+	font-size: 16px;
+	line-height: 1.6;
+	color: #1b181a;
+	white-space: pre-line;
+}
+.wwa-bio-panel img,
+.wwa-bio-panel .elementor-widget-image {
+	display: none !important;
+}
+
+/* Leadership banner gradient */
+.elementor-1648 .elementor-element-5cdce87,
+body.elementor-page-1648 .elementor-element-5cdce87 {
+	position: relative;
+}
+.elementor-1648 .elementor-element-5cdce87::before,
+body.elementor-page-1648 .elementor-element-5cdce87::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	pointer-events: none;
+	background: linear-gradient(
+		102.44deg,
+		#1a1a2e 0.63%,
+		rgba(26, 26, 46, 0.8) 32.95%,
+		rgba(26, 26, 46, 0) 61.39%
+	);
+}
+.elementor-1648 .elementor-element-5cdce87 > .e-con-inner,
+.elementor-1648 .elementor-element-5cdce87 > .elementor-element {
+	position: relative;
+	z-index: 2;
+}
+
+/* =========================================================
+   3) FAQ nested accordion — visible arrows + smooth slide
+   ========================================================= */
+.e-n-accordion {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.e-n-accordion-item {
+	border: none;
+	margin: 0;
+	overflow: hidden;
+}
+
+/* Hide default marker */
+.e-n-accordion-item > .e-n-accordion-item-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	cursor: pointer;
+	list-style: none;
+	background: #f0f3f7 !important;
+	border-radius: 16px !important;
+	padding: 18px 22px !important;
+	font-family: "Geist", sans-serif !important;
+	font-weight: 500 !important;
+	line-height: 30px;
+	transition: border-radius 0.25s ease;
+}
+.e-n-accordion-item > .e-n-accordion-item-title::-webkit-details-marker {
+	display: none;
+}
+
+.e-n-accordion-item[open] > .e-n-accordion-item-title {
+	border-bottom-left-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+}
+
+.e-n-accordion-item-title-header {
+	width: 85%;
+	flex: 1;
+}
+.e-n-accordion-item-title-text {
+	font-family: "Geist", sans-serif !important;
+	font-size: 18px;
+	line-height: 30px;
+	color: #1b181a;
+}
+
+/* Icon circle — always visible */
+.e-n-accordion-item-title-icon {
+	position: relative !important;
+	width: 36px !important;
+	height: 36px !important;
+	min-width: 36px !important;
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	border-radius: 50% !important;
+	background: #1a1a2e !important;
+	color: #fff !important;
+	flex-shrink: 0;
+	overflow: hidden;
+}
+
+/* Hide broken icon-font glyphs; use CSS chevrons */
+.e-n-accordion-item-title-icon .e-opened,
+.e-n-accordion-item-title-icon .e-closed {
+	display: none !important;
+}
+.e-n-accordion-item-title-icon i {
+	display: none !important;
+}
+
+/* CSS down-arrow (closed) */
+.e-n-accordion-item-title-icon::after {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-right: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	transform: rotate(45deg) translate(-1px, -1px);
+	transition: transform 0.3s ease;
+	box-sizing: border-box;
+}
+/* CSS up-arrow when open */
+.e-n-accordion-item[open] > .e-n-accordion-item-title .e-n-accordion-item-title-icon::after {
+	transform: rotate(225deg) translate(-1px, -1px);
+}
+
+/* Smooth content panel — animated by JS helper class */
+.e-n-accordion-item > .e-con,
+.e-n-accordion-item > [role="region"],
+.e-n-accordion-item .e-n-accordion-item-content,
+.e-n-accordion-item > .elementor-element {
+	background: #f0f3f7;
+	border-radius: 0 0 16px 16px;
+	overflow: hidden;
+	transition: max-height 0.4s ease, padding 0.35s ease, opacity 0.3s ease;
+}
+
+/* When JS wraps content for animation */
+.e-n-accordion-item .wwa-acc-panel {
+	background: #f0f3f7;
+	border-radius: 0 0 16px 16px;
+	padding: 0 22px;
+	overflow: hidden;
+	max-height: 0;
+	opacity: 0;
+	transition: max-height 0.45s ease, opacity 0.35s ease, padding 0.35s ease;
+}
+.e-n-accordion-item[open] .wwa-acc-panel,
+.e-n-accordion-item.is-open .wwa-acc-panel {
+	max-height: 800px;
+	opacity: 1;
+	padding: 4px 22px 20px;
+}
+
+/* Fallback open content padding when not wrapped */
+.e-n-accordion-item[open] > .e-con,
+.e-n-accordion-item[open] > [role="region"] {
+	padding: 4px 22px 18px;
+}
+
+/* =========================================================
+   4) Refurbished equipment — layout / design (content unchanged)
+   ========================================================= */
+
+/* Reveal any Elementor-invisible blocks on this page */
+body.elementor-page-3423 .elementor-invisible {
+	opacity: 1 !important;
+	visibility: visible !important;
+	transform: none !important;
+}
+
+/* Page background */
+body.elementor-page-3423 .elementor-3423 {
+	background: #fff;
+}
+
+/* Hero: dark gradient + readable title */
+body.elementor-page-3423 .elementor-3423 > .e-con.e-parent:first-child {
+	position: relative;
+	min-height: 420px;
+	display: flex !important;
+	align-items: center;
+}
+body.elementor-page-3423 .elementor-3423 > .e-con.e-parent:first-child::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	pointer-events: none;
+	background: linear-gradient(
+		102.44deg,
+		#1a1a2e 0.63%,
+		rgba(26, 26, 46, 0.85) 40%,
+		rgba(26, 26, 46, 0.35) 70%,
+		rgba(26, 26, 46, 0) 100%
+	);
+}
+body.elementor-page-3423 .elementor-3423 > .e-con.e-parent:first-child > * {
+	position: relative;
+	z-index: 2;
+}
+body.elementor-page-3423 .elementor-3423 > .e-con.e-parent:first-child .elementor-heading-title {
+	color: #fff !important;
+	font-family: "Geist", sans-serif !important;
+}
+
+/* Section spacing */
+body.elementor-page-3423 .elementor-3423 > .e-con.e-parent {
+	padding-left: clamp(16px, 5vw, 80px) !important;
+	padding-right: clamp(16px, 5vw, 80px) !important;
+}
+
+/* Product / listing rows: card-like soft panels */
+body.elementor-page-3423 .elementor-3423 .e-con.e-child {
+	border-radius: 16px;
+}
+
+/* Images rounded */
+body.elementor-page-3423 .elementor-widget-image img,
+body.elementor-page-3423 .elementor-widget-image {
+	border-radius: 16px;
+	overflow: hidden;
+}
+
+/* Green Enquire buttons (reference) */
+body.elementor-page-3423 .elementor-button,
+body.elementor-page-3423 a.elementor-button {
+	border-radius: 8px !important;
+	font-family: "Geist", sans-serif !important;
+	font-weight: 500 !important;
+}
+body.elementor-page-3423 .elementor-button-success,
+body.elementor-page-3423 a.elementor-button[href*="tel"],
+body.elementor-page-3423 .elementor-element .elementor-button {
+	/* keep live colors from post CSS; ensure padding */
+	padding: 10px 18px !important;
+}
+
+/* Guarantee / checklist icons green */
+body.elementor-page-3423 .elementor-icon-list-icon i,
+body.elementor-page-3423 .elementor-icon-list-icon svg {
+	color: #16a34a !important;
+	fill: #16a34a !important;
+}
+
+/* Spec tables / text spacing */
+body.elementor-page-3423 .elementor-widget-text-editor,
+body.elementor-page-3423 .elementor-widget-heading .elementor-heading-title {
+	font-family: "Geist", sans-serif !important;
+}
+body.elementor-page-3423 table {
+	width: 100%;
+	border-collapse: collapse;
+}
+body.elementor-page-3423 table td,
+body.elementor-page-3423 table th {
+	padding: 8px 12px;
+	border-bottom: 1px solid #e8ecf1;
+	font-family: "Geist", sans-serif !important;
+	font-size: 15px;
+}
+
+/* Alternating listing cards feel */
+body.elementor-page-3423 .elementor-3423 .e-con.e-parent:nth-child(n + 3) {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+/* Equipment photo blocks (img-new-equa*) */
+body.elementor-page-3423 [class*="img-new-equa"],
+body.elementor-page-3423 .e-con[style*="img-new-equa"],
+body.elementor-page-3423 .e-con[style*="background-image"] {
+	background-size: cover !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	border-radius: 16px;
+	min-height: 260px;
+}
+
+/* Ensure flex rows for listing split */
+body.elementor-page-3423 .e-con.e-flex {
+	display: flex !important;
+}
+body.elementor-page-3423 .e-con.e-parent > .e-con-inner,
+body.elementor-page-3423 .e-con[data-element_type="container"] {
+	gap: 24px;
+}
+
+/* Soft card panels for machine rows */
+body.elementor-page-3423 .elementor-3423 > .e-con.e-parent:not(:first-child) {
+	background: #f8fafc;
+	border-radius: 20px;
+	padding-top: 32px !important;
+	padding-bottom: 32px !important;
+	margin-bottom: 16px;
+}
+body.elementor-page-3423 .elementor-3423 > .e-con.e-parent:nth-child(2) {
+	background: #fff;
+}
+
+/* Map / product sections full width containers */
+body.elementor-page-3423 main.site-main,
+body.elementor-page-3423 .page-content {
+	max-width: none !important;
+	padding: 0 !important;
+}
+
+/* =========================================================
+   Shared: products, map, counters, contact
+   ========================================================= */
+.our-product-blk-img {
+	overflow: hidden;
+	border-radius: 16px;
+	position: relative !important;
+}
+.our-product-blk-img::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	pointer-events: none;
+	background: linear-gradient(
+		180deg,
+		rgba(26, 26, 46, 0) 63.49%,
+		rgba(26, 26, 46, 0.571429) 73.08%,
+		#1a1a2e 88.65%
+	) !important;
+}
+.our-product-blk-img > .e-con-inner,
+.our-product-blk-img > .elementor-element {
+	position: relative;
+	z-index: 2;
+}
+
+.container-dot-animation {
+	position: relative;
+	width: 100%;
+	min-height: 400px;
+	height: 100%;
+	overflow: hidden;
+}
+#fluidCanvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	pointer-events: none;
+	display: block;
+}
+
+.elementor-counter-number-wrapper {
+	font-family: "Geist", sans-serif !important;
+}
+
+body.elementor-page-21 .wpcf7 input[type="text"],
+body.elementor-page-21 .wpcf7 input[type="email"],
+body.elementor-page-21 .wpcf7 input[type="tel"],
+body.elementor-page-21 .wpcf7 textarea,
+body.elementor-page-21 .elementor-field-textual {
+	font-family: "Geist", sans-serif !important;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+	body.elementor-page-21 .wpcf7 input,
+	body.elementor-page-21 .wpcf7 textarea,
+	body.elementor-page-21 .elementor-field-group {
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+	.our-product-blks {
+		grid-template-columns: 1fr !important;
+	}
+	body.wwa-live-clone footer .footer-sec-mains,
+	body.wwa-live-clone footer .footer-sec-main {
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
+}

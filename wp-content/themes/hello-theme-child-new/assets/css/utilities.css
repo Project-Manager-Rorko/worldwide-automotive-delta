@@ -64,10 +64,19 @@ body.wwa-site a {
 		border-color var(--wwa-transition), transform var(--wwa-transition), opacity var(--wwa-transition);
 }
 
-body.wwa-site img,
-body.wwa-site video {
+body.wwa-site img {
 	max-width: 100%;
 	height: auto;
+	display: block;
+}
+
+/* Hero video must fill container (not height:auto) */
+body.wwa-site .wwa-hero video,
+body.wwa-site .wwa-hero__video {
+	max-width: none;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 	display: block;
 }
 
@@ -121,6 +130,20 @@ body.wwa-site :focus-visible {
 .alignfull {
 	width: 100vw;
 	max-width: 100vw;
+	margin-left: calc(50% - 50vw) !important;
+	margin-right: calc(50% - 50vw) !important;
+}
+
+.wwa-hero.alignfull,
+.wwa-trust.alignfull,
+.wwa-products.alignfull,
+.wwa-service.alignfull,
+.wwa-presence.alignfull,
+.wwa-page-hero.alignfull,
+.wwa-section.alignfull,
+.wwa-home-fleet.alignfull {
+	width: 100vw !important;
+	max-width: 100vw !important;
 	margin-left: calc(50% - 50vw) !important;
 	margin-right: calc(50% - 50vw) !important;
 }

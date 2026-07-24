@@ -1,0 +1,87 @@
+{
+  "wheel-loaders": {
+    "fragment": "page-wheel-loaders",
+    "css": [
+      1348,
+      2111,
+      2115,
+      3419,
+      2436,
+      2440,
+      3504
+    ],
+    "body": [
+      "elementor-page",
+      "elementor-page-1348"
+    ],
+    "page_id": 1348
+  },
+  "attachments": {
+    "fragment": "page-attachments",
+    "css": [
+      1377,
+      2111,
+      2115,
+      3419,
+      2436,
+      2440,
+      3504
+    ],
+    "body": [
+      "elementor-page",
+      "elementor-page-1377"
+    ],
+    "page_id": 1377
+  },
+  "construction-excavators": {
+    "fragment": "page-construction-excavators",
+    "css": [
+      1543,
+      2111,
+      2115,
+      3419,
+      2436,
+      2440,
+      3504
+    ],
+    "body": [
+      "elementor-page",
+      "elementor-page-1543"
+    ],
+    "page_id": 1543
+  },
+  "mining-excavators": {
+    "fragment": "page-mining-excavators",
+    "css": [
+      1397,
+      2111,
+      2115,
+      3419,
+      2436,
+      2440,
+      3504
+    ],
+    "body": [
+      "elementor-page",
+      "elementor-page-1397"
+    ],
+    "page_id": 1397
+  },
+  "service-support": {
+    "fragment": "page-service-support",
+    "css": [
+      1425,
+      2111,
+      2115,
+      3419,
+      2436,
+      2440,
+      3504
+    ],
+    "body": [
+      "elementor-page",
+      "elementor-page-1425"
+    ],
+    "page_id": 1425
+  }
+}

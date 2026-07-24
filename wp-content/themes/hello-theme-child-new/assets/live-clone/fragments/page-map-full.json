@@ -1,0 +1,278 @@
+{
+  "home": {
+    "slug": "home",
+    "path": "/",
+    "page_id": 3616,
+    "css": [
+      3616,
+      2111,
+      2115,
+      3419,
+      2436,
+      2440,
+      3504
+    ],
+    "body": [
+      "elementor-page",
+      "elementor-page-3616"
+    ],
+    "fragment": "page-home",
+    "title": "Worldwide Automotive | Construction Equipment Solutions",
+    "description": "Worldwide Automotive delivers Hyundai construction equipment, excavators, wheel loaders, attachments, and reliable service support."
+  },
+  "contact": {
+    "slug": "contact",
+    "path": "/contact/",
+    "page_id": 21,
+    "css": [
+      21,
+      2111,
+      2115,
+      3419,
+      2436,
+      2440,
+      3504
+    ],
+    "body": [
+      "elementor-page",
+      "elementor-page-21"
+    ],
+    "fragment": "page-contact",
+    "title": "Worldwide Automotive Contact Information",
+    "description": "Contact Worldwide Automotive for construction equipment sales, support, and service across India and Saudi Arabia."
+  },
+  "service-support": {
+    "slug": "service-support",
+    "path": "/service-support/",
+    "page_id": 1425,
+    "css": [
+      1425,
+      2111,
+      2115,
+      3419,
+      2436,
+      2440,
+      3504
+    ],
+    "body": [
+      "elementor-page",
+      "elementor-page-1425"
+    ],
+    "fragment": "page-service-support",
+    "title": "Worldwide Automotive Service &amp; Support Solutions",
+    "description": "Reliable construction equipment service and support with preventive maintenance, OEM-standard repairs, spare parts, and on-site assistance."
+  },
+  "refurbished-equipment": {
+    "slug": "refurbished-equipment",
+    "path": "/refurbished-equipment/",
+    "page_id": 3423,
+    "css": [
+      3423,
+      2111,
+      2115,
+      3419,
+      2436,
+      2440,
+      3504
+    ],
+    "body": [
+      "elementor-page",
+      "elementor-page-3423"
+    ],
+    "fragment": "page-refurbished-equipment",
+    "title": "Refurbished Equipment - World Wide Automotive",
+    "description": ""
+  },
+  "about": {
+    "slug": "about",
+    "path": "/about/",
+    "page_id": 14,
+    "css": [
+      14,
+      2111,
+      2115,
+      3419,
+      2436,
+      2440,
+      3504
+    ],
+    "body": [
+      "elementor-page",
+      "elementor-page-14"
+    ],
+    "fragment": "page-about",
+    "title": "About Worldwide Automotive | Hyundai Equipment Partner",
+    "description": "Worldwide Automotive is an authorized Hyundai Construction Equipment dealer delivering reliable machinery, service support, and equipment solutions."
+  },
+  "leadership": {
+    "slug": "leadership",
+    "path": "/leadership/",
+    "page_id": 1648,
+    "css": [
+      1648,
+      2111,
+      2115,
+      3419,
+      2436,
+      2440,
+      3504,
+      2663,
+      2666,
+      2669
+    ],
+    "body": [
+      "elementor-page",
+      "elementor-page-1648"
+    ],
+    "fragment": "page-leadership",
+    "title": "Worldwide Automotive Leadership | Group Delta Team",
+    "description": "Meet the leadership team behind Worldwide Automotive and Group Delta, driving growth through integrity, safety, and operational excellence."
+  },
+  "mini-excavators": {
+    "slug": "mini-excavators",
+    "path": "/mini-excavators/",
+    "page_id": 1170,
+    "css": [
+      1170,
+      2111,
+      2115,
+      3419,
+      2436,
+      2440,
+      3504
+    ],
+    "body": [
+      "elementor-page",
+      "elementor-page-1170"
+    ],
+    "fragment": "page-mini-excavators",
+    "title": "Hyundai Mini Excavators in India | Worldwide Automotive",
+    "description": "Explore Hyundai mini excavators designed for construction, trenching, demolition, and utility projects with expert support from Worldwide Automotive."
+  },
+  "wheel-loaders": {
+    "slug": "wheel-loaders",
+    "path": "/wheel-loaders/",
+    "page_id": 1348,
+    "css": [
+      1348,
+      2111,
+      2115,
+      3419,
+      2436,
+      2440,
+      3504
+    ],
+    "body": [
+      "elementor-page",
+      "elementor-page-1348"
+    ],
+    "fragment": "page-wheel-loaders",
+    "title": "Wheel Loaders for Construction &amp; Quarry Operations",
+    "description": "Explore high-performance wheel loaders for quarry, construction, and material handling with reliable service and OEM-backed support."
+  },
+  "attachments": {
+    "slug": "attachments",
+    "path": "/attachments/",
+    "page_id": 1377,
+    "css": [
+      1377,
+      2111,
+      2115,
+      3419,
+      2436,
+      2440,
+      3504
+    ],
+    "body": [
+      "elementor-page",
+      "elementor-page-1377"
+    ],
+    "fragment": "page-attachments",
+    "title": "Excavator Attachments for Construction Projects",
+    "description": "Explore excavator attachments for demolition, quarry, and construction applications with reliable performance and expert support."
+  },
+  "construction-excavators": {
+    "slug": "construction-excavators",
+    "path": "/construction-excavators/",
+    "page_id": 1543,
+    "css": [
+      1543,
+      2111,
+      2115,
+      3419,
+      2436,
+      2440,
+      3504
+    ],
+    "body": [
+      "elementor-page",
+      "elementor-page-1543"
+    ],
+    "fragment": "page-construction-excavators",
+    "title": "Construction Excavators for Heavy-Duty Projects",
+    "description": "Explore Hyundai construction excavators engineered for fuel efficiency, durability, and high-performance earthmoving operations."
+  },
+  "mining-excavators": {
+    "slug": "mining-excavators",
+    "path": "/mining-excavators/",
+    "page_id": 1397,
+    "css": [
+      1397,
+      2111,
+      2115,
+      3419,
+      2436,
+      2440,
+      3504
+    ],
+    "body": [
+      "elementor-page",
+      "elementor-page-1397"
+    ],
+    "fragment": "page-mining-excavators",
+    "title": "Mining Excavators for Heavy-Duty Operations",
+    "description": "Explore powerful mining excavators built for quarrying, earthmoving, and heavy-duty mining operations with reliable support."
+  },
+  "privacy-policy": {
+    "slug": "privacy-policy",
+    "path": "/privacy-policy/",
+    "page_id": 2199,
+    "css": [
+      2199,
+      2111,
+      2115,
+      3419,
+      2436,
+      2440,
+      3504
+    ],
+    "body": [
+      "elementor-page",
+      "elementor-page-2199"
+    ],
+    "fragment": "page-privacy-policy",
+    "title": "Privacy Policy - World Wide Automotive",
+    "description": ""
+  },
+  "terms-and-conditions": {
+    "slug": "terms-and-conditions",
+    "path": "/terms-and-conditions/",
+    "page_id": 2206,
+    "css": [
+      2206,
+      2111,
+      2115,
+      3419,
+      2436,
+      2440,
+      3504
+    ],
+    "body": [
+      "elementor-page",
+      "elementor-page-2206"
+    ],
+    "fragment": "page-terms-and-conditions",
+    "title": "Terms and Conditions - World Wide Automotive",
+    "description": ""
+  }
+}

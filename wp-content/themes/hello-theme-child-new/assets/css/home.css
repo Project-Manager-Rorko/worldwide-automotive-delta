@@ -728,26 +728,30 @@
 	filter: sepia(0.15) saturate(1.4) hue-rotate(-15deg);
 }
 
-/* Fluid map animation */
+/* Map: static by default; fluid motion only on hover (live-like interaction) */
+.wwa-presence__map img,
 .wwa-map-float img {
-	animation: wwa-map-float 8s ease-in-out infinite;
+	transform: translateY(0) scale(1);
 	transform-origin: center center;
+	transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), filter 0.45s ease;
 	will-change: transform;
+	animation: none;
 }
 
-@keyframes wwa-map-float {
-	0%,
-	100% {
-		transform: translateY(0) scale(1);
-	}
-	50% {
-		transform: translateY(-12px) scale(1.03);
-	}
+.wwa-presence__map:hover img,
+.wwa-map-float:hover img {
+	transform: translateY(-10px) scale(1.04);
+	filter: sepia(0.1) saturate(1.5) hue-rotate(-12deg) brightness(1.05);
 }
 
 @media (prefers-reduced-motion: reduce) {
+	.wwa-presence__map img,
 	.wwa-map-float img {
-		animation: none;
+		transition: none;
+	}
+	.wwa-presence__map:hover img,
+	.wwa-map-float:hover img {
+		transform: none;
 	}
 }
 

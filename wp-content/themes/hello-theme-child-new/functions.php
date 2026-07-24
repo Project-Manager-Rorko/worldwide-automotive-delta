@@ -11,9 +11,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'WWA_CHILD_VERSION', '7.0.0' );
+define( 'WWA_CHILD_VERSION', '8.0.0' );
 define( 'WWA_CHILD_DIR', get_stylesheet_directory() );
 define( 'WWA_CHILD_URI', get_stylesheet_directory_uri() );
+
+// Pixel-accurate live Elementor clone (header/footer/pages).
+require_once WWA_CHILD_DIR . '/inc/live-clone.php';
 
 /**
  * Theme supports & menus.
@@ -46,10 +49,11 @@ add_action( 'after_setup_theme', 'wwa_child_setup' );
  * Enqueue styles & scripts.
  */
 function wwa_child_assets() {
-	// Soften Hello parent layout on WWA pages (we provide our own chrome + home CSS).
+	// Soften Hello parent layout on WWA pages.
 	wp_dequeue_style( 'hello-elementor-theme-style' );
 	wp_dequeue_style( 'hello-elementor-header-footer' );
 
+	// Tokens only here — pixel-accurate chrome/sections come from live-clone (inc/live-clone.php).
 	wp_enqueue_style(
 		'wwa-tokens',
 		WWA_CHILD_URI . '/assets/css/tokens.css',
@@ -57,56 +61,53 @@ function wwa_child_assets() {
 		filemtime( WWA_CHILD_DIR . '/assets/css/tokens.css' )
 	);
 
-	wp_enqueue_style(
-		'wwa-utilities',
-		WWA_CHILD_URI . '/assets/css/utilities.css',
-		array( 'wwa-tokens' ),
-		filemtime( WWA_CHILD_DIR . '/assets/css/utilities.css' )
-	);
-
-	wp_enqueue_style(
-		'wwa-header-footer',
-		WWA_CHILD_URI . '/assets/css/header-footer.css',
-		array( 'wwa-utilities' ),
-		filemtime( WWA_CHILD_DIR . '/assets/css/header-footer.css' )
-	);
-
-	// Child style.css = theme header + @font-face only.
-	wp_enqueue_style(
-		'hello-elementor-child-style',
-		get_stylesheet_uri(),
-		array( 'wwa-header-footer' ),
-		filemtime( WWA_CHILD_DIR . '/style.css' )
-	);
-
-	// Section styles for home + inner pages (class-driven Gutenberg wrappers).
-	wp_enqueue_style(
-		'wwa-sections',
-		WWA_CHILD_URI . '/assets/css/home.css',
-		array( 'hello-elementor-child-style' ),
-		filemtime( WWA_CHILD_DIR . '/assets/css/home.css' )
-	);
-
-	$inner = WWA_CHILD_DIR . '/assets/css/inner-pages.css';
-	if ( file_exists( $inner ) ) {
+	// Approximate Gutenberg layout CSS is intentionally NOT enqueued when live-clone is active.
+	// Kept on disk as fallback only.
+	if ( ! function_exists( 'wwa_live_clone_enabled' ) || ! wwa_live_clone_enabled() ) {
 		wp_enqueue_style(
-			'wwa-inner-pages',
-			WWA_CHILD_URI . '/assets/css/inner-pages.css',
-			array( 'wwa-sections' ),
-			filemtime( $inner )
+			'wwa-utilities',
+			WWA_CHILD_URI . '/assets/css/utilities.css',
+			array( 'wwa-tokens' ),
+			filemtime( WWA_CHILD_DIR . '/assets/css/utilities.css' )
+		);
+		wp_enqueue_style(
+			'wwa-header-footer',
+			WWA_CHILD_URI . '/assets/css/header-footer.css',
+			array( 'wwa-utilities' ),
+			filemtime( WWA_CHILD_DIR . '/assets/css/header-footer.css' )
+		);
+		wp_enqueue_style(
+			'hello-elementor-child-style',
+			get_stylesheet_uri(),
+			array( 'wwa-header-footer' ),
+			filemtime( WWA_CHILD_DIR . '/style.css' )
+		);
+		wp_enqueue_style(
+			'wwa-sections',
+			WWA_CHILD_URI . '/assets/css/home.css',
+			array( 'hello-elementor-child-style' ),
+			filemtime( WWA_CHILD_DIR . '/assets/css/home.css' )
+		);
+		$inner = WWA_CHILD_DIR . '/assets/css/inner-pages.css';
+		if ( file_exists( $inner ) ) {
+			wp_enqueue_style(
+				'wwa-inner-pages',
+				WWA_CHILD_URI . '/assets/css/inner-pages.css',
+				array( 'wwa-sections' ),
+				filemtime( $inner )
+			);
+		}
+		wp_enqueue_script(
+			'wwa-site',
+			WWA_CHILD_URI . '/assets/js/home.js',
+			array(),
+			filemtime( WWA_CHILD_DIR . '/assets/js/home.js' ),
+			array(
+				'in_footer' => true,
+				'strategy'  => 'defer',
+			)
 		);
 	}
-
-	wp_enqueue_script(
-		'wwa-site',
-		WWA_CHILD_URI . '/assets/js/home.js',
-		array(),
-		filemtime( WWA_CHILD_DIR . '/assets/js/home.js' ),
-		array(
-			'in_footer' => true,
-			'strategy'  => 'defer',
-		)
-	);
 }
 add_action( 'wp_enqueue_scripts', 'wwa_child_assets', 20 );
 

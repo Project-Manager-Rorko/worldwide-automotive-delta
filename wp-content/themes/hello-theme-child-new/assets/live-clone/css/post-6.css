@@ -1,0 +1,57 @@
+.elementor-kit-6{--e-global-color-primary:#DC2626;--e-global-color-secondary:#000F24;--e-global-color-text:#475569;--e-global-color-accent:#DC2626;--e-global-color-primary_red:#DC2626;--e-global-color-dark_navy_1:#000F24;--e-global-color-dark_navy_2:#00142D;--e-global-color-slate_900:#0F172A;--e-global-color-slate_600:#475569;--e-global-color-slate_400:#94A3B8;--e-global-typography-primary-font-family:"Syne";--e-global-typography-primary-font-weight:600;--e-global-typography-secondary-font-family:"Syne";--e-global-typography-secondary-font-weight:400;--e-global-typography-text-font-family:"Geist";--e-global-typography-text-font-weight:400;--e-global-typography-accent-font-family:"Geist";--e-global-typography-accent-font-weight:500;--e-global-typography-hero_h1-font-family:"Syne";--e-global-typography-hero_h1-font-weight:300;--e-global-typography-section_h2-font-family:"Syne";--e-global-typography-section_h2-font-weight:300;--e-global-typography-body_large-font-family:"Geist";--e-global-typography-body_large-font-weight:300;}.elementor-kit-6 e-page-transition{background-color:#FFBC7D;}.elementor-section.elementor-section-boxed > .elementor-container{max-width:1140px;}.e-con{--container-max-width:1140px;}.elementor-widget:not(:last-child){margin-block-end:16px;}.elementor-element{--widgets-spacing:16px 16px;--widgets-spacing-row:16px;--widgets-spacing-column:16px;}{}h1.entry-title{display:var(--page-title-display);}.site-header .site-branding{flex-direction:column;align-items:stretch;}.site-header{padding-inline-end:0px;padding-inline-start:0px;}.site-footer .site-branding{flex-direction:column;align-items:stretch;}@media(max-width:1024px){.elementor-section.elementor-section-boxed > .elementor-container{max-width:1024px;}.e-con{--container-max-width:1024px;}}@media(max-width:480px){.elementor-section.elementor-section-boxed > .elementor-container{max-width:480px;}.e-con{--container-max-width:480px;}}/* Start Custom Fonts CSS */@font-face {
+	font-family: 'Syne';
+	font-style: normal;
+	font-weight: 400;
+	font-display: auto;
+	src: url('http://wwa.local/wp-content/uploads/2026/03/Syne-Regular.woff2') format('woff2'),
+		url('http://wwa.local/wp-content/uploads/2026/03/Syne-Regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'Syne';
+	font-style: normal;
+	font-weight: 600;
+	font-display: auto;
+	src: url('http://wwa.local/wp-content/uploads/2026/03/Syne-SemiBold.woff2') format('woff2'),
+		url('http://wwa.local/wp-content/uploads/2026/03/Syne-SemiBold.woff') format('woff');
+}
+@font-face {
+	font-family: 'Syne';
+	font-style: normal;
+	font-weight: 700;
+	font-display: auto;
+	src: url('http://wwa.local/wp-content/uploads/2026/03/Syne-Bold.woff2') format('woff2'),
+		url('http://wwa.local/wp-content/uploads/2026/03/Syne-Bold.woff') format('woff');
+}
+/* End Custom Fonts CSS */
+/* Start Custom Fonts CSS */@font-face {
+	font-family: 'Geist';
+	font-style: normal;
+	font-weight: 400;
+	font-display: auto;
+	src: url('http://wwa.local/wp-content/uploads/2026/03/Geist-Regular.woff2') format('woff2'),
+		url('http://wwa.local/wp-content/uploads/2026/03/Geist-Regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'Geist';
+	font-style: normal;
+	font-weight: 600;
+	font-display: auto;
+	src: url('http://wwa.local/wp-content/uploads/2026/03/Geist-SemiBold.woff2') format('woff2'),
+		url('http://wwa.local/wp-content/uploads/2026/03/Geist-SemiBold.woff') format('woff');
+}
+@font-face {
+	font-family: 'Geist';
+	font-style: normal;
+	font-weight: 700;
+	font-display: auto;
+	src: url('http://wwa.local/wp-content/uploads/2026/03/Geist-Bold.woff2') format('woff2'),
+		url('http://wwa.local/wp-content/uploads/2026/03/Geist-Bold.woff') format('woff');
+}
+@font-face {
+	font-family: 'Geist';
+	font-style: normal;
+	font-weight: 500;
+	font-display: auto;
+	src: ;
+}
+/* End Custom Fonts CSS */
