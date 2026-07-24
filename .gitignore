@@ -7,17 +7,11 @@ Thumbs.db
 *.swp
 *~
 
-# Secrets & runtime
+# Secrets — never commit real credentials
 wp-config.php
 wp-config-local.php
 **/.env
-**/local-xdebuginfo.php
-
-# WordPress core (install separately) — only wp-content is versioned
-wp-admin/
-wp-includes/
-*.php
-!wp-content/**
+local-xdebuginfo.php
 
 # Caches / temp
 wp-content/cache/

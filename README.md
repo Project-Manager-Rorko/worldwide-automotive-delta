@@ -1,17 +1,24 @@
 # Worldwide Automotive (Delta)
 
-WordPress local rebuild of [Worldwide Automotive](https://vipaccounts.org/WWA/).
+Full WordPress package for the local rebuild of [Worldwide Automotive](https://vipaccounts.org/WWA/).
 
 ## Repository contents
 
 | Path | Description |
 |------|-------------|
-| `wp-content/themes/hello-theme-child-new/` | Active child theme (header, footer, CSS, fonts, JS) |
-| `wp-content/themes/` | Other themes present on the Local site |
-| `wp-content/plugins/` | Active plugins (e.g. Yoast SEO) |
-| `wp-content/uploads/` | Media library (images, video, logos) |
+| `wp-admin/` | WordPress admin core |
+| `wp-includes/` | WordPress core libraries |
+| Root PHP files | `index.php`, `wp-load.php`, `wp-login.php`, etc. |
+| `wp-config-sample.php` | Sample config (copy to `wp-config.php` and set DB credentials) |
+| `wp-content/themes/` | Themes including **hello-theme-child-new** |
+| `wp-content/plugins/` | Plugins (e.g. Yoast SEO) |
+| `wp-content/uploads/` | Media library |
 | `database/local.sql` | Local site database export |
 | `conf/` | Local by Flywheel nginx/php/mysql templates |
+
+## Not committed
+
+- **`wp-config.php`** — contains database passwords; create locally from `wp-config-sample.php` or your Local site export.
 
 ## Local environment
 
@@ -20,21 +27,14 @@ WordPress local rebuild of [Worldwide Automotive](https://vipaccounts.org/WWA/).
 | Path | `C:\Users\shanm\Local Sites\wwa` |
 | URL | http://wwa.local |
 | Theme | Hello Elementor Child (`hello-theme-child-new`) |
-| Parent | Hello Elementor |
 
-## Restore notes
+## Restore
 
-1. Create a WordPress site (Local or other) with Hello Elementor installed.
-2. Copy `wp-content` into the site (merge carefully).
-3. Import `database/local.sql` and update URLs (`wwa.local` or search-replace as needed).
-4. Activate **Hello Elementor Child**.
-5. Do **not** commit `wp-config.php` (credentials).
-
-## Design
-
-- Live site: Elementor on production.
-- Local: PHP header/footer + Gutenberg page content; styles aligned to live kit colors/type.
+1. Clone this repo into a web root (or merge into a Local site `app/public`).
+2. Copy `wp-config-sample.php` → `wp-config.php` and set DB credentials (or use Local’s existing config).
+3. Import `database/local.sql` and search-replace URLs if the domain is not `wwa.local`.
+4. Ensure parent theme **Hello Elementor** is present; activate **Hello Elementor Child**.
 
 ## License
 
-Proprietary — Rorko / Delta Group project use.
+Proprietary — Rorko / Delta Group project use. WordPress core is GPLv2+.
