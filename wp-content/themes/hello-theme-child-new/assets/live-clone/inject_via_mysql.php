@@ -1,7 +1,8 @@
 <?php
 /**
  * Direct MySQL inject of Gutenberg Custom HTML (bypasses WP when CLI can't reach DB via localhost).
- * Usage: php -c cli-php.ini inject_via_mysql.php home
+ * Prefers fragments/gutenberg-{slug}.html (multi-block: one <!-- wp:html --> per section).
+ * Usage: php -c conf/php/cli-php.ini inject_via_mysql.php home
  */
 $slug = $argv[1] ?? 'home';
 $host = '127.0.0.1';
