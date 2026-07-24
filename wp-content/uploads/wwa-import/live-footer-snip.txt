@@ -1,0 +1,26 @@
+﻿elementor-location-footer" data-elementor-post-type="elementor_library">
+			<div class="elementor-element elementor-element-593d2c8 e-con-full footer-sec-mains e-flex e-con e-parent" data-id="593d2c8" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-07f0890 e-con-full footer-sec-main pdng-lt-rt all-heading  elementor-hidden-mobile elementor-hidden-tablet e-flex e-con e-child" data-id="07f0890" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-1427a5d e-con-full footer-sect-head e-flex e-con e-child" data-id="1427a5d" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-4af97d8 e-con-full footer-sect-btm-blk-logo e-flex elementor-invisible e-con e-child" data-id="4af97d8" data-element_type="container" data-e-type="container" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:0.5}">
+				<div class="elementor-element elementor-element-ae7daee elementor-widget elementor-widget-image" data-id="ae7daee" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="https://vipaccounts.org/WWA">
+							<img width="265" height="50" src="https://vipaccounts.org/WWA/wp-content/uploads/2026/03/WWA-logo.svg" class="attachment-full size-full wp-image-2022" alt="" />								</a>
+															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-91c1305 e-con-full footer-sect-btm-blk-cnt e-flex elementor-invisible e-con e-child" data-id="91c1305" data-element_type="container" data-e-type="container" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;,&quot;animation_delay&quot;:1}">
+				<div class="elementor-element elementor-element-050ab08 elementor-hidden-mobile all-heading-new elementor-widget elementor-widget-heading" data-id="050ab08" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Built on an execution-driven approach, Delta Group focuses on delivering reliable operations, scalable solutions, and long-term value for clients and partners.</p>				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-519a0bb e-con-full footer-sect-btm-blk-btn e-flex elementor-invisible e-con e-child" data-id="519a0bb" data-element_type="container" data-e-type="container" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:0.5}">
+				<div class="elementor-element elementor-element-1bbb244 elementor-align-left elementor-widget elementor-widget-button" data-id="1bbb244" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="https://vipaccounts.org/WWA/contact/">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Connect With Team</span>
+				

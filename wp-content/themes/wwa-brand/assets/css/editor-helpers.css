@@ -1,0 +1,47 @@
+/**
+ * Lightweight front-end helpers for WWA.
+ * Prefer block spacing/colors in the editor; use this only when blocks cannot express the design.
+ */
+
+/* Full-bleed sections built with Group / Cover alignfull */
+.wwa-hero .wp-block-cover,
+.wwa-hero.wp-block-cover {
+	min-height: min(85vh, 720px);
+}
+
+.wwa-hero .wp-block-cover__inner-container {
+	max-width: var(--wp--style--global--wide-size, 1280px);
+}
+
+/* Soft cards for category grids (add class "wwa-card" on Group in Advanced → CSS class) */
+.wwa-card {
+	background: var(--wp--preset--color--base-white, #fff);
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.wwa-card img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/* Circular primary CTA (add class "wwa-circle-btn" on Button block) */
+.wwa-circle-btn .wp-block-button__link {
+	border-radius: 999px !important;
+	min-width: 3rem;
+	min-height: 3rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.75rem 1.25rem !important;
+}
+
+/* Stats row emphasis */
+.wwa-stat-number {
+	font-size: clamp(2rem, 4vw, 3rem);
+	font-weight: 500;
+	letter-spacing: -0.02em;
+	line-height: 1;
+}
