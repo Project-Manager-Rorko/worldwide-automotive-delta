@@ -1,0 +1,120 @@
+/**
+ * Live Elementor kit tokens (measured from post-6 + post-3616 + post-726).
+ */
+:root {
+	/* Colors — live kit */
+	--e-primary: #dc2626;
+	--e-red: #ec2633;
+	--e-navy: #000f24;
+	--e-navy-2: #00142d;
+	--e-dark: #1a1a2e;
+	--e-text-dark: #1b181a;
+	--e-slate-900: #0f172a;
+	--e-slate-600: #475569;
+	--e-slate-400: #94a3b8;
+	--e-base: #f5f5f5;
+	--e-white: #ffffff;
+	--e-teal: #5ab4ab;
+	--e-teal-alt: #5ab5ac;
+	--e-gold: #dfaf20;
+	--e-footer-border: #f8d4d9;
+
+	/* Type families */
+	--font-syne: "Syne", system-ui, sans-serif;
+	--font-space: "Space Grotesk", "Syne", system-ui, sans-serif;
+	--font-geist: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+	/* Type scale (live-measured) */
+	--fs-hero: 56px;
+	--fs-h2: 46px;
+	--fs-h2-lh: 56px;
+	--fs-26: 26px;
+	--fs-24: 24px;
+	--fs-22: 22px;
+	--fs-20: 20px;
+	--fs-18: 18px;
+	--fs-16: 16px;
+	--fs-14: 14px;
+
+	/* Spacing (live) */
+	--pad-x: 80px;
+	--pad-x-md: 32px;
+	--pad-x-sm: 24px;
+	--section-y: 100px;
+	--gutter: clamp(24px, 5vw, 80px);
+	--container: 1480px;
+	--kit-max: 1140px;
+
+	/* Aliases used by older CSS */
+	--wwa-red: var(--e-red);
+	--wwa-red-dark: #d41f2b;
+	--wwa-dark: var(--e-dark);
+	--wwa-text: var(--e-text-dark);
+	--wwa-muted: var(--e-slate-600);
+	--wwa-muted-light: var(--e-slate-400);
+	--wwa-white: var(--e-white);
+	--wwa-page: var(--e-base);
+	--wwa-pink: #f6e9eb;
+	--wwa-teal: var(--e-teal-alt);
+	--wwa-teal-dark: #4aa399;
+	--wwa-green-badge: #2bb673;
+	--wwa-border: #e6e8ee;
+	--wwa-pill-border: #e2e5ec;
+	--wwa-footer-border: var(--e-footer-border);
+	--wwa-font: var(--font-geist);
+	--wwa-fs-xs: 12px;
+	--wwa-fs-sm: 14px;
+	--wwa-fs-base: 16px;
+	--wwa-fs-hero: clamp(36px, 4vw + 12px, 56px);
+	--wwa-fs-h2: clamp(28px, 2vw + 16px, 46px);
+	--wwa-lh-tight: 1.12;
+	--wwa-lh-body: 1.6;
+	--wwa-tracking-tight: -0.02em;
+	--wwa-gutter: var(--gutter);
+	--wwa-container: 1320px;
+	--wwa-container-wide: 1480px;
+	--wwa-section-y: clamp(64px, 7vw, 100px);
+	--wwa-radius: 16px;
+	--wwa-radius-lg: 20px;
+	--wwa-radius-pill: 999px;
+	--wwa-header-h: 74px;
+	--wwa-shadow: 0 16px 48px rgba(26, 26, 46, 0.12);
+	--wwa-shadow-soft: 0 8px 28px rgba(26, 26, 46, 0.08);
+	--wwa-transition: 0.25s ease;
+	--wwa-z-header: 9999;
+}
+
+/* Global body type — live Geist text 400 */
+body.wwa-site {
+	font-family: var(--font-geist);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.6;
+	color: var(--e-text-dark);
+	background: var(--e-white);
+}
+
+/* Section H2 — live Syne 46/56 weight 500 color #1A1A2E */
+body.wwa-site h2,
+body.wwa-site .wwa-trust h2,
+body.wwa-site .wwa-products__intro h2,
+body.wwa-site .wwa-service h2,
+body.wwa-site .wwa-presence h2,
+body.wwa-site .wwa-section h2 {
+	font-family: var(--font-syne);
+	font-size: clamp(28px, 2.2vw + 12px, 46px);
+	font-weight: 500;
+	line-height: 1.22;
+	color: var(--e-dark);
+	letter-spacing: -0.01em;
+}
+
+body.wwa-site .wwa-service h2 {
+	color: #ffffff !important;
+}
+
+/* Body copy */
+body.wwa-site p {
+	font-family: var(--font-geist);
+	font-weight: 400;
+}

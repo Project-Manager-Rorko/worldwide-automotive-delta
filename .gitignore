@@ -1,0 +1,24 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+*.swp
+*~
+
+# WordPress runtime (if ever expanded)
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup*/
+node_modules/
+vendor/
+*.sql
+*.sql.gz
+*.zip
+
+# Theme dev noise
+**/live-ref/
+**/*.map

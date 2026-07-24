@@ -1,0 +1,173 @@
+/**
+ * Global baseline for design mockup.
+ */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+body.wwa-site {
+	margin: 0;
+	font-family: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.6;
+	color: #1b181a;
+	background: #ffffff;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
+}
+
+/* Kill Hello Elementor default header/footer chrome */
+body.wwa-site header.site-header,
+body.wwa-site footer.site-footer,
+body.wwa-site .site-header,
+body.wwa-site .site-footer {
+	display: none !important;
+}
+
+body.wwa-site .site-main,
+body.wwa-site main,
+body.wwa-site .page-content,
+body.wwa-site .entry-content,
+body.wwa-site .site-main > article,
+body.wwa-site #content,
+body.wwa-site .content-area {
+	max-width: none !important;
+	width: 100% !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+body.wwa-site .page-header,
+body.wwa-site .entry-title {
+	display: none !important;
+}
+
+body.wwa-site a {
+	color: inherit;
+	text-decoration: none;
+	transition: color var(--wwa-transition), background-color var(--wwa-transition),
+		border-color var(--wwa-transition), transform var(--wwa-transition), opacity var(--wwa-transition);
+}
+
+body.wwa-site img,
+body.wwa-site video {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+body.wwa-site h1 {
+	font-family: "Space Grotesk", "Syne", system-ui, sans-serif;
+	font-weight: 400;
+	letter-spacing: -0.02em;
+	line-height: 1.12;
+	margin-top: 0;
+}
+
+body.wwa-site h2 {
+	font-family: "Syne", system-ui, sans-serif;
+	font-weight: 500;
+	font-size: clamp(28px, 2.2vw + 12px, 46px);
+	line-height: 1.22;
+	color: #1a1a2e;
+	letter-spacing: -0.01em;
+	margin-top: 0;
+}
+
+body.wwa-site h3,
+body.wwa-site h4 {
+	font-family: "Syne", system-ui, sans-serif;
+	font-weight: 500;
+	letter-spacing: -0.01em;
+	line-height: 1.25;
+	color: #1a1a2e;
+	margin-top: 0;
+}
+
+body.wwa-site :focus-visible {
+	outline: 2px solid var(--wwa-red);
+	outline-offset: 3px;
+}
+
+.skip-link.screen-reader-text {
+	position: absolute;
+	left: -9999px;
+	z-index: 9999;
+	padding: 0.75rem 1rem;
+	background: var(--wwa-dark);
+	color: var(--wwa-white);
+}
+
+.skip-link.screen-reader-text:focus {
+	left: 1rem;
+	top: 1rem;
+}
+
+.alignfull {
+	width: 100vw;
+	max-width: 100vw;
+	margin-left: calc(50% - 50vw) !important;
+	margin-right: calc(50% - 50vw) !important;
+}
+
+/* Buttons */
+.wwa-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.4rem;
+	font-family: var(--wwa-font);
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.2;
+	padding: 12px 22px;
+	border-radius: var(--wwa-radius-pill);
+	border: 2px solid transparent;
+	cursor: pointer;
+	text-decoration: none;
+	transition: background-color var(--wwa-transition), color var(--wwa-transition),
+		border-color var(--wwa-transition), transform var(--wwa-transition);
+}
+
+.wwa-btn--primary {
+	background: var(--wwa-red);
+	color: var(--wwa-white) !important;
+	border-color: var(--wwa-red);
+}
+
+/* Ensure full-bleed sections always escape Hello constraints */
+.wwa-hero.alignfull,
+.wwa-trust.alignfull,
+.wwa-products.alignfull,
+.wwa-service.alignfull,
+.wwa-presence.alignfull {
+	width: 100vw !important;
+	max-width: 100vw !important;
+	margin-left: calc(50% - 50vw) !important;
+	margin-right: calc(50% - 50vw) !important;
+}
+
+.wwa-btn--primary:hover {
+	background: var(--wwa-red-dark);
+	border-color: var(--wwa-red-dark);
+	color: var(--wwa-white) !important;
+}
+
+.wwa-btn--primary:active {
+	transform: translateY(1px);
+}
