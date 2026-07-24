@@ -17,6 +17,49 @@ body.wwa-live-clone select {
 }
 
 /* =========================================================
+   0) HEADER — match live (post-726 + live-theme-custom)
+   Only ensure Elementor container variables apply; do not override
+   justify/align/padding from live CSS.
+   ========================================================= */
+body.wwa-live-clone header.elementor-location-header .e-con:not(.elementor-hidden-desktop):not(.elementor-hidden-mobile):not(.elementor-hidden-tablet) {
+	display: var(--display, flex) !important;
+	flex-direction: var(--flex-direction, column);
+	justify-content: var(--justify-content, initial);
+	align-items: var(--align-items, initial);
+	flex-wrap: var(--flex-wrap, nowrap);
+	gap: var(--row-gap, 0) var(--column-gap, 0);
+	width: var(--width, 100%);
+	max-width: min(100%, var(--width, 100%));
+	box-sizing: border-box;
+	/* padding comes from Elementor frontend (padding-block/inline vars) + .pdng-lt-rt */
+}
+body.wwa-live-clone header.elementor-location-header .e-con.e-flex > .e-con-inner {
+	display: flex;
+	flex-direction: var(--flex-direction, column);
+	justify-content: var(--justify-content, initial);
+	align-items: var(--align-items, initial);
+	flex-wrap: var(--flex-wrap, nowrap);
+	gap: var(--row-gap, 0) var(--column-gap, 0);
+	width: 100%;
+	box-sizing: border-box;
+}
+/* Top bar + main bar full width like live */
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main-sec,
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main,
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top {
+	width: 100% !important;
+	max-width: 100% !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+/* Do not force menu justify — live uses flex-end on menu-items + space-between on bar */
+body.wwa-live-clone header.elementor-location-header .elementor-invisible {
+	opacity: 1 !important;
+	visibility: visible !important;
+	transform: none !important;
+}
+
+/* =========================================================
    1) FOOTER — live Elementor layout (post-737) parity
    Uses Elementor --width / --display variables; no equal-column overrides.
    ========================================================= */
@@ -238,12 +281,28 @@ body.wwa-live-clone footer .footer-main-sec-rt .elementor-icon-list-item > a:hov
 	opacity: 0.85;
 }
 
-/* Contact column — red pin/phone/mail icons (live) */
+/* Contact column — outline icons (live SVG stroke #FF2D16, not solid fill) */
 body.wwa-live-clone footer .footer-main-sec-rt-4 .elementor-icon-list-icon {
-	color: #ec2633 !important;
+	color: #ff2d16 !important;
 }
-body.wwa-live-clone footer .footer-main-sec-rt-4 .elementor-icon-list-icon svg path {
-	fill: #ec2633 !important;
+body.wwa-live-clone footer .footer-main-sec-rt-4 .elementor-icon-list-icon svg {
+	fill: none !important;
+	width: 20px !important;
+	height: 20px !important;
+	overflow: visible;
+}
+body.wwa-live-clone footer .footer-main-sec-rt-4 .elementor-icon-list-icon svg path,
+body.wwa-live-clone footer .elementor-element-33a9dc7 .elementor-icon-list-icon svg path,
+body.wwa-live-clone footer .elementor-element-c33aa77 .elementor-icon-list-icon svg path {
+	fill: none !important;
+	stroke: #ff2d16 !important;
+	stroke-width: 1.66667;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+body.wwa-live-clone footer .elementor-element-33a9dc7 .elementor-icon-list-icon svg,
+body.wwa-live-clone footer .elementor-element-c33aa77 .elementor-icon-list-icon svg {
+	fill: none !important;
 }
 body.wwa-live-clone footer .footer-main-sec-rt-4 .elementor-icon-list-items:not(.elementor-inline-items)
 	.elementor-icon-list-item {
@@ -306,9 +365,25 @@ body.wwa-live-clone footer .elementor-element-e40db9b .elementor-icon-list-items
 	justify-content: flex-end;
 }
 
-/* Dividers */
+/* Dividers — live uses Elementor divider widgets (#FFFFFF38).
+   One line after the logo/CTA row, one line above rights reserved.
+   Do NOT add border-top on .footer-sect-btm (that doubled the rights-bar line). */
 body.wwa-live-clone footer .elementor-widget-divider {
-	--divider-color: rgba(255, 255, 255, 0.22) !important;
+	--divider-color: #ffffff38 !important;
+	--divider-border-width: 1px !important;
+}
+body.wwa-live-clone footer .elementor-widget-divider .elementor-divider-separator {
+	border-block-start-width: 1px !important;
+	border-block-start-style: solid !important;
+	border-block-start-color: #ffffff38 !important;
+}
+body.wwa-live-clone footer .footer-sect-btm,
+body.wwa-live-clone footer .elementor-element-67411de {
+	padding-top: 20px;
+	border-top: 0 !important;
+	border-block-start: 0 !important;
+	box-shadow: none !important;
+	outline: none !important;
 }
 
 /* CTA row spacing under logo row */
@@ -318,10 +393,6 @@ body.wwa-live-clone footer .footer-sect-head {
 body.wwa-live-clone footer .footer-main-sec-rt {
 	padding-top: 12px;
 	padding-bottom: 24px;
-}
-body.wwa-live-clone footer .footer-sect-btm {
-	padding-top: 20px;
-	border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* Mobile / tablet footer (live has separate mobile block) */
@@ -602,150 +673,80 @@ body.elementor-page-1648 .elementor-element-5cdce87::before {
 }
 
 /* =========================================================
-   4) Refurbished equipment — layout / design (content unchanged)
+   4) Refurbished equipment — LIVE parity (post-3423 + live-theme-custom)
+   Do NOT override .pdng-lt-rt / .pdng-tp-btm / Elementor --padding / --width.
+   Only bridge gaps when Elementor runtime is absent (invisibility, carousel slides).
    ========================================================= */
 
-/* Reveal any Elementor-invisible blocks on this page */
+/* Reveal Elementor-invisible blocks without Elementor motion JS */
 body.elementor-page-3423 .elementor-invisible {
 	opacity: 1 !important;
 	visibility: visible !important;
 	transform: none !important;
 }
 
-/* Page background */
-body.elementor-page-3423 .elementor-3423 {
-	background: #fff;
+/* Honor Elementor container CSS variables (same approach as footer/header).
+   Padding stays with Elementor frontend + .pdng-lt-rt / .pdng-tp-btm from live-theme-custom. */
+body.elementor-page-3423 .elementor-3423 .e-con:not(.elementor-hidden-desktop):not(.elementor-hidden-mobile):not(.elementor-hidden-tablet) {
+	display: var(--display, flex) !important;
+	flex-direction: var(--flex-direction, column);
+	justify-content: var(--justify-content, initial);
+	align-items: var(--align-items, initial);
+	flex-wrap: var(--flex-wrap, nowrap);
+	gap: var(--row-gap, 0) var(--column-gap, 0);
+	width: var(--width, 100%);
+	max-width: min(100%, var(--width, 100%));
+	box-sizing: border-box;
 }
-
-/* Hero: dark gradient + readable title */
-body.elementor-page-3423 .elementor-3423 > .e-con.e-parent:first-child {
-	position: relative;
-	min-height: 420px;
-	display: flex !important;
-	align-items: center;
-}
-body.elementor-page-3423 .elementor-3423 > .e-con.e-parent:first-child::before {
-	content: "";
-	position: absolute;
-	inset: 0;
-	z-index: 1;
-	pointer-events: none;
-	background: linear-gradient(
-		102.44deg,
-		#1a1a2e 0.63%,
-		rgba(26, 26, 46, 0.85) 40%,
-		rgba(26, 26, 46, 0.35) 70%,
-		rgba(26, 26, 46, 0) 100%
-	);
-}
-body.elementor-page-3423 .elementor-3423 > .e-con.e-parent:first-child > * {
-	position: relative;
-	z-index: 2;
-}
-body.elementor-page-3423 .elementor-3423 > .e-con.e-parent:first-child .elementor-heading-title {
-	color: #fff !important;
-	font-family: "Geist", sans-serif !important;
-}
-
-/* Section spacing */
-body.elementor-page-3423 .elementor-3423 > .e-con.e-parent {
-	padding-left: clamp(16px, 5vw, 80px) !important;
-	padding-right: clamp(16px, 5vw, 80px) !important;
-}
-
-/* Product / listing rows: card-like soft panels */
-body.elementor-page-3423 .elementor-3423 .e-con.e-child {
-	border-radius: 16px;
-}
-
-/* Images rounded */
-body.elementor-page-3423 .elementor-widget-image img,
-body.elementor-page-3423 .elementor-widget-image {
-	border-radius: 16px;
-	overflow: hidden;
-}
-
-/* Green Enquire buttons (reference) */
-body.elementor-page-3423 .elementor-button,
-body.elementor-page-3423 a.elementor-button {
-	border-radius: 8px !important;
-	font-family: "Geist", sans-serif !important;
-	font-weight: 500 !important;
-}
-body.elementor-page-3423 .elementor-button-success,
-body.elementor-page-3423 a.elementor-button[href*="tel"],
-body.elementor-page-3423 .elementor-element .elementor-button {
-	/* keep live colors from post CSS; ensure padding */
-	padding: 10px 18px !important;
-}
-
-/* Guarantee / checklist icons green */
-body.elementor-page-3423 .elementor-icon-list-icon i,
-body.elementor-page-3423 .elementor-icon-list-icon svg {
-	color: #16a34a !important;
-	fill: #16a34a !important;
-}
-
-/* Spec tables / text spacing */
-body.elementor-page-3423 .elementor-widget-text-editor,
-body.elementor-page-3423 .elementor-widget-heading .elementor-heading-title {
-	font-family: "Geist", sans-serif !important;
-}
-body.elementor-page-3423 table {
+body.elementor-page-3423 .elementor-3423 .e-con.e-flex > .e-con-inner {
+	display: flex;
+	flex-direction: var(--flex-direction, column);
+	justify-content: var(--justify-content, initial);
+	align-items: var(--align-items, initial);
+	flex-wrap: var(--flex-wrap, nowrap);
+	gap: var(--row-gap, 0) var(--column-gap, 0);
 	width: 100%;
-	border-collapse: collapse;
-}
-body.elementor-page-3423 table td,
-body.elementor-page-3423 table th {
-	padding: 8px 12px;
-	border-bottom: 1px solid #e8ecf1;
-	font-family: "Geist", sans-serif !important;
-	font-size: 15px;
+	box-sizing: border-box;
 }
 
-/* Alternating listing cards feel */
-body.elementor-page-3423 .elementor-3423 .e-con.e-parent:nth-child(n + 3) {
-	margin-top: 8px;
-	margin-bottom: 8px;
-}
-
-/* Equipment photo blocks (img-new-equa*) */
-body.elementor-page-3423 [class*="img-new-equa"],
-body.elementor-page-3423 .e-con[style*="img-new-equa"],
-body.elementor-page-3423 .e-con[style*="background-image"] {
-	background-size: cover !important;
-	background-position: center !important;
-	background-repeat: no-repeat !important;
-	border-radius: 16px;
-	min-height: 260px;
-}
-
-/* Ensure flex rows for listing split */
-body.elementor-page-3423 .e-con.e-flex {
-	display: flex !important;
-}
-body.elementor-page-3423 .e-con.e-parent > .e-con-inner,
-body.elementor-page-3423 .e-con[data-element_type="container"] {
-	gap: 24px;
-}
-
-/* Soft card panels for machine rows */
-body.elementor-page-3423 .elementor-3423 > .e-con.e-parent:not(:first-child) {
-	background: #f8fafc;
-	border-radius: 20px;
-	padding-top: 32px !important;
-	padding-bottom: 32px !important;
-	margin-bottom: 16px;
-}
-body.elementor-page-3423 .elementor-3423 > .e-con.e-parent:nth-child(2) {
-	background: #fff;
-}
-
-/* Map / product sections full width containers */
+/* Full-bleed page wrappers (Hello theme) — Elementor owns gutters via .pdng-lt-rt */
 body.elementor-page-3423 main.site-main,
 body.elementor-page-3423 .page-content {
 	max-width: none !important;
 	padding: 0 !important;
+}
+
+/*
+ * Media carousel slides use background-image on .elementor-carousel-image.
+ * post-3423 sets .elementor-main-swiper{height:400px} — do not override height.
+ * Only ensure slides paint when Swiper is not yet initialized.
+ */
+body.elementor-page-3423 .elementor-widget-media-carousel .elementor-carousel-image,
+body.elementor-page-3423 .refurbished-equipment-media-slides .elementor-carousel-image {
+	background-repeat: no-repeat !important;
+	background-position: 50% 50% !important;
+	background-size: cover !important;
+	width: 100% !important;
+	height: 100% !important;
+	min-height: 100%;
+	display: block !important;
+}
+body.elementor-page-3423 .elementor-widget-media-carousel .swiper-wrapper,
+body.elementor-page-3423 .elementor-widget-media-carousel .swiper-slide {
+	height: 100%;
+}
+/* Pre-init fallback: show first slide full width */
+body.elementor-page-3423 .elementor-widget-media-carousel .swiper:not(.swiper-initialized) .swiper-wrapper {
+	display: flex;
+}
+body.elementor-page-3423 .elementor-widget-media-carousel .swiper:not(.swiper-initialized) .swiper-slide {
+	flex: 0 0 100%;
+	width: 100%;
+}
+/* Keep Elementor arrow styling (white chevrons from post-3423); ensure clickable */
+body.elementor-page-3423 .elementor-widget-media-carousel .elementor-swiper-button {
+	z-index: 5;
+	cursor: pointer;
 }
 
 /* =========================================================

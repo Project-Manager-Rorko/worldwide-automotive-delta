@@ -287,6 +287,11 @@ function wwa_live_clone_enqueue_assets() {
 		'wwa-lc-icon-list-c' => 'custom-widget-icon-list.min.css',
 		'wwa-lc-hfe-widgets' => 'hfe-widgets-frontend.css',
 		'wwa-lc-hello-hf'    => 'hello-header-footer.css',
+		// Media carousel (refurbished equipment product photos).
+		'wwa-lc-swiper'      => 'swiper.min.css',
+		'wwa-lc-e-swiper'    => 'e-swiper.min.css',
+		'wwa-lc-carousel-base' => 'widget-carousel-module-base.min.css',
+		'wwa-lc-media-carousel' => 'widget-media-carousel.min.css',
 	);
 	foreach ( $extras as $handle => $file ) {
 		$path = $extra_dir . '/' . $file;
@@ -397,13 +402,36 @@ function wwa_live_clone_enqueue_assets() {
 		);
 	}
 
-	// Interactive: mobile nav, counters, FAQ, leadership bio, video.
+	// Swiper only when a page actually has media carousels (refurbished listings).
+	// Keeps other pages free of extra JS and avoids layout side-effects.
+	$swiper_deps = array();
+	$swiper_js   = WWA_LIVE_CLONE_DIR . '/js/swiper.min.js';
+	$post_id     = is_singular() ? (int) get_queried_object_id() : 0;
+	$post_html   = $post_id ? (string) get_post_field( 'post_content', $post_id ) : '';
+	$needs_swiper = is_page( 'refurbished-equipment' )
+		|| ( $post_html && false !== strpos( $post_html, 'media-carousel' ) )
+		|| ( $post_html && false !== strpos( $post_html, 'refurbished-equipment-media-slides' ) );
+	if ( file_exists( $swiper_js ) && $needs_swiper ) {
+		wp_enqueue_script(
+			'wwa-swiper',
+			WWA_LIVE_CLONE_URI . '/js/swiper.min.js',
+			array(),
+			filemtime( $swiper_js ),
+			array(
+				'in_footer' => true,
+				'strategy'  => 'defer',
+			)
+		);
+		$swiper_deps[] = 'wwa-swiper';
+	}
+
+	// Interactive: mobile nav, counters, FAQ, leadership bio, video, carousels.
 	$js = WWA_LIVE_CLONE_DIR . '/js/live-clone.js';
 	if ( file_exists( $js ) ) {
 		wp_enqueue_script(
 			'wwa-live-clone',
 			WWA_LIVE_CLONE_URI . '/js/live-clone.js',
-			array(),
+			$swiper_deps,
 			filemtime( $js ),
 			array(
 				'in_footer' => true,

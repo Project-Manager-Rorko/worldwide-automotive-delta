@@ -503,6 +503,87 @@
 		onScroll();
 	}
 
+	/* ---------- Media carousels (refurbished product photos only) ---------- */
+	function initMediaCarousels() {
+		var carousels = qsa(
+			'.elementor-widget-media-carousel .elementor-main-swiper.swiper, .refurbished-equipment-media-slides .elementor-main-swiper'
+		);
+		if (!carousels.length) return;
+
+		function parseSettings(widget) {
+			var raw = widget && widget.getAttribute('data-settings');
+			if (!raw) return {};
+			try {
+				return JSON.parse(
+					raw.replace(/&quot;/g, '"').replace(/&#039;/g, "'").replace(/&amp;/g, '&')
+				);
+			} catch (e) {
+				return {};
+			}
+		}
+
+		function boot() {
+			if (typeof window.Swiper === 'undefined') return;
+			carousels.forEach(function (el) {
+				if (el.swiper || el.classList.contains('swiper-initialized')) return;
+				var widget = el.closest('.elementor-widget-media-carousel') || el.parentElement;
+				var settings = parseSettings(widget);
+				var nextBtn =
+					el.querySelector('.elementor-swiper-button-next') ||
+					(widget && widget.querySelector('.elementor-swiper-button-next'));
+				var prevBtn =
+					el.querySelector('.elementor-swiper-button-prev') ||
+					(widget && widget.querySelector('.elementor-swiper-button-prev'));
+				var speed = parseInt(settings.speed, 10) || 500;
+				var autoplayOn = settings.autoplay !== 'no' && settings.autoplay !== false;
+				var delay = parseInt(settings.autoplay_speed, 10) || 5000;
+				var loopOn = settings.loop !== 'no' && settings.loop !== false;
+				try {
+					// eslint-disable-next-line no-new
+					new window.Swiper(el, {
+						slidesPerView: 1,
+						spaceBetween: 10,
+						loop: loopOn,
+						speed: speed,
+						watchOverflow: true,
+						observer: true,
+						observeParents: true,
+						autoplay: autoplayOn
+							? {
+									delay: delay,
+									disableOnInteraction: false,
+									pauseOnMouseEnter: settings.pause_on_hover === 'yes',
+							  }
+							: false,
+						navigation:
+							nextBtn || prevBtn
+								? {
+										nextEl: nextBtn,
+										prevEl: prevBtn,
+								  }
+								: undefined,
+						allowTouchMove: true,
+					});
+				} catch (e) {
+					// ignore init errors
+				}
+			});
+		}
+
+		if (typeof window.Swiper !== 'undefined') {
+			boot();
+		} else {
+			var tries = 0;
+			var t = setInterval(function () {
+				tries += 1;
+				if (typeof window.Swiper !== 'undefined' || tries > 50) {
+					clearInterval(t);
+					boot();
+				}
+			}, 100);
+		}
+	}
+
 	ready(function () {
 		initNav();
 		initAos();
@@ -512,5 +593,6 @@
 		initFaq();
 		initLeadershipBio();
 		initStickyHeader();
+		initMediaCarousels();
 	});
 })();
