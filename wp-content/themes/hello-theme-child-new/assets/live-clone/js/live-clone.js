@@ -22,39 +22,223 @@
 
 	/* ---------- Nav / mobile ---------- */
 	function initNav() {
-		qsa('.ekit-menu-hamburger, .elementskit-menu-hamburger, .ekit-nav-menu-icon').forEach(function (btn) {
-			btn.addEventListener('click', function (e) {
-				e.preventDefault();
-				var wrap =
-					btn.closest('.ekit-wid-con') ||
-					btn.closest('.elementor-widget-elementskit-nav-menu') ||
-					btn.parentElement;
-				if (!wrap) return;
-				wrap.classList.toggle('ekit-nav-menu-active');
-				wrap.classList.toggle('active');
-				document.documentElement.classList.toggle('ekit-menu-open');
-				var panel = wrap.querySelector(
-					'.elementskit-navbar-nav-default, .ekit-nav-menu, .elementskit-menu-container'
-				);
-				if (panel) {
-					var open = panel.classList.toggle('active');
-					panel.style.display = open ? 'block' : '';
-				}
-			});
+		var currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
+
+		qsa('a[href]').forEach(function (link) {
+			var href = link.getAttribute('href') || '';
+			if (href.indexOf('/about/') !== -1) link.setAttribute('href', href.replace('/about/', '/about-us/'));
+			if (href.charAt(0) === '#') return;
+			if ((link.pathname.replace(/\/+$/, '') || '/') === currentPath) {
+				link.classList.add('is-active');
+				link.setAttribute('aria-current', 'page');
+				var parent = link.closest('.elementskit-dropdown-has');
+				if (parent) parent.classList.add('is-current-ancestor');
+			}
+		});
+		qsa('img[src*="WWA-logo.svg"]').forEach(function (img) {
+			img.setAttribute('alt', 'Worldwide Automotive');
+		});
+		qsa('header.elementor-location-header a').forEach(function (link) {
+			if (!link.textContent.trim() && !link.querySelector('img,svg')) {
+				link.remove();
+			}
 		});
 
-		qsa(
-			'.elementskit-dropdown-has > a, .menu-item-has-children > a, .elementor-item-has-submenu'
-		).forEach(function (link) {
-			link.addEventListener('click', function (e) {
-				if (window.innerWidth > 1024) return;
-				var li = link.parentElement;
-				if (!li) return;
-				var sub = li.querySelector('.elementskit-dropdown, .sub-menu, .elementor-nav-menu--dropdown');
-				if (!sub) return;
+		function syncHeaderLayout() {
+			var pageMain = qs('body.wwa-live-clone main.site-main');
+			if (pageMain) pageMain.style.setProperty('margin-top', window.innerWidth > 1024 ? '5px' : '0', 'important');
+			qsa('header.elementor-location-header .hdr-menu-main').forEach(function (main) {
+				var mobileLogo = main.querySelector(':scope > .elementor-element-e683956');
+				var desktopLogo = main.querySelector(':scope > .elementor-element-fb79e5a');
+				var menuItems = main.querySelector(':scope > .elementor-element-5af951e');
+				var desktop = window.innerWidth > 1024;
+				if (desktop) {
+					main.style.setProperty('display', 'grid', 'important');
+					main.style.setProperty('grid-template-columns', '240px minmax(0, 1fr)', 'important');
+					main.style.setProperty('column-gap', '32px', 'important');
+					if (mobileLogo) mobileLogo.style.setProperty('display', 'none', 'important');
+					if (desktopLogo) {
+						desktopLogo.style.setProperty('display', 'flex', 'important');
+						desktopLogo.style.setProperty('width', '240px', 'important');
+					}
+					if (menuItems) {
+						menuItems.style.setProperty('display', 'flex', 'important');
+						menuItems.style.setProperty('width', '100%', 'important');
+						menuItems.style.setProperty('justify-content', 'flex-end', 'important');
+					}
+				} else {
+					main.style.setProperty('display', 'flex', 'important');
+					main.style.setProperty('justify-content', 'space-between', 'important');
+					main.style.setProperty('column-gap', '12px', 'important');
+					if (mobileLogo) {
+						mobileLogo.style.setProperty('display', 'flex', 'important');
+						mobileLogo.style.setProperty('width', '100%', 'important');
+						mobileLogo.style.setProperty('flex', '1 1 auto', 'important');
+						mobileLogo.style.setProperty('height', '50px', 'important');
+						var mobileLogoWidget = mobileLogo.querySelector('.elementor-element-47af525');
+						var mobileLogoLink = mobileLogo.querySelector('a');
+						var mobileLogoImage = mobileLogo.querySelector('img');
+						if (mobileLogoWidget) {
+							mobileLogoWidget.style.setProperty('display', 'flex', 'important');
+							mobileLogoWidget.style.setProperty('height', '50px', 'important');
+						}
+						if (mobileLogoLink) {
+							mobileLogoLink.style.setProperty('display', 'inline-flex', 'important');
+							mobileLogoLink.style.setProperty('height', '50px', 'important');
+						}
+						if (mobileLogoImage) {
+							mobileLogoImage.style.setProperty('display', 'block', 'important');
+							mobileLogoImage.style.setProperty('width', '190px', 'important');
+							mobileLogoImage.style.setProperty('height', 'auto', 'important');
+						}
+					}
+					if (desktopLogo) desktopLogo.style.setProperty('display', 'none', 'important');
+					if (menuItems) {
+						menuItems.style.setProperty('display', 'flex', 'important');
+						menuItems.style.setProperty('width', 'auto', 'important');
+						menuItems.style.setProperty('margin-left', 'auto', 'important');
+					}
+				}
+			});
+		}
+		syncHeaderLayout();
+		window.addEventListener('resize', syncHeaderLayout, { passive: true });
+
+		function focusables(root) {
+			return qsa(
+				'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])',
+				root
+			).filter(function (el) {
+				return !el.hidden && el.offsetParent !== null;
+			});
+		}
+
+		qsa('#ekit-megamenu-mobile-menu').forEach(function (panel) {
+			var wrap = panel.closest('.ekit-wid-con') || panel.parentElement;
+			var btn = wrap && wrap.querySelector('.elementskit-menu-hamburger, .ekit-menu-hamburger');
+			var closeBtn = panel.querySelector('.elementskit-menu-close');
+			var overlay = wrap && wrap.querySelector('.elementskit-menu-overlay');
+			var list = panel.querySelector('#menu-mobile-menu');
+			var activeButton = null;
+			if (!wrap || !btn || !list) return;
+
+			btn.setAttribute('aria-controls', panel.id);
+			btn.setAttribute('aria-expanded', 'false');
+			panel.setAttribute('role', 'dialog');
+			panel.setAttribute('aria-modal', 'true');
+			panel.setAttribute('aria-label', 'Mobile navigation');
+			panel.hidden = true;
+			panel.setAttribute('aria-hidden', 'true');
+			if (overlay) overlay.hidden = true;
+
+			if (!panel.querySelector('.wwa-mobile-actions')) {
+				var actions = document.createElement('div');
+				actions.className = 'wwa-mobile-actions';
+				actions.innerHTML =
+					'<a class="wwa-mobile-cta wwa-mobile-cta-primary" href="/contact/">Contact Us</a>' +
+					'<a class="wwa-mobile-cta wwa-mobile-cta-secondary" href="mailto:info@worldwideautomotive.com">Email Us</a>';
+				panel.appendChild(actions);
+			}
+
+			qsa('.elementskit-dropdown-has', list).forEach(function (item, index) {
+				var toggle = item.querySelector(':scope > a.ekit-menu-nav-link');
+				var sub = item.querySelector(':scope > .elementskit-megamenu-panel');
+				if (!toggle || !sub) return;
+				if (!sub.id) sub.id = 'wwa-mobile-panel-' + index;
+				toggle.setAttribute('role', 'button');
+				toggle.setAttribute('aria-controls', sub.id);
+				toggle.setAttribute('aria-expanded', 'false');
+				sub.hidden = true;
+				toggle.addEventListener('click', function (e) {
+					if (window.innerWidth > 1024) return;
+					e.preventDefault();
+					var open = !item.classList.contains('ekit-dropdown-open');
+					qsa('.elementskit-dropdown-has.ekit-dropdown-open', list).forEach(function (other) {
+						var otherToggle = other.querySelector(':scope > a.ekit-menu-nav-link');
+						var otherSub = other.querySelector(':scope > .elementskit-megamenu-panel');
+						other.classList.remove('ekit-dropdown-open', 'active', 'elementskit-open');
+						if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
+						if (otherSub) otherSub.hidden = true;
+					});
+					item.classList.toggle('ekit-dropdown-open', open);
+					item.classList.toggle('active', open);
+					toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+					sub.hidden = !open;
+				});
+			});
+
+			function closeMenu() {
+				if (panel.hidden) return;
+				panel.classList.remove('active');
+				wrap.classList.remove('active', 'ekit-nav-menu-active');
+				document.documentElement.classList.remove('ekit-menu-open');
+				document.body.classList.remove('wwa-menu-lock');
+				btn.setAttribute('aria-expanded', 'false');
+				panel.setAttribute('aria-hidden', 'true');
+				if (overlay) overlay.classList.remove('active');
+				setTimeout(function () {
+					panel.hidden = true;
+					if (overlay) overlay.hidden = true;
+					if (activeButton) activeButton.focus();
+				}, 220);
+			}
+
+			function openMenu() {
+				activeButton = document.activeElement;
+				panel.hidden = false;
+				if (overlay) overlay.hidden = false;
+				requestAnimationFrame(function () {
+					panel.classList.add('active');
+					wrap.classList.add('active', 'ekit-nav-menu-active');
+					document.documentElement.classList.add('ekit-menu-open');
+					document.body.classList.add('wwa-menu-lock');
+					btn.setAttribute('aria-expanded', 'true');
+					panel.setAttribute('aria-hidden', 'false');
+					if (overlay) overlay.classList.add('active');
+					var first = closeBtn || focusables(panel)[0];
+					if (first) first.focus();
+				});
+			}
+
+			btn.addEventListener('click', function (e) {
 				e.preventDefault();
-				li.classList.toggle('ekit-dropdown-open');
-				sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
+				if (panel.hidden) openMenu();
+				else closeMenu();
+			});
+			if (closeBtn) {
+				closeBtn.addEventListener('click', function (e) {
+					e.preventDefault();
+					closeMenu();
+				});
+			}
+			if (overlay) {
+				overlay.addEventListener('click', function (e) {
+					e.preventDefault();
+					closeMenu();
+				});
+			}
+			document.addEventListener('pointerdown', function (e) {
+				if (panel.hidden || panel.contains(e.target) || btn.contains(e.target)) return;
+				closeMenu();
+			});
+			document.addEventListener('keydown', function (e) {
+				if (panel.hidden) return;
+				if (e.key === 'Escape') {
+					closeMenu();
+					return;
+				}
+				if (e.key !== 'Tab') return;
+				var items = focusables(panel);
+				if (!items.length) return;
+				var first = items[0];
+				var last = items[items.length - 1];
+				if (e.shiftKey && document.activeElement === first) {
+					e.preventDefault();
+					last.focus();
+				} else if (!e.shiftKey && document.activeElement === last) {
+					e.preventDefault();
+					first.focus();
+				}
 			});
 		});
 	}
@@ -168,6 +352,10 @@
 
 	/* ---------- Counters (About operational impact) ---------- */
 	function animateCounter(el, to, duration) {
+		if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+			el.textContent = String(to);
+			return;
+		}
 		var start = 0;
 		var startTime = null;
 		var suffix = '';

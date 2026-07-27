@@ -150,12 +150,13 @@ function wwa_live_clone_current() {
 		return $cached;
 	}
 
-	if ( ! is_singular( 'page' ) ) {
-		$cached = false;
-		return null;
+	$slug = '';
+	if ( is_singular( 'page' ) ) {
+		$slug = get_post_field( 'post_name', get_queried_object_id() );
+	} else {
+		$request = isset( $GLOBALS['wp']->request ) ? (string) $GLOBALS['wp']->request : '';
+		$slug    = trim( $request, '/' );
 	}
-
-	$slug = get_post_field( 'post_name', get_queried_object_id() );
 	if ( $slug && isset( $map[ $slug ] ) ) {
 		$cached = $map[ $slug ];
 		return $cached;
@@ -174,6 +175,28 @@ function wwa_live_clone_current() {
 	$cached = false;
 	return null;
 }
+
+/**
+ * Serve local clone fragments for scraped routes that do not have WP pages.
+ */
+function wwa_live_clone_virtual_page() {
+	if ( ! is_404() || ! wwa_live_clone_has_page() ) {
+		return;
+	}
+	status_header( 200 );
+	get_header();
+	$cfg  = wwa_live_clone_current();
+	$html = wwa_live_clone_get_fragment( $cfg['fragment'] );
+	if ( $html ) {
+		echo '<main id="content" class="site-main"><div class="page-content">';
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- trusted local fragment from live scrape
+		echo $html;
+		echo '</div></main>';
+	}
+	get_footer();
+	exit;
+}
+add_action( 'template_redirect', 'wwa_live_clone_virtual_page', 0 );
 
 function wwa_live_clone_enabled() {
 	// Always use live header/footer; page body when mapped.
@@ -206,10 +229,53 @@ function wwa_live_clone_get_fragment( $name ) {
 			'https://wwa.local',
 			'http://vipaccounts.org/WWA',
 			'https://vipaccounts.org/WWA',
+			'http:\/\/wwa.local',
+			'https:\/\/wwa.local',
+			'http:\/\/vipaccounts.org\/WWA',
+			'https:\/\/vipaccounts.org\/WWA',
 		),
-		$home,
+		array(
+			$home,
+			$home,
+			$home,
+			$home,
+			str_replace( '/', '\/', $home ),
+			str_replace( '/', '\/', $home ),
+			str_replace( '/', '\/', $home ),
+			str_replace( '/', '\/', $home ),
+		),
 		$html
 	);
+
+	$html = str_replace(
+		array(
+			'/about/',
+			'/construction-excavators/',
+			'/mining-excavators/',
+			'Products and attatchments',
+			'alt="WWA-logo"',
+			'aria-label="hamburger-icon"',
+			'<button class="elementskit-menu-close elementskit-menu-toggler" type="button">X</button>',
+		),
+		array(
+			'/about-us/',
+			'/construction-excavators/',
+			'/mining-excavators/',
+			'Products and Attachments',
+			'alt="Worldwide Automotive"',
+			'aria-label="Open menu"',
+			'<button class="elementskit-menu-close elementskit-menu-toggler" type="button" aria-label="Close menu">X</button>',
+		),
+		$html
+	);
+	$html = str_replace(
+		'class="attachment-full size-full wp-image-2022" alt=""',
+		'class="attachment-full size-full wp-image-2022" alt="Worldwide Automotive"',
+		$html
+	);
+
+	$html = preg_replace( '#<script\b[^>]*>.*?</script>#is', '', $html );
+	$html = preg_replace( '#<script\b[^>]*$#i', '', $html );
 
 	return $html;
 }
@@ -464,6 +530,8 @@ add_action( 'wp_enqueue_scripts', 'wwa_live_clone_enqueue_assets', 100 );
  * Inject AOS / lazyload head styles from live site.
  */
 function wwa_live_clone_head_extras() {
+	$icon = content_url( '/uploads/2026/07/cropped-delta-fav-icon.png' );
+	echo '<link rel="icon" href="' . esc_url( $icon ) . '" type="image/png">' . "\n";
 	$aos = WWA_LIVE_CLONE_DIR . '/fragments/aos-inline.css';
 	if ( file_exists( $aos ) ) {
 		echo '<style id="wwa-live-aos">' . file_get_contents( $aos ) . '</style>' . "\n"; // phpcs:ignore
