@@ -150,13 +150,12 @@ function wwa_live_clone_current() {
 		return $cached;
 	}
 
-	$slug = '';
-	if ( is_singular( 'page' ) ) {
-		$slug = get_post_field( 'post_name', get_queried_object_id() );
-	} else {
-		$request = isset( $GLOBALS['wp']->request ) ? (string) $GLOBALS['wp']->request : '';
-		$slug    = trim( $request, '/' );
+	if ( ! is_singular( 'page' ) ) {
+		$cached = false;
+		return null;
 	}
+
+	$slug = get_post_field( 'post_name', get_queried_object_id() );
 	if ( $slug && isset( $map[ $slug ] ) ) {
 		$cached = $map[ $slug ];
 		return $cached;
@@ -175,28 +174,6 @@ function wwa_live_clone_current() {
 	$cached = false;
 	return null;
 }
-
-/**
- * Serve local clone fragments for scraped routes that do not have WP pages.
- */
-function wwa_live_clone_virtual_page() {
-	if ( ! is_404() || ! wwa_live_clone_has_page() ) {
-		return;
-	}
-	status_header( 200 );
-	get_header();
-	$cfg  = wwa_live_clone_current();
-	$html = wwa_live_clone_get_fragment( $cfg['fragment'] );
-	if ( $html ) {
-		echo '<main id="content" class="site-main"><div class="page-content">';
-		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- trusted local fragment from live scrape
-		echo $html;
-		echo '</div></main>';
-	}
-	get_footer();
-	exit;
-}
-add_action( 'template_redirect', 'wwa_live_clone_virtual_page', 0 );
 
 function wwa_live_clone_enabled() {
 	// Always use live header/footer; page body when mapped.
@@ -229,53 +206,10 @@ function wwa_live_clone_get_fragment( $name ) {
 			'https://wwa.local',
 			'http://vipaccounts.org/WWA',
 			'https://vipaccounts.org/WWA',
-			'http:\/\/wwa.local',
-			'https:\/\/wwa.local',
-			'http:\/\/vipaccounts.org\/WWA',
-			'https:\/\/vipaccounts.org\/WWA',
 		),
-		array(
-			$home,
-			$home,
-			$home,
-			$home,
-			str_replace( '/', '\/', $home ),
-			str_replace( '/', '\/', $home ),
-			str_replace( '/', '\/', $home ),
-			str_replace( '/', '\/', $home ),
-		),
+		$home,
 		$html
 	);
-
-	$html = str_replace(
-		array(
-			'/about/',
-			'/construction-excavators/',
-			'/mining-excavators/',
-			'Products and attatchments',
-			'alt="WWA-logo"',
-			'aria-label="hamburger-icon"',
-			'<button class="elementskit-menu-close elementskit-menu-toggler" type="button">X</button>',
-		),
-		array(
-			'/about-us/',
-			'/construction-excavators/',
-			'/mining-excavators/',
-			'Products and Attachments',
-			'alt="Worldwide Automotive"',
-			'aria-label="Open menu"',
-			'<button class="elementskit-menu-close elementskit-menu-toggler" type="button" aria-label="Close menu">X</button>',
-		),
-		$html
-	);
-	$html = str_replace(
-		'class="attachment-full size-full wp-image-2022" alt=""',
-		'class="attachment-full size-full wp-image-2022" alt="Worldwide Automotive"',
-		$html
-	);
-
-	$html = preg_replace( '#<script\b[^>]*>.*?</script>#is', '', $html );
-	$html = preg_replace( '#<script\b[^>]*$#i', '', $html );
 
 	return $html;
 }
@@ -468,9 +402,12 @@ function wwa_live_clone_enqueue_assets() {
 		);
 	}
 
+	// Core jQuery must load before Elementor / ElementsKit (fixes "jQuery is not defined").
+	wwa_live_clone_ensure_jquery();
+
 	// Swiper only when a page actually has media carousels (refurbished listings).
 	// Keeps other pages free of extra JS and avoids layout side-effects.
-	$swiper_deps = array();
+	$swiper_deps = array( 'jquery' );
 	$swiper_js   = WWA_LIVE_CLONE_DIR . '/js/swiper.min.js';
 	$post_id     = is_singular() ? (int) get_queried_object_id() : 0;
 	$post_html   = $post_id ? (string) get_post_field( 'post_content', $post_id ) : '';
@@ -481,11 +418,10 @@ function wwa_live_clone_enqueue_assets() {
 		wp_enqueue_script(
 			'wwa-swiper',
 			WWA_LIVE_CLONE_URI . '/js/swiper.min.js',
-			array(),
+			array( 'jquery' ),
 			filemtime( $swiper_js ),
 			array(
 				'in_footer' => true,
-				'strategy'  => 'defer',
 			)
 		);
 		$swiper_deps[] = 'wwa-swiper';
@@ -501,7 +437,6 @@ function wwa_live_clone_enqueue_assets() {
 			filemtime( $js ),
 			array(
 				'in_footer' => true,
-				'strategy'  => 'defer',
 			)
 		);
 	}
@@ -512,11 +447,10 @@ function wwa_live_clone_enqueue_assets() {
 		wp_enqueue_script(
 			'wwa-fluid-map',
 			WWA_LIVE_CLONE_URI . '/js/fluid-map.js',
-			array(),
+			array( 'jquery' ),
 			filemtime( $fluid ),
 			array(
 				'in_footer' => true,
-				'strategy'  => 'defer',
 			)
 		);
 	}
@@ -527,11 +461,41 @@ function wwa_live_clone_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'wwa_live_clone_enqueue_assets', 100 );
 
 /**
+ * Ensure WordPress jQuery is registered and printed before Elementor/Ekit scripts.
+ * Some Local/clone setups drop the jquery handle while still loading jquery-ui.
+ */
+function wwa_live_clone_ensure_jquery() {
+	$jq = includes_url( 'js/jquery/jquery.min.js' );
+	$jm = includes_url( 'js/jquery/jquery-migrate.min.js' );
+
+	// Re-register core handles if missing or broken.
+	if ( ! wp_script_is( 'jquery-core', 'registered' ) ) {
+		wp_register_script( 'jquery-core', $jq, array(), '3.7.1', true );
+	} else {
+		// Force a real src if someone emptied it.
+		$scripts = wp_scripts();
+		if ( isset( $scripts->registered['jquery-core'] ) && empty( $scripts->registered['jquery-core']->src ) ) {
+			$scripts->registered['jquery-core']->src = $jq;
+		}
+	}
+	if ( ! wp_script_is( 'jquery-migrate', 'registered' ) ) {
+		wp_register_script( 'jquery-migrate', $jm, array( 'jquery-core' ), '3.4.1', true );
+	}
+	if ( ! wp_script_is( 'jquery', 'registered' ) ) {
+		wp_register_script( 'jquery', false, array( 'jquery-core', 'jquery-migrate' ), '3.7.1', true );
+	}
+
+	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'jquery-core' );
+	wp_enqueue_script( 'jquery-migrate' );
+}
+// Early so plugin scripts that only declare jquery deps can resolve.
+add_action( 'wp_enqueue_scripts', 'wwa_live_clone_ensure_jquery', 1 );
+
+/**
  * Inject AOS / lazyload head styles from live site.
  */
 function wwa_live_clone_head_extras() {
-	$icon = content_url( '/uploads/2026/07/cropped-delta-fav-icon.png' );
-	echo '<link rel="icon" href="' . esc_url( $icon ) . '" type="image/png">' . "\n";
 	$aos = WWA_LIVE_CLONE_DIR . '/fragments/aos-inline.css';
 	if ( file_exists( $aos ) ) {
 		echo '<style id="wwa-live-aos">' . file_get_contents( $aos ) . '</style>' . "\n"; // phpcs:ignore
