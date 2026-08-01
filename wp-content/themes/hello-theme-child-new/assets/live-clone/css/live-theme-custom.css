@@ -87,7 +87,7 @@ h1.entry-title {display: none;}
 .abt-scnd-sec-inr-accord span.e-opened i,.abt-scnd-sec-inr-accord span.e-closed i{color:#fff!important;font-size:12px!important}
 summary.e-n-accordion-item-title{border-radius:16px 16px 16px 16px!important}
 /* Header */
-.hdr-menu-main {width: 100% !important;float: left;max-width: 100%;position:absolute;top:60px;z-index:9999 !important;background: #00000042 !important;backdrop-filter: blur(33px);-webkit-backdrop-filter: blur(12px);border-bottom: 1px solid rgba(255, 255, 255, 0.1);box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);transition: background 0.3s ease, backdrop-filter 0.3s ease;}
+.hdr-menu-main {width: 100% !important;float: left;max-width: 100%;position:relative;top:auto;left:auto;z-index:9999 !important;background: #00000042 !important;backdrop-filter: blur(33px);-webkit-backdrop-filter: blur(12px);border-bottom: 1px solid rgba(255, 255, 255, 0.1);box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);transition: background 0.3s ease, backdrop-filter 0.3s ease;}
 .hdr-menu-main-btn a span.elementor-button-text {font-size: clamp(1.0625rem, 0.9511rem + 0.1739vw, 1.125rem) !important;font-family: "geist", Sans-serif !important;line-height:1.4 !important;font-weight: 400 !important;text-transform: capitalize;}
 
 .hdr-menu-main-menu ul#menu-main-menu {display: flex;flex-wrap: wrap;align-items: center;justify-content: space-between;}
@@ -396,7 +396,7 @@ button.elementskit-menu-hamburger.elementskit-menu-toggler {padding: 0px !import
 .footer-inr-sec-lft {width: 73%;}
 .hdr-menu-main-inr {display:none !important;}
 
-.hdr-menu-main{width:100%!important;float:left;max-width:100%;position:absolute;top:0;z-index:9999!important;background:transparent!important;background:#5e0000!important;backdrop-filter:none;-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.1);box-shadow:0 4px 30px rgba(0,0,0,0.1);transition:background .3s ease,backdrop-filter .3s ease}
+.hdr-menu-main{width:100%!important;float:left;max-width:100%;position:relative!important;top:auto!important;left:auto!important;z-index:9999!important;background:transparent!important;background:#5e0000!important;backdrop-filter:none;-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.1);box-shadow:0 4px 30px rgba(0,0,0,0.1);transition:background .3s ease,backdrop-filter .3s ease}
 button.elementskit-menu-close.elementskit-menu-toggler{padding:0!important;font-size:23px!important;font-family:"Geist",Sans-serif;background:transparent!important;border:1px solid #003883!important;color:#ec2633!important;border-radius:50%!important;width:36px!important}
 .menu-items .elementskit-navbar-nav > li > a.ekit-menu-nav-link{padding:10px 15px!important;font-size:18px!important}
 .elementskit-megamenu-panel{border-top:0 solid transparent}
@@ -406,12 +406,12 @@ button.elementskit-menu-close.elementskit-menu-toggler{padding:0!important;font-
 .contact-new-sec-btn a{display: flex;align-items: center;justify-content: center;color: #fff !important;}
 .menu-items .elementskit-navbar-nav > li > a.ekit-menu-nav-link {padding: 10px 15px !important;font-size: 18px !important;}
 
-.hdr-menu-main{position:fixed!important;top:50px;left:0;width:100%;background:#fff;z-index:99999;transform:none!important;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.hdr-menu-main{position:relative!important;top:auto!important;left:auto!important;width:100%;background:#fff;z-index:99999;transform:none!important;box-shadow:0 2px 10px rgba(0,0,0,.08)}
  /* Prevent content hiding behind fixed header */
 /* body{padding-top:80px} */
 /* Disable desktop animation classes on mobile */
-.hdr-menu-main.sticky,.hdr-menu-main.slide-in{animation:none!important;transform:none!important}
-.page-content {margin-top: 58px;}
+.hdr-menu-main.sticky,.hdr-menu-main.slide-in{animation:none!important;transform:none!important;position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;z-index:99999!important}
+.page-content {margin-top: 0;}
 
 .pdng-tp-btm {padding-top: 60px !important;padding-bottom: 60px !important;}
 span.e-n-accordion-item-title-header {width: 85%;}
@@ -509,3 +509,16 @@ button.elementskit-menu-close.elementskit-menu-toggler{top: 7px !important;right
 .career-form {padding: 30px;}
 
 }
+/* Contact header top strip fix. */
+body.wwa-live-clone.elementor-page-21 .hdr-menu-main {
+	top: 0 !important;
+	background: #1a1a2e !important;
+}
+body.wwa-live-clone.elementor-page-21 .hdr-menu-top {
+	background: #1a1a2e !important;
+}
+body.wwa-live-clone.elementor-page-21 .page-content {
+	margin-top: 0 !important;
+}
+
+

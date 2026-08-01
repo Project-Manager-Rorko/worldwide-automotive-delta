@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Live-clone mode: inject exact Elementor HTML + CSS from vipaccounts.org/WWA
  * for pixel-accurate layouts without running Elementor.
@@ -15,7 +15,7 @@ define( 'WWA_LIVE_CLONE_URI', WWA_CHILD_URI . '/assets/live-clone' );
 define( 'WWA_LIVE_CLONE_VER', '1.0.0' );
 
 /**
- * Map local page slugs → fragment basename + Elementor page CSS post ID(s).
+ * Map local page slugs â†’ fragment basename + Elementor page CSS post ID(s).
  * Front page uses 'home'.
  */
 function wwa_live_clone_page_map() {
@@ -198,7 +198,7 @@ function wwa_live_clone_get_fragment( $name ) {
 		return '';
 	}
 
-	// Fragments were built with http://wwa.local — rewrite to current site URL.
+	// Fragments were built with http://wwa.local â€” rewrite to current site URL.
 	$home = untrailingslashit( home_url() );
 	$html = str_replace(
 		array(
@@ -222,7 +222,7 @@ function wwa_live_clone_enqueue_assets() {
 		return;
 	}
 
-	// Drop approximate custom chrome styles — live CSS replaces them.
+	// Drop approximate custom chrome styles â€” live CSS replaces them.
 	wp_dequeue_style( 'wwa-header-footer' );
 	wp_dequeue_style( 'wwa-sections' );
 	wp_dequeue_style( 'wwa-inner-pages' );
@@ -346,7 +346,7 @@ function wwa_live_clone_enqueue_assets() {
 			$deps = array( 'wwa-lc-post-' . $post_id );
 		}
 	} else {
-		// Default: still load home page CSS lightly? Skip — only header/footer CSS.
+		// Default: still load home page CSS lightly? Skip â€” only header/footer CSS.
 		$home_css = $dir . '/post-3616.css';
 		if ( is_front_page() && file_exists( $home_css ) ) {
 			wp_enqueue_style( 'wwa-lc-post-3616', $base . '/post-3616.css', $deps, filemtime( $home_css ) );
@@ -402,7 +402,18 @@ function wwa_live_clone_enqueue_assets() {
 		);
 	}
 
-	// Core jQuery must load before Elementor / ElementsKit (fixes "jQuery is not defined").
+		// Focused UI/UX refresh for the contact page and service CTA.
+	$ui_refresh = $dir . '/ui-ux-refresh.css';
+	if ( file_exists( $ui_refresh ) ) {
+		wp_enqueue_style(
+			'wwa-lc-ui-refresh',
+			$base . '/ui-ux-refresh.css',
+			array( 'wwa-lc-site-fixes' ),
+			filemtime( $ui_refresh )
+		);
+	}
+
+// Core jQuery must load before Elementor / ElementsKit (fixes "jQuery is not defined").
 	wwa_live_clone_ensure_jquery();
 
 	// Swiper only when a page actually has media carousels (refurbished listings).
@@ -620,3 +631,7 @@ function wwa_live_clone_print_footer() {
 	}
 	return false;
 }
+
+
+
+

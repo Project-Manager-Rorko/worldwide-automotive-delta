@@ -1265,9 +1265,9 @@ body.wwa-live-clone footer .footer-main-sec-rt .elementor-icon-list-item > a:hov
 	color: #fff !important;
 }
 
-/* Contact column Ã¢â‚¬â€ outline icons (live SVG stroke #FF2D16, not solid fill) */
+/* Footer contact icons should be white. */
 body.wwa-live-clone footer .footer-main-sec-rt-4 .elementor-icon-list-icon {
-	color: #ff2d16 !important;
+	color: #fff !important;
 }
 body.wwa-live-clone footer .footer-main-sec-rt-4 .elementor-icon-list-icon svg {
 	fill: none !important;
@@ -1279,7 +1279,7 @@ body.wwa-live-clone footer .footer-main-sec-rt-4 .elementor-icon-list-icon svg p
 body.wwa-live-clone footer .elementor-element-33a9dc7 .elementor-icon-list-icon svg path,
 body.wwa-live-clone footer .elementor-element-c33aa77 .elementor-icon-list-icon svg path {
 	fill: none !important;
-	stroke: #ff2d16 !important;
+	stroke: #fff !important;
 	stroke-width: 1.66667;
 	stroke-linecap: round;
 	stroke-linejoin: round;
@@ -1528,7 +1528,7 @@ body.wwa-live-clone footer .footer-main-sec-rt {
 body.elementor-page-1648 .e-con:has(> .team-card-updated),
 body.elementor-page-1648 .e-con:has(.team-card-updated),
 body.elementor-page-1648 .elementor.elementor-1648 > .e-con.e-parent:last-of-type {
-	padding-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 /* Bio slide Ã¢â‚¬â€ must sit ABOVE sticky header (header uses ~100050) */
@@ -2272,7 +2272,8 @@ body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-icon svg 
 	height: 16px !important;
 }
 body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-icon svg path {
-	fill: var(--c-red) !important;
+	fill: currentColor !important;
+	stroke: currentColor !important;
 }
 body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-item {
 	align-items: flex-start !important;
@@ -2598,4 +2599,549 @@ body.elementor-page-21 .elementor-sticky__spacer {
 	body.elementor-page-21 .wpcf7-submit {
 		width: 100% !important;
 	}
+}
+/* Contact page cleanup: talent panel, office cards, and header top strip. */
+body.elementor-page-21 .elementor-element-e7cc60f {
+	background: linear-gradient(180deg, #112244 0%, #081423 100%) !important;
+	border: 1px solid rgba(255, 255, 255, 0.08) !important;
+	border-radius: 28px !important;
+	padding: clamp(28px, 4vw, 56px) !important;
+	box-shadow: 0 22px 60px rgba(7, 24, 47, 0.2) !important;
+}
+body.elementor-page-21 .elementor-element-e7cc60f .elementor-heading-title,
+body.elementor-page-21 .elementor-element-e7cc60f p,
+body.elementor-page-21 .elementor-element-e7cc60f .elementor-icon-list-text {
+	color: #ffffff !important;
+}
+body.elementor-page-21 .elementor-element-5a5e7bc {
+	background: transparent !important;
+	padding: 0 !important;
+}
+body.elementor-page-21 .elementor-element-404abc3 .elementor-icon-list-item {
+	display: inline-flex !important;
+	align-items: center !important;
+	gap: 10px !important;
+	padding-left: 0 !important;
+}
+body.elementor-page-21 .elementor-element-404abc3 .elementor-icon-list-text {
+	display: inline-block !important;
+	padding-left: 14px !important;
+	border-left: 3px solid var(--c-red) !important;
+	color: #ffffff !important;
+}
+body.elementor-page-21 .elementor-element-404abc3 .elementor-icon-list-icon {
+	width: 40px !important;
+	height: 40px !important;
+	min-width: 40px !important;
+	min-height: 40px !important;
+	border-radius: 999px !important;
+	background: rgba(236, 38, 51, 0.12) !important;
+	display: grid !important;
+	place-items: center !important;
+	flex: 0 0 40px !important;
+}
+body.elementor-page-21 .elementor-element-404abc3 .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-3446650 .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-e188f58 .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-cb8dd87 .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-7e5483b .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-33a3c7d .elementor-icon-list-icon svg {
+	width: 18px !important;
+	height: 18px !important;
+}
+body.elementor-page-21 .elementor-element-404abc3 .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-3446650 .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-e188f58 .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-cb8dd87 .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-7e5483b .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-33a3c7d .elementor-icon-list-icon svg path {
+	fill: currentColor !important;
+	stroke: currentColor !important;
+}
+body.elementor-page-21 .elementor-element-0ce5444 .elementor-heading-title,
+body.elementor-page-21 .elementor-element-0fd4288 .elementor-heading-title,
+body.elementor-page-21 .elementor-element-68c8ea5 .elementor-heading-title {
+	color: var(--c-navy) !important;
+	font-family: "Geist", system-ui, sans-serif !important;
+	font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem) !important;
+	line-height: 1.12 !important;
+	letter-spacing: -0.03em !important;
+}
+body.elementor-page-21 .elementor-element-3446650 .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-e188f58 .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-cb8dd87 .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-7e5483b .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-33a3c7d .elementor-icon-list-icon {
+	width: 42px !important;
+	height: 42px !important;
+	min-width: 42px !important;
+	min-height: 42px !important;
+	border-radius: 999px !important;
+	background: rgba(236, 38, 51, 0.1) !important;
+	display: grid !important;
+	place-items: center !important;
+	flex: 0 0 42px !important;
+}
+body.elementor-page-21 .elementor-element-2cb371c,
+body.elementor-page-21 .elementor-element-8ab9e8f,
+body.elementor-page-21 .elementor-element-c483d07 {
+	background: #ffffff !important;
+}
+body.elementor-page-21 .elementor-element-12ed5ce,
+body.elementor-page-21 .elementor-element-12ed5ce .elementor-shortcode,
+body.elementor-page-21 .elementor-element-12ed5ce .wpcf7-form,
+body.elementor-page-21 .career-form {
+	border-top: 0 !important;
+	padding-top: 0 !important;
+	margin-top: 0 !important;
+}
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-main,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main {
+	top: 0 !important;
+	background: #1a1a2e !important;
+}
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-top,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top {
+	background: #1a1a2e !important;
+}
+body.wwa-live-clone.elementor-page-21 .page-content,
+body.elementor-page-21 .page-content {
+	margin-top: 0 !important;
+}
+body.wwa-live-clone.elementor-page-21 .hdr-menu-main-sec,
+body.elementor-page-21 .hdr-menu-main-sec {
+	position: relative !important;
+}
+@media (max-width: 1024px) {
+	body.elementor-page-21 .elementor-element-2cb371c,
+	body.elementor-page-21 .elementor-element-8ab9e8f,
+	body.elementor-page-21 .elementor-element-c483d07 {
+		padding-top: 0 !important;
+	}
+}
+/* Plan-completion override: contact cleanup and header normalization. */
+body.elementor-page-21 .elementor-element-306cef6 {
+	background: linear-gradient(180deg, #1a1a2e 0%, #10172b 100%) !important;
+	padding-top: clamp(88px, 10vw, 136px) !important;
+	padding-bottom: clamp(64px, 8vw, 112px) !important;
+}
+body.elementor-page-21 .elementor-element-b1394c3 {
+	gap: clamp(28px, 4.5vw, 56px) !important;
+}
+body.elementor-page-21 .elementor-element-e7cc60f {
+	background: linear-gradient(180deg, #12264b 0%, #081423 100%) !important;
+	border: 1px solid rgba(255, 255, 255, 0.08) !important;
+	padding: clamp(36px, 4.8vw, 64px) !important;
+	border-radius: 28px !important;
+}
+body.elementor-page-21 .elementor-element-e7cc60f::before {
+	top: 14px;
+	right: 14px;
+}
+body.elementor-page-21 .elementor-element-e7cc60f h2.elementor-heading-title,
+body.elementor-page-21 .elementor-element-e7cc60f p.elementor-heading-title,
+body.elementor-page-21 .elementor-element-e7cc60f .elementor-icon-list-text {
+	color: #ffffff !important;
+}
+body.elementor-page-21 .elementor-element-404abc3 .elementor-icon-list-text {
+	padding-left: 16px !important;
+}
+body.elementor-page-21 .elementor-element-2cb371c,
+body.elementor-page-21 .elementor-element-8ab9e8f,
+body.elementor-page-21 .elementor-element-c483d07 {
+	align-self: stretch !important;
+	display: flex !important;
+	flex-direction: column !important;
+	background: #ffffff !important;
+	min-height: 100% !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-widget-image img {
+	height: 220px !important;
+}
+body.elementor-page-21 .elementor-element-92c2164,
+body.elementor-page-21 .elementor-element-d6a998c,
+body.elementor-page-21 .elementor-element-ec378d4 {
+	padding: 28px 28px 32px !important;
+	gap: 16px !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa h3.elementor-heading-title {
+	font-family: "Geist", system-ui, sans-serif !important;
+	font-size: clamp(1.45rem, 1.2rem + 0.8vw, 1.9rem) !important;
+	line-height: 1.08 !important;
+	letter-spacing: -0.03em !important;
+	margin: 0 !important;
+	padding: 0 0 14px !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-icon {
+	width: 46px !important;
+	height: 46px !important;
+	min-width: 46px !important;
+	height: 46px !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-icon svg {
+	width: 20px !important;
+	height: 20px !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-item {
+	align-items: flex-start !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-text {
+	line-height: 1.7 !important;
+}
+body.wwa-live-clone.elementor-page-21 .hdr-menu-main,
+body.elementor-page-21 .hdr-menu-main,
+body.wwa-live-clone.elementor-page-21 .hdr-menu-main.fixed-header,
+body.wwa-live-clone.elementor-page-21 .hdr-menu-main.sticky {
+	top: 0 !important;
+}
+body.wwa-live-clone.elementor-page-21 .hdr-menu-top,
+body.elementor-page-21 .hdr-menu-top {
+	background: #1a1a2e !important;
+}
+body.wwa-live-clone.elementor-page-21 .page-content,
+body.elementor-page-21 .page-content {
+	margin-top: 0 !important;
+}
+/* Talent section spacing tweak */
+body.elementor-page-21 .elementor-element-306cef6 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important;
+}
+/* Final contact page typography + office icon sizing override. */
+body.elementor-page-21,
+body.elementor-page-21 * {
+	font-family: "Geist", system-ui, sans-serif !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-3446650 .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-e188f58 .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-cb8dd87 .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-7e5483b .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-33a3c7d .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-404abc3 .elementor-icon-list-icon {
+	width: 46px !important;
+	height: 46px !important;
+	min-width: 46px !important;
+	min-height: 46px !important;
+	display: flex !important;
+	flex-wrap: wrap;
+	justify-content: center !important;
+	align-items: center !important;
+	padding: 0px !important;
+	border-radius: 999px !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-3446650 .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-e188f58 .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-cb8dd87 .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-7e5483b .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-33a3c7d .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-404abc3 .elementor-icon-list-icon svg {
+	width: 20px !important;
+	height: 20px !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-item {
+	align-items: flex-start !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-text {
+	line-height: 1.7 !important;
+}
+/* Exact Elementor override for the talent section. */
+.elementor-21 .elementor-element.elementor-element-306cef6:not(.elementor-motion-effects-element-type-background),
+.elementor-21 .elementor-element.elementor-element-306cef6 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+	background-color: #FFFFFF !important;
+	padding-top: 80px !important;
+	padding-bottom: 80px !important;
+}
+/* Remove hidden fields container from layout on the contact form. */
+body.elementor-page-21 fieldset.hidden-fields-container {
+	display: none !important;
+	padding: 0 !important;
+	border: 0 !important;
+	width: 0 !important;
+	float: none !important;
+	margin: 0 !important;
+}
+/* Final contact-page header and icon-path override. */
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-main,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main,
+body.wwa-live-clone.elementor-page-21 .hdr-menu-main,
+body.elementor-page-21 .hdr-menu-main,
+body.wwa-live-clone.elementor-page-21 .hdr-menu-main.fixed-header,
+body.wwa-live-clone.elementor-page-21 .hdr-menu-main.sticky {
+	top: 0 !important;
+}
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-top,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top,
+body.wwa-live-clone.elementor-page-21 .hdr-menu-top,
+body.elementor-page-21 .hdr-menu-top {
+	background: #1a1a2e !important;
+}
+body.wwa-live-clone.elementor-page-21 .page-content,
+body.elementor-page-21 .page-content {
+	margin-top: 0 !important;
+}
+body.elementor-page-21 .elementor-element-404abc3 .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-3446650 .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-e188f58 .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-cb8dd87 .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-7e5483b .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-33a3c7d .elementor-icon-list-icon {
+	color: var(--c-red) !important;
+}
+
+
+
+/* Contact page header stabilization and footer icon normalization. */
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header,
+body.elementor-page-21 header.elementor-location-header {
+	position: relative !important;
+	z-index: 100060 !important;
+}
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-main-sec,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main-sec {
+	display: flex !important;
+	flex-direction: column !important;
+	position: relative !important;
+	z-index: 100060 !important;
+}
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-top,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: flex-end !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+	position: relative !important;
+	z-index: 100061 !important;
+	min-height: 76px !important;
+	background: #1a1a2e !important;
+}
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-main,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main {
+	top: 0 !important;
+	left: 0 !important;
+	width: 100% !important;
+}
+body.wwa-live-clone.elementor-page-21 .page-content,
+body.elementor-page-21 .page-content {
+	margin-top: 0 !important;
+}
+body.elementor-page-21 .footer-main-sec-rt-4 .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-33a9dc7 .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-c33aa77 .elementor-icon-list-icon {
+	color: #fff !important;
+}
+body.elementor-page-21 .footer-main-sec-rt-4 .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-33a9dc7 .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-c33aa77 .elementor-icon-list-icon svg path {
+	stroke: #fff !important;
+	fill: none !important;
+}
+
+
+/* Reference-style contact page polish. */
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top * {
+	color: #ffffff !important;
+	opacity: 1 !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon {
+	width: auto !important;
+	height: auto !important;
+	min-width: 0 !important;
+	min-height: 0 !important;
+	background: transparent !important;
+	border: 0 !important;
+	padding: 0 !important;
+	color: #ffffff !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-text {
+	color: #ffffff !important;
+	font-weight: 400 !important;
+	letter-spacing: 0 !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top svg,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top svg path {
+	fill: #ffffff !important;
+	stroke: #ffffff !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main {
+	background: #aeb3b2 !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+}
+body.elementor-page-21 .elementor-element-dd5b6c1 {
+	min-height: clamp(380px, 45vw, 560px) !important;
+	padding-top: clamp(112px, 13vw, 170px) !important;
+	padding-bottom: clamp(96px, 10vw, 132px) !important;
+}
+body.elementor-page-21 .elementor-element-dd5b6c1 .elementor-heading-title {
+	max-width: 10ch !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa {
+	background: #f4f5f8 !important;
+	padding-top: clamp(72px, 8vw, 108px) !important;
+	padding-bottom: clamp(80px, 8vw, 120px) !important;
+}
+body.elementor-page-21 .elementor-element-097f286 {
+	gap: clamp(20px, 2.4vw, 32px) !important;
+}
+body.elementor-page-21 .elementor-element-2cb371c,
+body.elementor-page-21 .elementor-element-8ab9e8f,
+body.elementor-page-21 .elementor-element-c483d07 {
+	border-radius: 24px !important;
+	border: 1px solid rgba(26, 26, 46, 0.08) !important;
+	box-shadow: 0 24px 60px rgba(26, 26, 46, 0.08) !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-widget-image img {
+	height: 210px !important;
+}
+body.elementor-page-21 .elementor-element-92c2164,
+body.elementor-page-21 .elementor-element-d6a998c,
+body.elementor-page-21 .elementor-element-ec378d4 {
+	padding: 30px 30px 34px !important;
+}
+
+/* Contact header visibility pass: force top strip text and SVGs to render white on load. */
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top * {
+	color: #ffffff !important;
+	opacity: 1 !important;
+	text-shadow: none !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon svg,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon svg * {
+	color: #ffffff !important;
+	fill: #ffffff !important;
+	stroke: #ffffff !important;
+	background: transparent !important;
+	border-color: transparent !important;
+	box-shadow: none !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon {
+	width: 25px !important;
+	height: 26px !important;
+	min-width: 25px !important;
+	min-height: 26px !important;
+	padding: 0 !important;
+	margin-right: 10px !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-item {
+	align-items: center !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main {
+	background: #aeb3b2 !important;
+	min-height: 92px !important;
+}
+body.elementor-page-21 .elementor-element-dd5b6c1 {
+	min-height: clamp(500px, 58vw, 650px) !important;
+	padding-top: clamp(120px, 13vw, 172px) !important;
+	padding-bottom: clamp(96px, 10vw, 128px) !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa {
+	padding-top: clamp(78px, 8vw, 112px) !important;
+	padding-bottom: clamp(88px, 8vw, 126px) !important;
+}
+body.elementor-page-21 .elementor-element-097f286 {
+	margin-top: 0 !important;
+}
+
+/* Final contact-page alignment with live reference. */
+body.elementor-page-21 header.elementor-location-header,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main-sec {
+	width: 100% !important;
+	max-width: 100% !important;
+	position: relative !important;
+	z-index: 100080 !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: flex-end !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+	background: #1a1a2e !important;
+	min-height: 76px !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	gap: 24px !important;
+	min-height: 90px !important;
+	padding: 0 clamp(20px, 4vw, 72px) !important;
+	background: #aeb3b2 !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+}
+body.elementor-page-21 header.elementor-location-header .menu-items,
+body.elementor-page-21 header.elementor-location-header .menu-items .elementor-widget-container,
+body.elementor-page-21 header.elementor-location-header .menu-items .ekit-wid-con {
+	width: 100% !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: flex-end !important;
+}
+body.elementor-page-21 .footer-main-sec-rt {
+	--width: 100% !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	gap: 100px !important;
+	flex-wrap: wrap !important;
+}
+body.elementor-page-21 .footer-main-sec-rt-4 .elementor-icon-list-icon,
+body.elementor-page-21 .footer-main-sec-rt-4 .elementor-icon-list-icon svg path,
+body.elementor-page-21 .footer-main-sec-rt-4 .elementor-icon-list-icon svg * {
+	color: #ec2633 !important;
+	fill: #ec2633 !important;
+	stroke: #ec2633 !important;
+}
+body.elementor-page-21 .elementor-element-69f8ecb .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-69f8ecb .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-69f8ecb .elementor-icon-list-icon svg * {
+	color: #ffffff !important;
+	fill: #ffffff !important;
+	stroke: #ffffff !important;
+}
+
+/* Global sticky header fallback for all live-clone pages. */
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main,
+body.wwa-live-clone .hdr-menu-main {
+	position: relative !important;
+	top: auto !important;
+	left: auto !important;
+	right: auto !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	background: #1a1a2e !important;
+	z-index: 9999 !important;
+	transform: none !important;
+}
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main.fixed-header,
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main.sticky,
+body.wwa-live-clone .hdr-menu-main.fixed-header,
+body.wwa-live-clone .hdr-menu-main.sticky {
+	position: fixed !important;
+	top: 0 !important;
+	left: 0 !important;
+	right: 0 !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	background: #1a1a2e !important;
+	z-index: 100500 !important;
+	box-shadow: 0 18px 40px rgba(7, 24, 47, 0.16) !important;
+}
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top,
+body.wwa-live-clone .hdr-menu-top {
+	background: #1a1a2e !important;
+	color: #ffffff !important;
+}
+body.wwa-live-clone .hdr-menu-top *,
+body.wwa-live-clone .hdr-menu-main * {
+	color: #ffffff !important;
+	fill: #ffffff !important;
+	stroke: #ffffff !important;
 }

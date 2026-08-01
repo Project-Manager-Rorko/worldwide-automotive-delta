@@ -1,0 +1,935 @@
+﻿/* UI/UX refresh for the contact page and Build Your Fleet CTA. */
+:root{--wwa-refresh-ink:#101829;--wwa-refresh-navy:#07182f;--wwa-refresh-red:#ec2633;--wwa-refresh-paper:#f5f7fa;--wwa-refresh-line:rgba(16,24,41,.14)}
+
+/* Page background: use the requested dark backdrop across the viewport. */
+body.wwa-live-clone.elementor-page-21{background:#1a1a2e!important}
+
+/* Contact hero: preserve the current banner asset, add stronger contrast and hierarchy. */
+.wwa-live-clone.elementor-page-21 .elementor-element-445621a{min-height:clamp(360px,40vw,560px)!important;padding:clamp(96px,12vw,170px) clamp(24px,7vw,112px) clamp(48px,6vw,88px)!important;background-position:center!important;position:relative;isolation:isolate}
+.wwa-live-clone.elementor-page-21 .elementor-element-445621a:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,24,47,.9),rgba(7,24,47,.62) 48%,rgba(7,24,47,.12));z-index:-1}
+.wwa-live-clone.elementor-page-21 .elementor-element-02d0227{gap:28px!important}
+.wwa-live-clone.elementor-page-21 .elementor-element-616bdc6 .hfe-breadcrumbs{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:.84}
+.wwa-live-clone.elementor-page-21 .elementor-element-0bad4fd .elementor-heading-title{max-width:680px;font-family:var(--font-syne)!important;font-size:clamp(48px,7vw,92px)!important;font-weight:600!important;line-height:.98!important;letter-spacing:-.055em}
+
+/* Contact locations: cards with a calmer surface and clearer scan path. */
+.wwa-live-clone.elementor-page-21 .elementor-element-5ba657a{padding:clamp(64px,8vw,112px) clamp(20px,6vw,96px)!important;background:transparent!important}
+.wwa-live-clone.elementor-page-21 .elementor-element-27d846b{max-width:1480px;margin-inline:auto;gap:24px!important}
+.wwa-live-clone.elementor-page-21 .elementor-element-d351e85,.wwa-live-clone.elementor-page-21 .elementor-element-c483d07{background:var(--wwa-refresh-paper)!important;border:1px solid var(--wwa-refresh-line);border-radius:24px!important;box-shadow:0 18px 50px rgba(16,24,41,.07);overflow:hidden;transition:transform 220ms ease,box-shadow 220ms ease}
+.wwa-live-clone.elementor-page-21 .elementor-element-d351e85:hover,.wwa-live-clone.elementor-page-21 .elementor-element-c483d07:hover{transform:translateY(-4px);box-shadow:0 24px 64px rgba(16,24,41,.12)}
+.wwa-live-clone.elementor-page-21 .elementor-element-e359943 img,.wwa-live-clone.elementor-page-21 .elementor-element-ce4e2fd img{min-height:220px;object-fit:cover;filter:saturate(.86) contrast(1.04)}
+.wwa-live-clone.elementor-page-21 .elementor-element-c56b430,.wwa-live-clone.elementor-page-21 .elementor-element-ec378d4{padding:28px 30px 32px!important}
+.wwa-live-clone.elementor-page-21 .elementor-element-9148db4 .elementor-heading-title,.wwa-live-clone.elementor-page-21 .elementor-element-0fd4288 .elementor-heading-title,.wwa-live-clone.elementor-page-21 .elementor-element-215581f .elementor-heading-title,.wwa-live-clone.elementor-page-21 .elementor-element-68c8ea5 .elementor-heading-title{font-family:var(--font-syne)!important;font-size:clamp(24px,2vw,32px)!important;font-weight:600!important;letter-spacing:-.03em;line-height:1.15!important;color:var(--wwa-refresh-ink)!important}
+.wwa-live-clone.elementor-page-21 .elementor-element-9148db4 .elementor-heading-title,.wwa-live-clone.elementor-page-21 .elementor-element-0fd4288 .elementor-heading-title,.wwa-live-clone.elementor-page-21 .elementor-element-215581f .elementor-heading-title,.wwa-live-clone.elementor-page-21 .elementor-element-68c8ea5 .elementor-heading-title,.wwa-live-clone.elementor-page-21 .elementor-element-5a5e7bc .elementor-heading-title,.wwa-live-clone.elementor-page-21 .elementor-element-5a5e7bc .elementor-icon-list-text,.wwa-live-clone.elementor-page-21 .elementor-element-5a5e7bc p{background:transparent!important}
+.wwa-live-clone.elementor-page-21 .elementor-icon-list-items{display:grid;gap:18px}
+.wwa-live-clone.elementor-page-21 .elementor-icon-list-item{align-items:flex-start}
+.wwa-live-clone.elementor-page-21 .elementor-element-d351e85 .elementor-icon-list-icon,.wwa-live-clone.elementor-page-21 .elementor-element-c483d07 .elementor-icon-list-icon{width:44px;height:44px;min-width:44px;margin-top:2px;margin-right:14px;border-radius:999px;background:rgba(236,38,51,.1);display:grid;place-items:center;flex:0 0 44px}
+.wwa-live-clone.elementor-page-21 .elementor-icon-list-icon svg{width:20px;height:20px;display:block}
+.wwa-live-clone.elementor-page-21 .elementor-icon-list-icon svg path,.wwa-live-clone.elementor-page-21 .elementor-icon-list-icon svg g,[class*="elementor-element-"] .elementor-icon-list-icon svg path{fill:var(--wwa-refresh-red)!important;stroke:var(--wwa-refresh-red)!important}
+.wwa-live-clone.elementor-page-21 .elementor-icon-list-text{font-size:16px!important;line-height:1.7!important;color:var(--wwa-refresh-ink)!important}
+.wwa-live-clone.elementor-page-21 .elementor-element-98740b3 .elementor-heading-title,.wwa-live-clone.elementor-page-21 .elementor-element-4f1c1e7 .elementor-heading-title{font-size:16px!important;line-height:1.75!important;color:rgba(16,24,41,.82)!important}
+
+/* Contact form: visible labels, touch-safe controls and remove the top border line. */
+.wwa-live-clone.elementor-page-21 .elementor-element-306cef6{padding:0 clamp(20px,6vw,96px) clamp(72px,9vw,128px)!important;background:transparent!important}
+.wwa-live-clone.elementor-page-21 .elementor-element-b1394c3{max-width:1480px;margin-inline:auto;gap:clamp(28px,5vw,72px)!important;align-items:stretch}
+.wwa-live-clone.elementor-page-21 .elementor-element-e7cc60f{padding:clamp(28px,4vw,54px)!important;background:var(--wwa-refresh-navy)!important;border-radius:28px!important;position:relative;overflow:hidden}
+.wwa-live-clone.elementor-page-21 .elementor-element-e7cc60f:before{content:"";position:absolute;width:220px;height:220px;right:-90px;top:-90px;border:1px solid rgba(255,255,255,.2);border-radius:50%;box-shadow:0 0 0 28px rgba(255,255,255,.035),0 0 0 56px rgba(255,255,255,.025)}
+.wwa-live-clone.elementor-page-21 .elementor-element-e7cc60f .elementor-heading-title,.wwa-live-clone.elementor-page-21 .elementor-element-e7cc60f p,.wwa-live-clone.elementor-page-21 .elementor-element-e7cc60f a{position:relative;color:#fff!important}
+.wwa-live-clone.elementor-page-21 .elementor-element-5a5e7bc{background:transparent!important}
+.wwa-live-clone.elementor-page-21 .elementor-element-12ed5ce{padding:clamp(24px,4vw,48px)!important;border:1px solid var(--wwa-refresh-line)!important;border-top:0!important;border-radius:28px!important;background:#fff!important;box-shadow:0 22px 60px rgba(16,24,41,.08)}
+.wwa-live-clone.elementor-page-21 .wwa-live-clone .wpcf7-form,.wwa-live-clone.elementor-page-21 .wpcf7-form,.wwa-live-clone.elementor-page-21 .career-form{border-top:0!important;margin-top:0!important;padding-top:0!important}
+.wwa-live-clone.elementor-page-21 .career-form{gap:24px 18px}
+.wwa-live-clone.elementor-page-21 .career-form__field label{color:var(--wwa-refresh-ink)!important;font-size:13px!important;font-weight:600!important;letter-spacing:.04em;text-transform:uppercase}
+.wwa-live-clone.elementor-page-21 .career-form input[type=text],.wwa-live-clone.elementor-page-21 .career-form input[type=email],.wwa-live-clone.elementor-page-21 .career-form input[type=tel],.wwa-live-clone.elementor-page-21 .career-form input[type=file]{min-height:48px;border:0!important;border-bottom:1px solid rgba(16,24,41,.22)!important;border-radius:0!important;padding:10px 0!important;background:transparent!important;color:var(--wwa-refresh-ink)!important;transition:border-color 180ms ease,box-shadow 180ms ease}
+.wwa-live-clone.elementor-page-21 .career-form input:focus{outline:none;border-bottom-color:var(--wwa-refresh-red)!important;box-shadow:0 2px 0 var(--wwa-refresh-red)!important}
+.wwa-live-clone.elementor-page-21 .career-form input[type=submit]{min-height:50px;padding:12px 26px!important;border:1px solid var(--wwa-refresh-red)!important;border-radius:999px!important;background:var(--wwa-refresh-red)!important;font-weight:600!important;transition:transform 180ms ease,background 180ms ease,box-shadow 180ms ease}
+.wwa-live-clone.elementor-page-21 .career-form input[type=submit]:hover,.wwa-live-clone.elementor-page-21 .career-form input[type=submit]:focus-visible{background:#c91e2b!important;box-shadow:0 10px 24px rgba(236,38,51,.24);transform:translateY(-2px)}
+
+/* Service/support CTA: one signature split panel using the current excavator image and copy. */
+.wwa-live-clone.elementor-page-1425 .elementor-element-e298c82{padding:clamp(68px,8vw,120px) clamp(20px,6vw,96px)!important;background:#fff!important}
+.wwa-live-clone.elementor-page-1425 .elementor-element-1a41d17{max-width:1480px;min-height:420px;margin-inline:auto;padding:0!important;gap:0!important;align-items:stretch!important;border-radius:32px!important;background:var(--wwa-refresh-navy)!important;box-shadow:0 28px 80px rgba(7,24,47,.18);overflow:hidden}
+.wwa-live-clone.elementor-page-1425 .elementor-element-a43cf71{width:52%!important;padding:clamp(36px,6vw,86px) clamp(26px,5vw,78px)!important;align-items:flex-start;justify-content:center}
+.wwa-live-clone.elementor-page-1425 .elementor-element-254046b .elementor-heading-title{max-width:560px;font-family:var(--font-syne)!important;font-size:clamp(38px,4.3vw,68px)!important;font-weight:600!important;line-height:1.02!important;letter-spacing:-.05em;color:#fff!important}
+.wwa-live-clone.elementor-page-1425 .elementor-element-06d8068 .elementor-heading-title{max-width:560px;font-size:clamp(16px,1.4vw,20px)!important;line-height:1.6!important;color:rgba(255,255,255,.74)!important}
+.wwa-live-clone.elementor-page-1425 .elementor-element-11f8655{margin-top:20px!important;gap:12px!important}
+.wwa-live-clone.elementor-page-1425 .elementor-element-3722d95 .elementor-button,.wwa-live-clone.elementor-page-1425 .elementor-element-13319dd .elementor-button{min-height:50px;padding:12px 22px!important;font-size:16px!important;font-weight:600!important;transition:transform 180ms ease,background 180ms ease,color 180ms ease,box-shadow 180ms ease}
+.wwa-live-clone.elementor-page-1425 .elementor-element-3722d95 .elementor-button:hover,.wwa-live-clone.elementor-page-1425 .elementor-element-13319dd .elementor-button:hover,.wwa-live-clone.elementor-page-1425 .elementor-element-3722d95 .elementor-button:focus-visible,.wwa-live-clone.elementor-page-1425 .elementor-element-13319dd .elementor-button:focus-visible{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.2)}
+.wwa-live-clone.elementor-page-1425 .elementor-element-a1c2e78{width:48%!important;min-height:420px}
+.wwa-live-clone.elementor-page-1425 .elementor-element-f681f8d,.wwa-live-clone.elementor-page-1425 .elementor-element-f681f8d .elementor-widget-container,.wwa-live-clone.elementor-page-1425 .elementor-element-f681f8d img{height:100%!important}
+.wwa-live-clone.elementor-page-1425 .elementor-element-f681f8d img{width:100%!important;object-fit:cover;filter:saturate(.95) contrast(1.08)}
+
+.wwa-live-clone.elementor-page-21 a:focus-visible,.wwa-live-clone.elementor-page-1425 a:focus-visible{outline:3px solid #f7c948;outline-offset:4px}
+@media(max-width:767px){.wwa-live-clone.elementor-page-21 .elementor-element-0bad4fd .elementor-heading-title{font-size:clamp(48px,15vw,72px)!important}.wwa-live-clone.elementor-page-21 .career-form{grid-template-columns:1fr!important}.wwa-live-clone.elementor-page-21 .career-form__submit{grid-column:auto!important}.wwa-live-clone.elementor-page-21 .elementor-element-e7cc60f,.wwa-live-clone.elementor-page-21 .elementor-element-12ed5ce{border-radius:22px!important}.wwa-live-clone.elementor-page-1425 .elementor-element-a43cf71,.wwa-live-clone.elementor-page-1425 .elementor-element-a1c2e78{width:100%!important}.wwa-live-clone.elementor-page-1425 .elementor-element-a1c2e78{min-height:260px}.wwa-live-clone.elementor-page-1425 .elementor-element-1a41d17{min-height:0;border-radius:24px!important}}
+@media(prefers-reduced-motion:reduce){.wwa-live-clone.elementor-page-21 *,.wwa-live-clone.elementor-page-1425 *{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+/* Final contact-page cascade override so the front end reflects the latest layout. */
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header,
+body.elementor-page-21 header.elementor-location-header {
+	position: relative !important;
+	z-index: 100120 !important;
+}
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-main-sec,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main-sec {
+	display: flex !important;
+	flex-direction: column !important;
+	width: 100% !important;
+	max-width: 100% !important;
+}
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-top,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: flex-end !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+	min-height: 76px !important;
+	background: #1a1a2e !important;
+	color: #ffffff !important;
+}
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-top *,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top * {
+	color: #ffffff !important;
+	fill: #ffffff !important;
+	stroke: #ffffff !important;
+}
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-main,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	gap: 24px !important;
+	min-height: 90px !important;
+	padding: 0 clamp(20px, 4vw, 72px) !important;
+	background: #aeb3b2 !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+	z-index: 100110 !important;
+}
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .menu-items,
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .menu-items .elementor-widget-container,
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .menu-items .ekit-wid-con,
+body.elementor-page-21 header.elementor-location-header .menu-items,
+body.elementor-page-21 header.elementor-location-header .menu-items .elementor-widget-container,
+body.elementor-page-21 header.elementor-location-header .menu-items .ekit-wid-con {
+	width: 100% !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: flex-end !important;
+}
+body.wwa-live-clone.elementor-page-21 .page-content,
+body.elementor-page-21 .page-content {
+	margin-top: 0 !important;
+}
+body.elementor-page-21 .footer-main-sec-rt {
+	--width: 100% !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	gap: 100px !important;
+	flex-wrap: wrap !important;
+}
+body.elementor-page-21 .footer-main-sec-rt-4 .elementor-icon-list-icon,
+body.elementor-page-21 .footer-main-sec-rt-4 .elementor-icon-list-icon svg path,
+body.elementor-page-21 .footer-main-sec-rt-4 .elementor-icon-list-icon svg * {
+	color: #ec2633 !important;
+	fill: #ec2633 !important;
+	stroke: #ec2633 !important;
+}
+body.elementor-page-21 .elementor-element-69f8ecb .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-69f8ecb .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-69f8ecb .elementor-icon-list-icon svg * {
+	color: #ffffff !important;
+	fill: #ffffff !important;
+	stroke: #ffffff !important;
+}
+
+/* Hard fix for the contact header: keep the top bar visible on first paint. */
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header,
+body.elementor-page-21 header.elementor-location-header {
+	position: fixed !important;
+	top: 0 !important;
+	left: 0 !important;
+	right: 0 !important;
+	width: 100% !important;
+	z-index: 100500 !important;
+}
+body.wwa-live-clone.elementor-page-21 .page-content,
+body.elementor-page-21 .page-content {
+	margin-top: 0 !important;
+	padding-top: 160px !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main-sec {
+	display: flex !important;
+	flex-direction: column !important;
+	width: 100% !important;
+	max-width: 100% !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top {
+	min-height: 76px !important;
+	padding: 14px clamp(20px, 4vw, 72px) 12px !important;
+	background: #1a1a2e !important;
+	color: #ffffff !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top * {
+	color: #ffffff !important;
+	fill: #ffffff !important;
+	stroke: #ffffff !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main {
+	min-height: 90px !important;
+	padding: 0 clamp(20px, 4vw, 72px) !important;
+	background: #aeb3b2 !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+	box-shadow: 0 8px 28px rgba(7, 24, 47, 0.08) !important;
+}
+body.elementor-page-21 header.elementor-location-header .menu-items,
+body.elementor-page-21 header.elementor-location-header .menu-items .elementor-widget-container,
+body.elementor-page-21 header.elementor-location-header .menu-items .ekit-wid-con {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: flex-end !important;
+	width: 100% !important;
+}
+
+/* Final contact-page front-end fix: keep the header in flow so the top strip is visible without scroll, and normalize the contact page visuals. */
+body.wwa-live-clone.elementor-page-21,
+body.elementor-page-21 {
+	font-family: "Geist", system-ui, sans-serif !important;
+	background: #1a1a2e !important;
+}
+body.wwa-live-clone.elementor-page-21 *,
+body.elementor-page-21 * {
+	font-family: "Geist", system-ui, sans-serif !important;
+}
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header,
+body.elementor-page-21 header.elementor-location-header {
+	position: relative !important;
+	top: auto !important;
+	left: auto !important;
+	right: auto !important;
+	width: 100% !important;
+	z-index: 100500 !important;
+	overflow: visible !important;
+	transform: none !important;
+}
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-main-sec,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main-sec {
+	display: flex !important;
+	flex-direction: column !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	overflow: visible !important;
+}
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-top,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: flex-end !important;
+	min-height: 76px !important;
+	padding: 14px clamp(20px, 4vw, 72px) 12px !important;
+	background: #1a1a2e !important;
+	color: #ffffff !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-top *,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top * {
+	color: #ffffff !important;
+	fill: #ffffff !important;
+	stroke: #ffffff !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-main,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main {
+	position: relative !important;
+	top: auto !important;
+	left: auto !important;
+	right: auto !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	gap: 24px !important;
+	min-height: 90px !important;
+	padding: 0 clamp(20px, 4vw, 72px) !important;
+	width: 100% !important;
+	background: #aeb3b2 !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+	box-shadow: 0 8px 28px rgba(7, 24, 47, 0.08) !important;
+	transform: none !important;
+}
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .menu-items,
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .menu-items .elementor-widget-container,
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .menu-items .ekit-wid-con,
+body.elementor-page-21 header.elementor-location-header .menu-items,
+body.elementor-page-21 header.elementor-location-header .menu-items .elementor-widget-container,
+body.elementor-page-21 header.elementor-location-header .menu-items .ekit-wid-con {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: flex-end !important;
+	width: 100% !important;
+}
+body.wwa-live-clone.elementor-page-21 .page-content,
+body.elementor-page-21 .page-content {
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+}
+body.elementor-page-21 .elementor-element-306cef6,
+body.wwa-live-clone.elementor-page-21 .elementor-element-306cef6 {
+	background-color: #1a1a2e !important;
+	padding-top: 80px !important;
+	padding-bottom: 80px !important;
+}
+body.elementor-page-21 .elementor-element-306cef6 .elementor-heading-title,
+body.elementor-page-21 .elementor-element-306cef6 p,
+body.elementor-page-21 .elementor-element-306cef6 a {
+	color: #ffffff !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-3446650 .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-e188f58 .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-cb8dd87 .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-7e5483b .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-33a3c7d .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-404abc3 .elementor-icon-list-icon {
+	width: 46px !important;
+	height: 46px !important;
+	min-width: 46px !important;
+	min-height: 46px !important;
+	display: flex !important;
+	flex-wrap: wrap;
+	justify-content: center !important;
+	align-items: center !important;
+	padding: 0px !important;
+	border-radius: 999px !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-3446650 .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-e188f58 .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-cb8dd87 .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-7e5483b .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-33a3c7d .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-404abc3 .elementor-icon-list-icon svg {
+	width: 20px !important;
+	height: 20px !important;
+}
+body.elementor-page-21 .footer-main-sec-rt {
+	--width: 100%;
+	width: 100% !important;
+	justify-content: center !important;
+	align-items: center !important;
+	gap: 100px !important;
+}
+body.elementor-page-21 .footer-main-sec-rt-4 .elementor-icon-list-icon,
+body.elementor-page-21 .footer-main-sec-rt-4 .elementor-icon-list-icon svg path,
+body.elementor-page-21 .footer-main-sec-rt-4 .elementor-icon-list-icon svg * {
+	color: #ec2633 !important;
+	fill: #ec2633 !important;
+	stroke: #ec2633 !important;
+}
+body.elementor-page-21 .elementor-element-69f8ecb .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-69f8ecb .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-69f8ecb .elementor-icon-list-icon svg * {
+	color: #ffffff !important;
+	fill: #ffffff !important;
+	stroke: #ffffff !important;
+}
+
+/* Shared header + footer normalization for all live-clone pages. */
+body.wwa-live-clone header.elementor-location-header,
+body.elementor-page-21 header.elementor-location-header {
+	position: relative !important;
+	top: auto !important;
+	left: auto !important;
+	right: auto !important;
+	width: 100% !important;
+	z-index: 100500 !important;
+	transform: none !important;
+	overflow: visible !important;
+}
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main-sec,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main-sec {
+	display: flex !important;
+	flex-direction: column !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	overflow: visible !important;
+}
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: flex-end !important;
+	min-height: 76px !important;
+	padding: 14px clamp(20px, 4vw, 72px) 12px !important;
+	background: #1a1a2e !important;
+	color: #ffffff !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top *,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top * {
+	color: #ffffff !important;
+	fill: #ffffff !important;
+	stroke: #ffffff !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main {
+	position: relative !important;
+	top: auto !important;
+	left: auto !important;
+	right: auto !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	gap: 24px !important;
+	min-height: 90px !important;
+	padding: 0 clamp(20px, 4vw, 72px) !important;
+	width: 100% !important;
+	background: #aeb3b2 !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+	box-shadow: 0 8px 28px rgba(7, 24, 47, 0.08) !important;
+	transform: none !important;
+}
+body.wwa-live-clone header.elementor-location-header .menu-items,
+body.wwa-live-clone header.elementor-location-header .menu-items .elementor-widget-container,
+body.wwa-live-clone header.elementor-location-header .menu-items .ekit-wid-con,
+body.elementor-page-21 header.elementor-location-header .menu-items,
+body.elementor-page-21 header.elementor-location-header .menu-items .elementor-widget-container,
+body.elementor-page-21 header.elementor-location-header .menu-items .ekit-wid-con {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: flex-end !important;
+	width: 100% !important;
+}
+body.wwa-live-clone .page-content,
+body.elementor-page-21 .page-content {
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+}
+body.wwa-live-clone .footer-main-sec-rt,
+body.elementor-page-21 .footer-main-sec-rt,
+.elementor-element.elementor-element-1d46b54.e-con-full.footer-main-sec-rt.e-flex.e-con.e-child {
+	--width: 100% !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	gap: 100px !important;
+	flex-wrap: wrap !important;
+}
+body.wwa-live-clone .footer-main-sec-rt-4 .elementor-icon-list-icon,
+body.wwa-live-clone .footer-main-sec-rt-4 .elementor-icon-list-icon svg path,
+body.wwa-live-clone .footer-main-sec-rt-4 .elementor-icon-list-icon svg *,
+body.elementor-page-21 .footer-main-sec-rt-4 .elementor-icon-list-icon,
+body.elementor-page-21 .footer-main-sec-rt-4 .elementor-icon-list-icon svg path,
+body.elementor-page-21 .footer-main-sec-rt-4 .elementor-icon-list-icon svg * {
+	color: #ec2633 !important;
+	fill: #ec2633 !important;
+	stroke: #ec2633 !important;
+}
+body.wwa-live-clone .elementor-element-69f8ecb .elementor-icon-list-icon,
+body.wwa-live-clone .elementor-element-69f8ecb .elementor-icon-list-icon svg path,
+body.wwa-live-clone .elementor-element-69f8ecb .elementor-icon-list-icon svg *,
+body.elementor-page-21 .elementor-element-69f8ecb .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-69f8ecb .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-69f8ecb .elementor-icon-list-icon svg * {
+	color: #ffffff !important;
+	fill: #ffffff !important;
+	stroke: #ffffff !important;
+}
+
+/* Contact page final header + hero match for the screenshot reference. */
+body.elementor-page-21 header.elementor-location-header,
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header {
+	background: #1a1a2e !important;
+	border-bottom: 0 !important;
+	box-shadow: none !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top,
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-top,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main,
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-main {
+	background: #1a1a2e !important;
+	color: #ffffff !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top {
+	min-height: 72px !important;
+	padding-top: 14px !important;
+	padding-bottom: 12px !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main {
+	min-height: 94px !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top *,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main * {
+	color: #ffffff !important;
+	fill: #ffffff !important;
+	stroke: #ffffff !important;
+}
+body.elementor-page-21 .elementor-element-445621a {
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: center !important;
+	justify-content: center !important;
+	text-align: center !important;
+	min-height: 152px !important;
+	padding: 26px 20px 30px !important;
+	background: #1a1a2e !important;
+	background-image: none !important;
+	border-top: 1px solid rgba(255, 255, 255, 0.04) !important;
+	border-bottom: 0 !important;
+	gap: 0 !important;
+}
+body.elementor-page-21 .elementor-element-445621a .elementor-element-02d0227 {
+	width: 100% !important;
+	max-width: 100% !important;
+	align-items: center !important;
+	justify-content: center !important;
+	gap: 0 !important;
+}
+body.elementor-page-21 .elementor-element-445621a .elementor-element-616bdc6,
+body.elementor-page-21 .elementor-element-445621a .hfe-breadcrumbs {
+	display: none !important;
+}
+body.elementor-page-21 .elementor-element-445621a .elementor-element-b299f21,
+body.elementor-page-21 .elementor-element-445621a .elementor-element-0bad4fd {
+	width: 100% !important;
+	max-width: 100% !important;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+}
+body.elementor-page-21 .elementor-element-445621a .elementor-heading-title {
+	font-family: "Geist", system-ui, sans-serif !important;
+	font-size: clamp(52px, 4.8vw, 84px) !important;
+	line-height: 1 !important;
+	letter-spacing: -0.05em !important;
+	font-weight: 400 !important;
+	color: #ffffff !important;
+	text-wrap: balance;
+}
+body.elementor-page-21 .elementor-element-445621a .elementor-widget-container {
+	margin: 0 !important;
+}
+body.elementor-page-21 .page-content {
+	padding-top: 0 !important;
+	margin-top: 0 !important;
+}
+
+/* Contact page lock: sticky header, top bar, and equalized office cards. */
+body.elementor-page-21 header.elementor-location-header,
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header {
+	background: #1a1a2e !important;
+	position: relative !important;
+	z-index: 100080 !important;
+	overflow: visible !important;
+	transform: none !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main-sec,
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-main-sec {
+	display: flex !important;
+	flex-direction: column !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	overflow: visible !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top,
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-top {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: flex-end !important;
+	min-height: 72px !important;
+	padding: 14px clamp(20px, 4vw, 72px) 12px !important;
+	background: #1a1a2e !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+	color: #ffffff !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top *,
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-top * {
+	color: #ffffff !important;
+	fill: #ffffff !important;
+	stroke: #ffffff !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main,
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-main {
+	position: relative !important;
+	top: auto !important;
+	left: auto !important;
+	right: auto !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	gap: 24px !important;
+	min-height: 94px !important;
+	padding: 0 clamp(20px, 4vw, 72px) !important;
+	width: 100% !important;
+	background: #1a1a2e !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
+	box-shadow: none !important;
+	transform: none !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main.fixed-header,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main.sticky,
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-main.fixed-header,
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-main.sticky {
+	position: fixed !important;
+	top: 0 !important;
+	left: 0 !important;
+	right: 0 !important;
+	z-index: 100500 !important;
+	width: 100% !important;
+	background: #1a1a2e !important;
+	box-shadow: 0 18px 40px rgba(7, 24, 47, 0.16) !important;
+}
+body.elementor-page-21 header.elementor-location-header .menu-items,
+body.elementor-page-21 header.elementor-location-header .menu-items .elementor-widget-container,
+body.elementor-page-21 header.elementor-location-header .menu-items .ekit-wid-con,
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .menu-items,
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .menu-items .elementor-widget-container,
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .menu-items .ekit-wid-con {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: flex-end !important;
+	width: 100% !important;
+}
+body.elementor-page-21 .page-content,
+body.wwa-live-clone.elementor-page-21 .page-content {
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+}
+body.elementor-page-21 .elementor-element-445621a,
+body.wwa-live-clone.elementor-page-21 .elementor-element-445621a {
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: center !important;
+	justify-content: center !important;
+	text-align: center !important;
+	min-height: clamp(240px, 26vw, 360px) !important;
+	padding: clamp(56px, 7vw, 92px) 20px clamp(42px, 5vw, 70px) !important;
+	background: #1a1a2e !important;
+	background-image: none !important;
+	border-top: 0 !important;
+	border-bottom: 0 !important;
+	gap: 0 !important;
+}
+body.elementor-page-21 .elementor-element-445621a .elementor-element-616bdc6,
+body.elementor-page-21 .elementor-element-445621a .hfe-breadcrumbs,
+body.wwa-live-clone.elementor-page-21 .elementor-element-445621a .elementor-element-616bdc6,
+body.wwa-live-clone.elementor-page-21 .elementor-element-445621a .hfe-breadcrumbs {
+	display: none !important;
+}
+body.elementor-page-21 .elementor-element-445621a .elementor-heading-title,
+body.wwa-live-clone.elementor-page-21 .elementor-element-445621a .elementor-heading-title {
+	font-family: "Geist", system-ui, sans-serif !important;
+	font-size: clamp(52px, 4.8vw, 84px) !important;
+	line-height: 1 !important;
+	letter-spacing: -0.05em !important;
+	font-weight: 400 !important;
+	color: #ffffff !important;
+	text-wrap: balance;
+}
+body.elementor-page-21 .elementor-element-d4322aa,
+body.wwa-live-clone.elementor-page-21 .elementor-element-d4322aa {
+	background: #f4f5f8 !important;
+	padding-top: clamp(72px, 8vw, 108px) !important;
+	padding-bottom: clamp(80px, 8vw, 120px) !important;
+}
+body.elementor-page-21 .elementor-element-097f286,
+body.wwa-live-clone.elementor-page-21 .elementor-element-097f286 {
+	display: grid !important;
+	grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+	gap: clamp(20px, 2.4vw, 32px) !important;
+	align-items: stretch !important;
+	margin-top: 0 !important;
+	font-family: "Geist", system-ui, sans-serif !important;
+}
+body.elementor-page-21 .elementor-element-097f286 *,
+body.wwa-live-clone.elementor-page-21 .elementor-element-097f286 * {
+	font-family: "Geist", system-ui, sans-serif !important;
+}
+body.elementor-page-21 .elementor-element-2cb371c,
+body.elementor-page-21 .elementor-element-8ab9e8f,
+body.elementor-page-21 .elementor-element-c483d07,
+body.wwa-live-clone.elementor-page-21 .elementor-element-2cb371c,
+body.wwa-live-clone.elementor-page-21 .elementor-element-8ab9e8f,
+body.wwa-live-clone.elementor-page-21 .elementor-element-c483d07 {
+	height: 100% !important;
+	min-width: 0 !important;
+	background: #ffffff !important;
+	border-radius: 24px !important;
+	border: 1px solid rgba(26, 26, 46, 0.08) !important;
+	box-shadow: 0 24px 60px rgba(26, 26, 46, 0.08) !important;
+	overflow: hidden !important;
+	display: flex !important;
+	flex-direction: column !important;
+}
+body.elementor-page-21 .elementor-element-2cb371c .elementor-widget-image img,
+body.elementor-page-21 .elementor-element-8ab9e8f .elementor-widget-image img,
+body.elementor-page-21 .elementor-element-c483d07 .elementor-widget-image img,
+body.wwa-live-clone.elementor-page-21 .elementor-element-2cb371c .elementor-widget-image img,
+body.wwa-live-clone.elementor-page-21 .elementor-element-8ab9e8f .elementor-widget-image img,
+body.wwa-live-clone.elementor-page-21 .elementor-element-c483d07 .elementor-widget-image img {
+	display: block !important;
+	width: 100% !important;
+	height: clamp(220px, 18vw, 270px) !important;
+	object-fit: cover !important;
+	object-position: center !important;
+}
+body.elementor-page-21 .elementor-element-2cb371c > .e-con,
+body.elementor-page-21 .elementor-element-8ab9e8f > .e-con,
+body.elementor-page-21 .elementor-element-c483d07 > .e-con,
+body.wwa-live-clone.elementor-page-21 .elementor-element-2cb371c > .e-con,
+body.wwa-live-clone.elementor-page-21 .elementor-element-8ab9e8f > .e-con,
+body.wwa-live-clone.elementor-page-21 .elementor-element-c483d07 > .e-con {
+	padding: 30px 30px 34px !important;
+	gap: 22px !important;
+}
+body.elementor-page-21 .elementor-element-9148db4 .elementor-heading-title,
+body.elementor-page-21 .elementor-element-a1db0fd .elementor-heading-title,
+body.elementor-page-21 .elementor-element-68c8ea5 .elementor-heading-title,
+body.wwa-live-clone.elementor-page-21 .elementor-element-9148db4 .elementor-heading-title,
+body.wwa-live-clone.elementor-page-21 .elementor-element-a1db0fd .elementor-heading-title,
+body.wwa-live-clone.elementor-page-21 .elementor-element-68c8ea5 .elementor-heading-title {
+	font-family: "Geist", system-ui, sans-serif !important;
+	font-size: clamp(28px, 2.15vw, 36px) !important;
+	line-height: 1.15 !important;
+	letter-spacing: -0.04em !important;
+	font-weight: 400 !important;
+	color: #1a1a2e !important;
+	margin: 0 !important;
+	text-wrap: balance;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-items,
+body.wwa-live-clone.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-items {
+	gap: 24px !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-item,
+body.elementor-page-21 .elementor-element-404abc3 .elementor-icon-list-item,
+body.elementor-page-21 .elementor-element-7e5483b .elementor-icon-list-item,
+body.elementor-page-21 .elementor-element-33a3c7d .elementor-icon-list-item,
+body.elementor-page-21 .elementor-element-cb8dd87 .elementor-icon-list-item,
+body.elementor-page-21 .elementor-element-e188f58 .elementor-icon-list-item,
+body.elementor-page-21 .elementor-element-3446650 .elementor-icon-list-item,
+body.wwa-live-clone.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-item,
+body.wwa-live-clone.elementor-page-21 .elementor-element-404abc3 .elementor-icon-list-item,
+body.wwa-live-clone.elementor-page-21 .elementor-element-7e5483b .elementor-icon-list-item,
+body.wwa-live-clone.elementor-page-21 .elementor-element-33a3c7d .elementor-icon-list-item,
+body.wwa-live-clone.elementor-page-21 .elementor-element-cb8dd87 .elementor-icon-list-item,
+body.wwa-live-clone.elementor-page-21 .elementor-element-e188f58 .elementor-icon-list-item,
+body.wwa-live-clone.elementor-page-21 .elementor-element-3446650 .elementor-icon-list-item {
+	font-family: "Geist", system-ui, sans-serif !important;
+	align-items: flex-start !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-404abc3 .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-7e5483b .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-33a3c7d .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-cb8dd87 .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-e188f58 .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-3446650 .elementor-icon-list-icon,
+body.wwa-live-clone.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-icon,
+body.wwa-live-clone.elementor-page-21 .elementor-element-404abc3 .elementor-icon-list-icon,
+body.wwa-live-clone.elementor-page-21 .elementor-element-7e5483b .elementor-icon-list-icon,
+body.wwa-live-clone.elementor-page-21 .elementor-element-33a3c7d .elementor-icon-list-icon,
+body.wwa-live-clone.elementor-page-21 .elementor-element-cb8dd87 .elementor-icon-list-icon,
+body.wwa-live-clone.elementor-page-21 .elementor-element-e188f58 .elementor-icon-list-icon,
+body.wwa-live-clone.elementor-page-21 .elementor-element-3446650 .elementor-icon-list-icon {
+	width: 46px !important;
+	height: 46px !important;
+	min-width: 46px !important;
+	min-height: 46px !important;
+	display: flex !important;
+	flex-wrap: wrap;
+	justify-content: center !important;
+	align-items: center !important;
+	padding: 0px !important;
+	border-radius: 999px !important;
+	background: rgba(26, 26, 46, 0.06) !important;
+	color: #1a1a2e !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-404abc3 .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-7e5483b .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-33a3c7d .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-cb8dd87 .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-e188f58 .elementor-icon-list-icon svg,
+body.elementor-page-21 .elementor-element-3446650 .elementor-icon-list-icon svg,
+body.wwa-live-clone.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-icon svg,
+body.wwa-live-clone.elementor-page-21 .elementor-element-404abc3 .elementor-icon-list-icon svg,
+body.wwa-live-clone.elementor-page-21 .elementor-element-7e5483b .elementor-icon-list-icon svg,
+body.wwa-live-clone.elementor-page-21 .elementor-element-33a3c7d .elementor-icon-list-icon svg,
+body.wwa-live-clone.elementor-page-21 .elementor-element-cb8dd87 .elementor-icon-list-icon svg,
+body.wwa-live-clone.elementor-page-21 .elementor-element-e188f58 .elementor-icon-list-icon svg,
+body.wwa-live-clone.elementor-page-21 .elementor-element-3446650 .elementor-icon-list-icon svg {
+	width: 20px !important;
+	height: 20px !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-404abc3 .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-7e5483b .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-33a3c7d .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-cb8dd87 .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-e188f58 .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-3446650 .elementor-icon-list-icon svg path,
+body.wwa-live-clone.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-icon svg path,
+body.wwa-live-clone.elementor-page-21 .elementor-element-404abc3 .elementor-icon-list-icon svg path,
+body.wwa-live-clone.elementor-page-21 .elementor-element-7e5483b .elementor-icon-list-icon svg path,
+body.wwa-live-clone.elementor-page-21 .elementor-element-33a3c7d .elementor-icon-list-icon svg path,
+body.wwa-live-clone.elementor-page-21 .elementor-element-cb8dd87 .elementor-icon-list-icon svg path,
+body.wwa-live-clone.elementor-page-21 .elementor-element-e188f58 .elementor-icon-list-icon svg path,
+body.wwa-live-clone.elementor-page-21 .elementor-element-3446650 .elementor-icon-list-icon svg path {
+	color: #1a1a2e !important;
+	fill: #1a1a2e !important;
+	stroke: #1a1a2e !important;
+}
+body.elementor-page-21 .footer-main-sec-rt,
+body.wwa-live-clone.elementor-page-21 .footer-main-sec-rt,
+.elementor-element.elementor-element-1d46b54.e-con-full.footer-main-sec-rt.e-flex.e-con.e-child {
+	--width: 100% !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	gap: 100px !important;
+	flex-wrap: wrap !important;
+}
+body.elementor-page-21 .footer-main-sec-rt-4 .elementor-icon-list-icon,
+body.elementor-page-21 .footer-main-sec-rt-4 .elementor-icon-list-icon svg path,
+body.elementor-page-21 .footer-main-sec-rt-4 .elementor-icon-list-icon svg * {
+	color: #ec2633 !important;
+	fill: #ec2633 !important;
+	stroke: #ec2633 !important;
+}
+body.elementor-page-21 .elementor-element-69f8ecb .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-69f8ecb .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-69f8ecb .elementor-icon-list-icon svg * {
+	color: #ffffff !important;
+	fill: #ffffff !important;
+	stroke: #ffffff !important;
+}
+@media (max-width: 1024px) {
+	body.elementor-page-21 .elementor-element-097f286,
+	body.wwa-live-clone.elementor-page-21 .elementor-element-097f286 {
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
+}
+@media (max-width: 767px) {
+	body.elementor-page-21 .elementor-element-097f286,
+	body.wwa-live-clone.elementor-page-21 .elementor-element-097f286 {
+		grid-template-columns: 1fr !important;
+	}
+	body.elementor-page-21 header.elementor-location-header .hdr-menu-top,
+	body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-top {
+		justify-content: flex-start !important;
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
+}
+
+/* Contact office cards: use the real Elementor row/card IDs so the grid cannot collapse. */
+body.elementor-page-21 .elementor-element-27d846b,
+body.wwa-live-clone.elementor-page-21 .elementor-element-27d846b {
+	display: grid !important;
+	grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+	gap: clamp(20px, 2.2vw, 30px) !important;
+	align-items: stretch !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	min-width: 0 !important;
+}
+body.elementor-page-21 .elementor-element-27d846b > *,
+body.wwa-live-clone.elementor-page-21 .elementor-element-27d846b > * {
+	width: 100% !important;
+	max-width: none !important;
+	min-width: 0 !important;
+	flex: 1 1 0 !important;
+}
+body.elementor-page-21 .elementor-element-d351e85,
+body.elementor-page-21 .elementor-element-30c8c37,
+body.elementor-page-21 .elementor-element-b3cfd5a,
+body.wwa-live-clone.elementor-page-21 .elementor-element-d351e85,
+body.wwa-live-clone.elementor-page-21 .elementor-element-30c8c37,
+body.wwa-live-clone.elementor-page-21 .elementor-element-b3cfd5a {
+	width: 100% !important;
+	max-width: none !important;
+	min-width: 0 !important;
+	height: 100% !important;
+	align-self: stretch !important;
+	flex: 1 1 0 !important;
+}
+body.elementor-page-21 .elementor-element-d351e85 .elementor-widget-image img,
+body.elementor-page-21 .elementor-element-30c8c37 .elementor-widget-image img,
+body.elementor-page-21 .elementor-element-b3cfd5a .elementor-widget-image img,
+body.wwa-live-clone.elementor-page-21 .elementor-element-d351e85 .elementor-widget-image img,
+body.wwa-live-clone.elementor-page-21 .elementor-element-30c8c37 .elementor-widget-image img,
+body.wwa-live-clone.elementor-page-21 .elementor-element-b3cfd5a .elementor-widget-image img {
+	display: block !important;
+	width: 100% !important;
+	height: clamp(220px, 18vw, 280px) !important;
+	object-fit: cover !important;
+	object-position: center !important;
+}
+body.elementor-page-21 .elementor-element-d351e85 > .e-con,
+body.elementor-page-21 .elementor-element-30c8c37 > .e-con,
+body.elementor-page-21 .elementor-element-b3cfd5a > .e-con,
+body.wwa-live-clone.elementor-page-21 .elementor-element-d351e85 > .e-con,
+body.wwa-live-clone.elementor-page-21 .elementor-element-30c8c37 > .e-con,
+body.wwa-live-clone.elementor-page-21 .elementor-element-b3cfd5a > .e-con {
+	padding: 30px 30px 34px !important;
+	gap: 22px !important;
+	width: 100% !important;
+	max-width: none !important;
+	min-width: 0 !important;
+}
+body.elementor-page-21 .elementor-element-d351e85 .elementor-heading-title,
+body.elementor-page-21 .elementor-element-30c8c37 .elementor-heading-title,
+body.elementor-page-21 .elementor-element-b3cfd5a .elementor-heading-title,
+body.wwa-live-clone.elementor-page-21 .elementor-element-d351e85 .elementor-heading-title,
+body.wwa-live-clone.elementor-page-21 .elementor-element-30c8c37 .elementor-heading-title,
+body.wwa-live-clone.elementor-page-21 .elementor-element-b3cfd5a .elementor-heading-title {
+	font-family: "Geist", system-ui, sans-serif !important;
+	font-size: clamp(28px, 2.15vw, 36px) !important;
+	line-height: 1.15 !important;
+	letter-spacing: -0.04em !important;
+	font-weight: 400 !important;
+	color: #1a1a2e !important;
+	text-wrap: balance;
+}
+body.elementor-page-21 .elementor-element-d351e85 .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-30c8c37 .elementor-icon-list-icon,
+body.elementor-page-21 .elementor-element-b3cfd5a .elementor-icon-list-icon,
+body.wwa-live-clone.elementor-page-21 .elementor-element-d351e85 .elementor-icon-list-icon,
+body.wwa-live-clone.elementor-page-21 .elementor-element-30c8c37 .elementor-icon-list-icon,
+body.wwa-live-clone.elementor-page-21 .elementor-element-b3cfd5a .elementor-icon-list-icon {
+	width: 46px !important;
+	height: 46px !important;
+	min-width: 46px !important;
+	min-height: 46px !important;
+}
+@media (max-width: 1024px) {
+	body.elementor-page-21 .elementor-element-27d846b,
+	body.wwa-live-clone.elementor-page-21 .elementor-element-27d846b {
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
+}
+@media (max-width: 767px) {
+	body.elementor-page-21 .elementor-element-27d846b,
+	body.wwa-live-clone.elementor-page-21 .elementor-element-27d846b {
+		grid-template-columns: 1fr !important;
+	}
+}

@@ -3,24 +3,24 @@
 	font-style: normal;
 	font-weight: 400;
 	font-display: auto;
-	src: url('/wp-content/uploads/2026/03/Syne-Regular.woff2') format('woff2'),
-		url('/wp-content/uploads/2026/03/Syne-Regular.woff') format('woff');
+	src: url('http://wwa.local/wp-content/uploads/2026/03/Syne-Regular.woff2') format('woff2'),
+		url('http://wwa.local/wp-content/uploads/2026/03/Syne-Regular.woff') format('woff');
 }
 @font-face {
 	font-family: 'Syne';
 	font-style: normal;
 	font-weight: 600;
 	font-display: auto;
-	src: url('/wp-content/uploads/2026/03/Syne-SemiBold.woff2') format('woff2'),
-		url('/wp-content/uploads/2026/03/Syne-SemiBold.woff') format('woff');
+	src: url('http://wwa.local/wp-content/uploads/2026/03/Syne-SemiBold.woff2') format('woff2'),
+		url('http://wwa.local/wp-content/uploads/2026/03/Syne-SemiBold.woff') format('woff');
 }
 @font-face {
 	font-family: 'Syne';
 	font-style: normal;
 	font-weight: 700;
 	font-display: auto;
-	src: url('/wp-content/uploads/2026/03/Syne-Bold.woff2') format('woff2'),
-		url('/wp-content/uploads/2026/03/Syne-Bold.woff') format('woff');
+	src: url('http://wwa.local/wp-content/uploads/2026/03/Syne-Bold.woff2') format('woff2'),
+		url('http://wwa.local/wp-content/uploads/2026/03/Syne-Bold.woff') format('woff');
 }
 /* End Custom Fonts CSS */
 /* Start Custom Fonts CSS */@font-face {
@@ -28,24 +28,24 @@
 	font-style: normal;
 	font-weight: 400;
 	font-display: auto;
-	src: url('/wp-content/uploads/2026/03/Geist-Regular.woff2') format('woff2'),
-		url('/wp-content/uploads/2026/03/Geist-Regular.woff') format('woff');
+	src: url('http://wwa.local/wp-content/uploads/2026/03/Geist-Regular.woff2') format('woff2'),
+		url('http://wwa.local/wp-content/uploads/2026/03/Geist-Regular.woff') format('woff');
 }
 @font-face {
 	font-family: 'Geist';
 	font-style: normal;
 	font-weight: 600;
 	font-display: auto;
-	src: url('/wp-content/uploads/2026/03/Geist-SemiBold.woff2') format('woff2'),
-		url('/wp-content/uploads/2026/03/Geist-SemiBold.woff') format('woff');
+	src: url('http://wwa.local/wp-content/uploads/2026/03/Geist-SemiBold.woff2') format('woff2'),
+		url('http://wwa.local/wp-content/uploads/2026/03/Geist-SemiBold.woff') format('woff');
 }
 @font-face {
 	font-family: 'Geist';
 	font-style: normal;
 	font-weight: 700;
 	font-display: auto;
-	src: url('/wp-content/uploads/2026/03/Geist-Bold.woff2') format('woff2'),
-		url('/wp-content/uploads/2026/03/Geist-Bold.woff') format('woff');
+	src: url('http://wwa.local/wp-content/uploads/2026/03/Geist-Bold.woff2') format('woff2'),
+		url('http://wwa.local/wp-content/uploads/2026/03/Geist-Bold.woff') format('woff');
 }
 @font-face {
 	font-family: 'Geist';
