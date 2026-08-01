@@ -27,3 +27,6 @@ vendor/
 # Dev noise
 **/live-ref/
 **/*.map
+
+# local compare dumps
+wp-content/themes/hello-theme-child-new/assets/live-clone/_cmp/
