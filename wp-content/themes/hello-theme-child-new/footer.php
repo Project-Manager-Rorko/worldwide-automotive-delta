@@ -25,6 +25,8 @@ if ( function_exists( 'wwa_live_clone_print_footer' ) ) {
 if ( function_exists( 'wwa_live_clone_get_fragment' ) ) {
 	$popups = wwa_live_clone_get_fragment( 'popups' );
 	if ( $popups ) {
+		// Keep popup source markup available to the lightweight leadership bio reader.
+		$popups = str_replace( 'data-elementor-type="popup"', 'data-wwa-bio-source="true"', $popups );
 		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo $popups;
 	}

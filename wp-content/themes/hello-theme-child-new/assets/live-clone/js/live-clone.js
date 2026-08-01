@@ -482,6 +482,7 @@
 	function findPopupEl(popupId) {
 		if (!popupId) return null;
 		return (
+			qs('[data-wwa-bio-source="true"][data-elementor-id="' + popupId + '"]') ||
 			qs('[data-elementor-type="popup"][data-elementor-id="' + popupId + '"]') ||
 			qs('.elementor-' + popupId + '[data-elementor-type="popup"]') ||
 			qs('.elementor-' + popupId + '.elementor-location-popup') ||

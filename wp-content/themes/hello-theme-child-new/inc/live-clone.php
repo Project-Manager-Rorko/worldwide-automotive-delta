@@ -216,7 +216,14 @@ function wwa_live_clone_get_fragment( $name ) {
 		return '';
 	}
 
-	return wwa_live_clone_rebase_urls( $html );
+	$html = wwa_live_clone_rebase_urls( $html );
+
+	if ( 'page-refurbished-equipment' === $name ) {
+		$html = str_replace( '1800 209 8600', '+91 94808 49765', $html );
+		$html = str_replace( 'href="#"', 'href="' . esc_url( home_url( '/contact/' ) ) . '"', $html );
+	}
+
+	return $html;
 }
 
 /**
