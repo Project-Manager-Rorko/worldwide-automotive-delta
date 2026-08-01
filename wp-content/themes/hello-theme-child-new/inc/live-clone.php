@@ -606,6 +606,16 @@ function wwa_live_clone_disable_content_filters() {
 add_action( 'wp', 'wwa_live_clone_disable_content_filters' );
 
 /**
+ * WordPress emits a malformed speculationrules tag in this cloned markup.
+ * The site does not need speculative prefetching, so remove that optional
+ * footer output rather than shipping invalid JavaScript to the browser.
+ */
+function wwa_live_clone_disable_speculation_rules() {
+	remove_action( 'wp_footer', 'wp_print_speculation_rules' );
+}
+add_action( 'wp', 'wwa_live_clone_disable_speculation_rules', 1 );
+
+/**
  * If post already has Gutenberg-injected Elementor HTML, leave it.
  * Otherwise fall back to live-clone fragment files.
  */
