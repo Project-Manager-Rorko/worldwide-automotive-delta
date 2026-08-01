@@ -3165,3 +3165,51 @@ body.wwa-live-clone .hdr-menu-main * {
 	fill: #ffffff !important;
 	stroke: #ffffff !important;
 }
+
+/* Home desktop polish: compact chrome, one-viewport hero, balanced sections. */
+@media (min-width: 1025px) {
+	body.home.wwa-live-clone header.elementor-location-header .hdr-menu-top,
+	body.home.wwa-live-clone .hdr-menu-top {
+		height: 54px !important;
+		min-height: 54px !important;
+		box-sizing: border-box !important;
+		padding-top: 8px !important;
+		padding-bottom: 8px !important;
+		background: rgba(26, 26, 46, 0.72) !important;
+		-webkit-backdrop-filter: blur(14px) saturate(120%);
+		backdrop-filter: blur(14px) saturate(120%);
+	}
+	body.home.wwa-live-clone .hdr-menu-top .elementor-icon-list-text {
+		font-size: 14px !important;
+		line-height: 20px !important;
+		font-weight: 500 !important;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+	}
+	body.home.wwa-live-clone header.elementor-location-header .hdr-menu-main,
+	body.home.wwa-live-clone .hdr-menu-main,
+	body.home.wwa-live-clone .hdr-menu-main.fixed-header,
+	body.home.wwa-live-clone .hdr-menu-main.sticky {
+		height: 82px !important;
+		min-height: 82px !important;
+		box-sizing: border-box !important;
+		background: rgba(26, 26, 46, 0.38) !important;
+		-webkit-backdrop-filter: blur(12px) saturate(115%);
+		backdrop-filter: blur(12px) saturate(115%);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.16) !important;
+	}
+	body.home.wwa-live-clone .hdr-menu-main .elementskit-navbar-nav > li > a {
+		color: #ffffff !important;
+		text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	}
+	body.home.wwa-live-clone .hm-bnr-sec {
+		height: calc(100svh - 136px) !important;
+		min-height: calc(100svh - 136px) !important;
+		max-height: none !important;
+	}
+	body.home.wwa-live-clone .hm-scnd-sec > .elementor-element-4254d62 {
+		align-items: center !important;
+	}
+	body.home.wwa-live-clone .Global-Presenc-sec .delta-hm-map-btns {
+		margin-top: 24px !important;
+	}
+}
