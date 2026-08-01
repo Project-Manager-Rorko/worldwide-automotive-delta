@@ -578,6 +578,26 @@ body.wwa-live-clone header.elementor-location-header .elementskit-dropdown-has {
 	position: relative !important;
 }
 
+/* Keep the mobile drawer in the viewport when the clone toggle opens it. */
+@media (max-width: 1024px) {
+	body.wwa-live-clone header.elementor-location-header .hdr-menu-main.mbl .elementskit-menu-container {
+		left: -100% !important;
+		right: auto !important;
+		visibility: hidden !important;
+		opacity: 0 !important;
+		transform: none !important;
+		transition: left var(--wwa-sub-dur) var(--wwa-sub-ease), opacity var(--wwa-sub-dur) ease, visibility var(--wwa-sub-dur) ease !important;
+	}
+	body.wwa-live-clone.ekit-menu-open header.elementor-location-header .hdr-menu-main.mbl .elementskit-menu-container.active,
+	body.wwa-live-clone header.elementor-location-header .hdr-menu-main.mbl .ekit-wid-con.active .elementskit-menu-container,
+	body.wwa-live-clone header.elementor-location-header .hdr-menu-main.mbl .elementskit-menu-container.active {
+		left: 0 !important;
+		visibility: visible !important;
+		opacity: 1 !important;
+		transform: none !important;
+	}
+}
+
 body.wwa-live-clone header.elementor-location-header .elementskit-dropdown-has > a.ekit-menu-nav-link,
 body.wwa-live-clone header.elementor-location-header .elementskit-navbar-nav > li > a {
 	cursor: pointer;
