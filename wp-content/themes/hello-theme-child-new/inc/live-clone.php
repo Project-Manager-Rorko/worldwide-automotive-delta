@@ -204,8 +204,12 @@ function wwa_live_clone_get_fragment( $name ) {
 		array(
 			'http://wwa.local',
 			'https://wwa.local',
+			'http:\\/\\/wwa.local',
+			'https:\\/\\/wwa.local',
 			'http://vipaccounts.org/WWA',
 			'https://vipaccounts.org/WWA',
+			'http:\\/\\/vipaccounts.org\\/WWA',
+			'https:\\/\\/vipaccounts.org\\/WWA',
 		),
 		$home,
 		$html
@@ -478,6 +482,8 @@ add_action( 'wp_enqueue_scripts', 'wwa_live_clone_enqueue_assets', 100 );
 function wwa_live_clone_ensure_jquery() {
 	$jq = includes_url( 'js/jquery/jquery.min.js' );
 	$jm = includes_url( 'js/jquery/jquery-migrate.min.js' );
+	$imagesloaded = ABSPATH . WPINC . '/js/imagesloaded.min.js';
+	$numerator   = WP_CONTENT_DIR . '/plugins/elementor/assets/lib/jquery-numerator/jquery-numerator.min.js';
 
 	// Re-register core handles if missing or broken.
 	if ( ! wp_script_is( 'jquery-core', 'registered' ) ) {
@@ -499,7 +505,26 @@ function wwa_live_clone_ensure_jquery() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'jquery-core' );
 	wp_enqueue_script( 'jquery-migrate' );
+	if ( file_exists( $imagesloaded ) ) {
+		wp_enqueue_script(
+			'wwa-imagesloaded',
+			includes_url( 'js/imagesloaded.min.js' ),
+			array( 'jquery' ),
+			filemtime( $imagesloaded ),
+			false
+		);
+	}
+	if ( file_exists( $numerator ) ) {
+		wp_enqueue_script(
+			'wwa-jquery-numerator',
+			content_url( 'plugins/elementor/assets/lib/jquery-numerator/jquery-numerator.min.js' ),
+			array( 'jquery' ),
+			filemtime( $numerator ),
+			false
+		);
+	}
 }
+
 // Early so plugin scripts that only declare jquery deps can resolve.
 add_action( 'wp_enqueue_scripts', 'wwa_live_clone_ensure_jquery', 1 );
 
@@ -631,7 +656,3 @@ function wwa_live_clone_print_footer() {
 	}
 	return false;
 }
-
-
-
-
