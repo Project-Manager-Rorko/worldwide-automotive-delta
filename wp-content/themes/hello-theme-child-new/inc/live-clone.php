@@ -188,19 +188,9 @@ function wwa_live_clone_has_page() {
 /**
  * Read a fragment file; optionally re-base URLs to current home_url().
  */
-function wwa_live_clone_get_fragment( $name ) {
-	$path = WWA_LIVE_CLONE_DIR . '/fragments/' . $name . '.html';
-	if ( ! file_exists( $path ) ) {
-		return '';
-	}
-	$html = file_get_contents( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
-	if ( false === $html ) {
-		return '';
-	}
-
-	// Fragments were built with http://wwa.local â€” rewrite to current site URL.
+function wwa_live_clone_rebase_urls( $html ) {
 	$home = untrailingslashit( home_url() );
-	$html = str_replace(
+	return str_replace(
 		array(
 			'http://wwa.local',
 			'https://wwa.local',
@@ -214,8 +204,19 @@ function wwa_live_clone_get_fragment( $name ) {
 		$home,
 		$html
 	);
+}
 
-	return $html;
+function wwa_live_clone_get_fragment( $name ) {
+	$path = WWA_LIVE_CLONE_DIR . '/fragments/' . $name . '.html';
+	if ( ! file_exists( $path ) ) {
+		return '';
+	}
+	$html = file_get_contents( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+	if ( false === $html ) {
+		return '';
+	}
+
+	return wwa_live_clone_rebase_urls( $html );
 }
 
 /**
@@ -617,7 +618,7 @@ function wwa_live_clone_the_content( $content ) {
 		str_contains( $content, 'data-elementor-type="wp-page"' )
 		|| str_contains( $content, 'elementor-location-' )
 	) ) {
-		return $content;
+		return wwa_live_clone_rebase_urls( $content );
 	}
 	if ( ! wwa_live_clone_has_page() ) {
 		return $content;
