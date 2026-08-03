@@ -3395,6 +3395,11 @@ body.wwa-live-clone .hdr-menu-main * {
 	stroke: #ffffff !important;
 }
 
+/* Preserve bio source nodes for JS without adding them to document flow. */
+body.wwa-live-clone [data-wwa-bio-source="true"] {
+	display: none !important;
+}
+
 /* Home desktop polish: compact chrome, one-viewport hero, balanced sections. */
 @media (min-width: 1025px) {
 	body.home.wwa-live-clone header.elementor-location-header .hdr-menu-top,
