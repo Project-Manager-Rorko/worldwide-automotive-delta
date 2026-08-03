@@ -704,6 +704,13 @@ body.wwa-live-clone header.elementor-location-header .elementskit-dropdown-has.e
 		background: transparent !important;
 		overflow: visible !important;
 	}
+	body.wwa-live-clone header.elementor-location-header .nav-sub-menu-blk .elementor-widget-icon-list,
+	body.wwa-live-clone header.elementor-location-header .nav-sub-menu-blk .elementor-widget-container,
+	body.wwa-live-clone header.elementor-location-header .nav-sub-menu-blk .elementor-icon-list-items {
+		width: 100% !important;
+		max-width: none !important;
+		margin-left: 0 !important;
+	}
 
 	body.wwa-live-clone header.elementor-location-header .nav-sub-menu li.elementor-icon-list-item {
 		padding: 0 !important;
