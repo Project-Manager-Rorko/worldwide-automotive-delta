@@ -965,10 +965,10 @@ body.wwa-live-clone.elementor-page-21 .elementor-element-b3cfd5a .elementor-icon
 		min-height: 40px !important;
 		max-height: 40px !important;
 		padding: 4px clamp(20px, 4vw, 72px) !important;
-		background: rgba(26, 26, 46, 0.5) !important;
-		background-color: rgba(26, 26, 46, 0.5) !important;
-		-webkit-backdrop-filter: blur(12px) saturate(120%) !important;
-		backdrop-filter: blur(12px) saturate(120%) !important;
+		background: #1a1a2e !important;
+		background-color: #1a1a2e !important;
+		-webkit-backdrop-filter: none !important;
+		backdrop-filter: none !important;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 	}
 	body.home.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-icon-list-text,
@@ -1975,6 +1975,15 @@ body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu
 	flex-direction: row !important;
 	flex-wrap: nowrap !important;
 	gap: 0 !important;
+}
+
+/* Homepage topbar — solid navy (all breakpoints) */
+body.home.wwa-live-clone header.elementor-location-header .hdr-menu-top,
+body.elementor-page-3616 header.elementor-location-header .hdr-menu-top,
+body.home.wwa-live-clone .hdr-menu-top,
+body.elementor-page-3616 .hdr-menu-top {
+	background: #1a1a2e !important;
+	background-color: #1a1a2e !important;
 }
 
 /* Sticky nav glass — all pages EXCEPT homepage (home keeps its own rules) */
