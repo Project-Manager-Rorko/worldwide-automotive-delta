@@ -177,12 +177,18 @@ body.elementor-page-3616 .elementor-element-db52be8 .elementor-heading-title {
 	width: 100%;
 }
 
-/* 2) Hide DIWL pills in Global Presence (desktop + mobile map buttons) */
+/* 2) Global Presence pills — Delta Construction + DIWL stay visible (same design as other map buttons) */
 body.elementor-page-3616 .elementor-element-2705243,
 body.elementor-page-3616 .elementor-element-d7ff123,
 body.elementor-page-3616 .elementor-element-d9ae4f3,
-body.elementor-page-3616 .elementor-element-0287084 {
-	display: none !important;
+body.elementor-page-3616 .elementor-element-0287084,
+body.home.wwa-live-clone .elementor-element-2705243,
+body.home.wwa-live-clone .elementor-element-d7ff123,
+body.home.wwa-live-clone .elementor-element-d9ae4f3,
+body.home.wwa-live-clone .elementor-element-0287084 {
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
 }
 
 /* Leadership — Meet our team section padding bottom (tighter) */
