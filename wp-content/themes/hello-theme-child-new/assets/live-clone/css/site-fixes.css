@@ -956,6 +956,16 @@ body.wwa-live-clone.elementor-page-1425 .elementor-element-a43cf71 {
 
 /* ---- Mobile / tablet luxury accordion panels ---- */
 @media (max-width: 1024px) {
+	body.wwa-live-clone header.elementor-location-header #ekit-megamenu-mobile-menu > ul > li > .elementskit-megamenu-panel {
+		display: none !important;
+	}
+	body.wwa-live-clone header.elementor-location-header #ekit-megamenu-mobile-menu > ul > li.active > .elementskit-megamenu-panel,
+	body.wwa-live-clone header.elementor-location-header #ekit-megamenu-mobile-menu > ul > li.elementskit-open > .elementskit-megamenu-panel,
+	body.wwa-live-clone header.elementor-location-header #ekit-megamenu-mobile-menu > ul > li.ekit-dropdown-open > .elementskit-megamenu-panel,
+	body.wwa-live-clone header.elementor-location-header #ekit-megamenu-mobile-menu > ul > li.wwa-sub-open > .elementskit-megamenu-panel {
+		display: block !important;
+	}
+
 	body.wwa-live-clone header.elementor-location-header #ekit-megamenu-mobile-menu {
 		display: flex !important;
 		flex-direction: column !important;
