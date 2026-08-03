@@ -956,6 +956,11 @@ body.wwa-live-clone.elementor-page-1425 .elementor-element-a43cf71 {
 
 /* ---- Mobile / tablet luxury accordion panels ---- */
 @media (max-width: 1024px) {
+	body.wwa-live-clone header:has(nav.ekit-nav-menu-active) .hdr-menu-main .nav-logo {
+		visibility: hidden !important;
+		pointer-events: none !important;
+	}
+
 	body.wwa-live-clone header.elementor-location-header #ekit-megamenu-mobile-menu > ul > li > .elementskit-megamenu-panel {
 		display: none !important;
 	}
