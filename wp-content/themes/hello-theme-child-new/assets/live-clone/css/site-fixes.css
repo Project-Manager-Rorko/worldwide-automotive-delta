@@ -185,18 +185,18 @@ body.elementor-page-3616 .elementor-element-0287084 {
 	display: none !important;
 }
 
-/* Leadership Ã¢â‚¬â€ Meet our team section padding bottom */
+/* Leadership — Meet our team section padding bottom (tighter) */
 body.elementor-page-1648 .elementor-element-cd15adc,
 body.elementor-page-1648 .elementor-element.elementor-element-cd15adc {
-	padding-bottom: 100px !important;
-	--padding-bottom: 100px !important;
+	padding-bottom: 40px !important;
+	--padding-bottom: 40px !important;
 	margin-bottom: 0 !important;
 }
 @media (max-width: 767px) {
 	body.elementor-page-1648 .elementor-element-cd15adc,
 	body.elementor-page-1648 .elementor-element.elementor-element-cd15adc {
-		padding-bottom: 64px !important;
-		--padding-bottom: 64px !important;
+		padding-bottom: 32px !important;
+		--padding-bottom: 32px !important;
 	}
 }
 
@@ -808,37 +808,209 @@ body.wwa-live-clone header.elementor-location-header .elementskit-dropdown-has.e
 
 /* Scoped page repairs for missing content and uneven Elementor defaults. */
 body.elementor-page-14 .sustainability-bnr-sec {
-	margin-top: -26px !important;
+	margin-top: 0 !important;
 }
 
-body.elementor-page-1648 main {
-	padding-bottom: 72px !important;
+/*
+ * Construction excavator product cards — match mining-excavators design.
+ * Native post-1543.css already mirrors post-1397 (same card IDs/structure).
+ * Only light safety nets so brochure buttons stay visible; no forced 3-col /
+ * min-height / image crop that diverged from mining.
+ */
+body.elementor-page-1543 .elementor-element-ebaa2dc,
+body.elementor-page-1543 .elementor-element-86cfb47 {
+	display: flex !important;
+	flex-direction: row !important;
+	flex-wrap: wrap !important;
+	align-items: stretch !important;
+	justify-content: space-between !important;
+	width: 100% !important;
+	height: auto !important;
+	min-height: 0 !important;
+	max-height: none !important;
+	gap: 26px !important;
+	--gap: 26px 26px !important;
+	box-sizing: border-box !important;
 }
-
 body.elementor-page-1543 .elementor-element-99bc71a,
 body.elementor-page-1543 .elementor-element-a908d3c,
 body.elementor-page-1543 .elementor-element-27f87d5,
-body.elementor-page-1543 .elementor-element-86cfb47,
+body.elementor-page-1543 .elementor-element-3f08a0c,
 body.elementor-page-1543 .elementor-element-90afefd {
-	height: 445.5px !important;
-	min-height: 445.5px !important;
+	display: flex !important;
+	flex-direction: column !important;
+	justify-content: flex-start !important;
+	height: auto !important;
+	min-height: 0 !important;
+	max-height: none !important;
+	/* Let Elementor width vars win (same as mining cards) */
+	width: auto !important;
+	max-width: none !important;
+	flex: 1 1 0 !important;
+	min-width: 0 !important;
+	box-sizing: border-box !important;
+	overflow: visible !important;
+	padding: 16px !important;
+	gap: 26px !important;
+	--gap: 26px 26px !important;
+	border-radius: 16px !important;
+	background-color: #f5f7fa !important;
+}
+/* Stats row stays row like mining post CSS */
+body.elementor-page-1543 .elementor-element-50ea84a,
+body.elementor-page-1543 .elementor-element-b74ff03,
+body.elementor-page-1543 .elementor-element-614e122,
+body.elementor-page-1543 .elementor-element-7406d81,
+body.elementor-page-1543 .elementor-element-dcdcfbc {
+	display: flex !important;
+	flex-direction: row !important;
+	flex-wrap: nowrap !important;
+	justify-content: space-between !important;
+	align-items: flex-start !important;
+	width: 100% !important;
+	--width: 100% !important;
+	gap: 12px !important;
+	min-width: 0 !important;
+}
+body.elementor-page-1543 .elementor-element-50ea84a > .e-con,
+body.elementor-page-1543 .elementor-element-50ea84a > .elementor-element,
+body.elementor-page-1543 .elementor-element-b74ff03 > .e-con,
+body.elementor-page-1543 .elementor-element-b74ff03 > .elementor-element,
+body.elementor-page-1543 .elementor-element-614e122 > .e-con,
+body.elementor-page-1543 .elementor-element-614e122 > .elementor-element,
+body.elementor-page-1543 .elementor-element-7406d81 > .e-con,
+body.elementor-page-1543 .elementor-element-7406d81 > .elementor-element,
+body.elementor-page-1543 .elementor-element-dcdcfbc > .e-con,
+body.elementor-page-1543 .elementor-element-dcdcfbc > .elementor-element {
+	flex: 1 1 0 !important;
+	min-width: 0 !important;
+	width: auto !important;
+	max-width: none !important;
+}
+/* Images: natural height like mining (no forced 180px crop) */
+body.elementor-page-1543 .elementor-element-99bc71a .elementor-widget-image img,
+body.elementor-page-1543 .elementor-element-a908d3c .elementor-widget-image img,
+body.elementor-page-1543 .elementor-element-27f87d5 .elementor-widget-image img,
+body.elementor-page-1543 .elementor-element-3f08a0c .elementor-widget-image img,
+body.elementor-page-1543 .elementor-element-90afefd .elementor-widget-image img {
+	width: 100% !important;
+	height: auto !important;
+	max-height: none !important;
+	object-fit: cover !important;
+	display: block !important;
+}
+/* Download Brochure — match mining red pill */
+body.elementor-page-1543 .elementor-element-99bc71a .elementor-widget-button,
+body.elementor-page-1543 .elementor-element-a908d3c .elementor-widget-button,
+body.elementor-page-1543 .elementor-element-27f87d5 .elementor-widget-button,
+body.elementor-page-1543 .elementor-element-3f08a0c .elementor-widget-button,
+body.elementor-page-1543 .elementor-element-90afefd .elementor-widget-button,
+body.elementor-page-1543 .elementor-element-a26e980,
+body.elementor-page-1543 .elementor-element-2ac5ed1,
+body.elementor-page-1543 .elementor-element-6e35ba4,
+body.elementor-page-1543 .elementor-element-16f6b89,
+body.elementor-page-1543 .elementor-element-378966a {
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+	width: 100% !important;
+}
+body.elementor-page-1543 .elementor-element-99bc71a .elementor-button,
+body.elementor-page-1543 .elementor-element-a908d3c .elementor-button,
+body.elementor-page-1543 .elementor-element-27f87d5 .elementor-button,
+body.elementor-page-1543 .elementor-element-3f08a0c .elementor-button,
+body.elementor-page-1543 .elementor-element-90afefd .elementor-button,
+body.elementor-page-1543 a.elementor-button[download],
+body.elementor-page-1543 a.elementor-button[href*=".pdf"] {
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	background-color: #ec2633 !important;
+	color: #ffffff !important;
+	border: 1px solid #ec2633 !important;
+	border-radius: 100px !important;
+	padding: 10px 16px !important;
+	font-size: 14px !important;
+	font-weight: 600 !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+	width: auto !important;
+	max-width: 100% !important;
+}
+body.elementor-page-1543 a.elementor-button[download] .elementor-button-text,
+body.elementor-page-1543 a.elementor-button[href*=".pdf"] .elementor-button-text {
+	color: #ffffff !important;
+}
+body.elementor-page-1543 a.elementor-button[download]:hover,
+body.elementor-page-1543 a.elementor-button[href*=".pdf"]:hover {
+	background-color: #ffffff !important;
+	color: #ec2633 !important;
+	border-color: #ec2633 !important;
+}
+body.elementor-page-1543 a.elementor-button[download]:hover .elementor-button-text,
+body.elementor-page-1543 a.elementor-button[href*=".pdf"]:hover .elementor-button-text {
+	color: #ec2633 !important;
+}
+@media (max-width: 1024px) {
+	body.elementor-page-1543 .elementor-element-99bc71a,
+	body.elementor-page-1543 .elementor-element-a908d3c,
+	body.elementor-page-1543 .elementor-element-27f87d5,
+	body.elementor-page-1543 .elementor-element-3f08a0c,
+	body.elementor-page-1543 .elementor-element-90afefd {
+		flex: 1 1 calc(50% - 13px) !important;
+		min-width: min(100%, 260px) !important;
+	}
+}
+@media (max-width: 767px) {
+	body.elementor-page-1543 .elementor-element-99bc71a,
+	body.elementor-page-1543 .elementor-element-a908d3c,
+	body.elementor-page-1543 .elementor-element-27f87d5,
+	body.elementor-page-1543 .elementor-element-3f08a0c,
+	body.elementor-page-1543 .elementor-element-90afefd {
+		flex: 1 1 100% !important;
+		width: 100% !important;
+		max-width: 100% !important;
+	}
 }
 
+/* Benefits cards — center content, even internal padding */
 body.elementor-page-1377 .elementor-element-9ada98b,
 body.elementor-page-1377 .elementor-element-1047013,
 body.elementor-page-1377 .elementor-element-16a5bde,
-body.elementor-page-1377 .elementor-element-9f2f1b3 {
+body.elementor-page-1377 .elementor-element-9f2f1b3,
+body.elementor-page-1543 .elementor-element-9ada98b,
+body.elementor-page-1543 .elementor-element-1047013,
+body.elementor-page-1543 .elementor-element-16a5bde,
+body.elementor-page-1543 .elementor-element-9f2f1b3,
+body.wwa-live-clone .elementor-element-9ada98b,
+body.wwa-live-clone .elementor-element-1047013,
+body.wwa-live-clone .elementor-element-16a5bde,
+body.wwa-live-clone .elementor-element-9f2f1b3 {
 	align-items: center !important;
 	justify-content: center !important;
 	text-align: center !important;
 	box-sizing: border-box !important;
-	padding: 32px !important;
+	padding: 28px 24px !important;
+	min-height: 200px !important;
+	height: 100% !important;
+}
+body.wwa-live-clone .elementor-element-9ada98b .elementor-heading-title,
+body.wwa-live-clone .elementor-element-1047013 .elementor-heading-title,
+body.wwa-live-clone .elementor-element-16a5bde .elementor-heading-title,
+body.wwa-live-clone .elementor-element-9f2f1b3 .elementor-heading-title {
+	text-align: center !important;
 }
 
+/* Refurbished — hide duplicate heading + carousel arrows */
 body.elementor-page-3423 .elementor-element-58a3f45,
 body.elementor-page-3423 .elementor-swiper-button-prev,
-body.elementor-page-3423 .elementor-swiper-button-next {
+body.elementor-page-3423 .elementor-swiper-button-next,
+body.elementor-page-3423 .elementor-swiper-button,
+body.elementor-page-3423 .refurbished-equipment-media-slides .elementor-swiper-button {
 	display: none !important;
+	visibility: hidden !important;
+	pointer-events: none !important;
+	opacity: 0 !important;
 }
 
 body.elementor-page-2199 .privacy-policy-sec,
@@ -886,22 +1058,71 @@ body.elementor-page-21 .elementor-element-d4322aa > .elementor-element-097f286 >
 	align-self: stretch !important;
 }
 
-/* Service CTA matches the construction CTA geometry and neutral surface. */
+/* Service CTA — match construction fleet CTA (light panel + image) */
 body.wwa-live-clone.elementor-page-1425 .elementor-element-e298c82 {
-	padding: 0 60px 100px !important;
+	padding: clamp(48px, 6vw, 100px) clamp(20px, 5vw, 80px) !important;
+	background: #ffffff !important;
 }
 body.wwa-live-clone.elementor-page-1425 .elementor-element-1a41d17 {
-	background: #f5f7fa !important;
+	display: flex !important;
+	flex-direction: row !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	max-width: 1480px !important;
+	width: 100% !important;
+	min-height: 0 !important;
+	margin-inline: auto !important;
 	padding: 21px 21px 21px 48px !important;
-	gap: 100px !important;
+	gap: 48px !important;
+	border-radius: 36px !important;
+	background: #f5f7fa !important;
+	background-color: #f5f7fa !important;
+	overflow: hidden !important;
+	box-shadow: none !important;
 }
 body.wwa-live-clone.elementor-page-1425 .elementor-element-a43cf71 {
-	padding: 58px 48px !important;
+	width: 52% !important;
+	padding: 36px 24px !important;
+	justify-content: center !important;
+	align-items: flex-start !important;
+	background: transparent !important;
+}
+body.wwa-live-clone.elementor-page-1425 .elementor-element-a43cf71 .elementor-heading-title,
+body.wwa-live-clone.elementor-page-1425 .elementor-element-254046b .elementor-heading-title {
+	color: #1a1a2e !important;
+}
+body.wwa-live-clone.elementor-page-1425 .elementor-element-06d8068 .elementor-heading-title {
+	color: #4a4a5a !important;
+}
+body.wwa-live-clone.elementor-page-1425 .elementor-element-a1c2e78 {
+	width: 48% !important;
+	min-height: 280px !important;
+	padding: 0 !important;
+	overflow: hidden !important;
+	border-radius: 24px !important;
+}
+body.wwa-live-clone.elementor-page-1425 .elementor-element-a1c2e78 img,
+body.wwa-live-clone.elementor-page-1425 .elementor-element-f681f8d img {
+	width: 100% !important;
+	height: 100% !important;
+	object-fit: cover !important;
+	border-radius: 16px !important;
+}
+body.wwa-live-clone.elementor-page-1425 .elementor-element-3722d95 .elementor-button {
+	background: #ec2633 !important;
+	color: #ffffff !important;
+	border-radius: 100px !important;
+}
+body.wwa-live-clone.elementor-page-1425 .elementor-element-13319dd .elementor-button {
+	background: transparent !important;
+	color: #1a1a2e !important;
+	border: 1px solid #1a1a2e !important;
+	border-radius: 100px !important;
 }
 
 @media (max-width: 1024px) {
 	body.elementor-page-14 .sustainability-bnr-sec {
-		margin-top: -18px !important;
+		margin-top: 0 !important;
 	}
 	body.elementor-page-2199 .privacy-policy-sec,
 	body.elementor-page-2206 .privacy-policy-sec {
@@ -937,13 +1158,7 @@ body.wwa-live-clone.elementor-page-1425 .elementor-element-a43cf71 {
 	}
 }
 
-@media (min-width: 1025px) {
-	body.elementor-page-1543 .elementor-element-ebaa2dc {
-		display: grid !important;
-		grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-		gap: 16px !important;
-	}
-}
+/* Construction product rows use flex like mining (see card block above) */
 
 @media (prefers-reduced-motion: reduce) {
 	body.wwa-live-clone header.elementor-location-header .elementskit-megamenu-panel,
@@ -1794,12 +2009,45 @@ body.wwa-live-clone footer .footer-main-sec-rt {
 }
 
 /* =========================================================
-   2) Leadership bio panel Ã¢â‚¬â€ 50% width, no extra team padding
+   2) Leadership bio panel + team section spacing
    ========================================================= */
+/* Keep breathing room before footer (was zeroed and collapsed into footer) */
+body.elementor-page-1648 .elementor-element-cd15adc,
 body.elementor-page-1648 .e-con:has(> .team-card-updated),
 body.elementor-page-1648 .e-con:has(.team-card-updated),
 body.elementor-page-1648 .elementor.elementor-1648 > .e-con.e-parent:last-of-type {
-    padding-bottom: 0 !important;
+	padding-bottom: 40px !important;
+	--padding-bottom: 40px !important;
+	margin-bottom: 0 !important;
+}
+@media (max-width: 767px) {
+	body.elementor-page-1648 .elementor-element-cd15adc,
+	body.elementor-page-1648 .e-con:has(.team-card-updated),
+	body.elementor-page-1648 .elementor.elementor-1648 > .e-con.e-parent:last-of-type {
+		padding-bottom: 32px !important;
+		--padding-bottom: 32px !important;
+	}
+}
+
+/* Meet our team portraits — force images visible */
+body.elementor-page-1648 .team-card-updated .elementor-widget-image,
+body.elementor-page-1648 .team-card-updated .elementor-widget-image .elementor-widget-container,
+body.elementor-page-1648 .popup-main-sec-blks .elementor-widget-image {
+	display: block !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+body.elementor-page-1648 .team-card-updated .elementor-widget-image img,
+body.elementor-page-1648 .popup-main-sec-blks .elementor-widget-image img {
+	display: block !important;
+	width: 100% !important;
+	height: auto !important;
+	max-width: 100% !important;
+	object-fit: cover !important;
+	opacity: 1 !important;
+	visibility: visible !important;
 }
 
 /* Bio slide Ã¢â‚¬â€ must sit ABOVE sticky header (header uses ~100050) */
@@ -1895,6 +2143,7 @@ body.wwa-bio-open header.elementor-location-header .hdr-menu-main {
 	color: #1a1a2e !important;
 	opacity: 1 !important;
 	visibility: visible !important;
+	display: block !important;
 }
 .wwa-bio-panel .wwa-bio-role {
 	font-size: 1rem !important;
@@ -1903,8 +2152,10 @@ body.wwa-bio-open header.elementor-location-header .hdr-menu-main {
 	margin: 0 0 24px !important;
 	opacity: 1 !important;
 	visibility: visible !important;
+	display: block !important;
 }
 .wwa-bio-panel .wwa-bio-body {
+	display: block !important;
 	font-size: 1.0625rem !important;
 	line-height: 1.7 !important;
 	letter-spacing: 0.01em !important;
@@ -1913,10 +2164,25 @@ body.wwa-bio-open header.elementor-location-header .hdr-menu-main {
 	visibility: visible !important;
 }
 .wwa-bio-panel .wwa-bio-body p {
+	display: block !important;
 	margin: 0 0 1em !important;
 	color: #1b181a !important;
 	font-size: inherit !important;
 	line-height: inherit !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+.wwa-bio-panel .wwa-bio-inner,
+.wwa-bio-panel .wwa-bio-inner * {
+	color: #1b181a !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+.wwa-bio-panel .wwa-bio-name {
+	color: #1a1a2e !important;
+}
+.wwa-bio-panel .wwa-bio-role {
+	color: #555a66 !important;
 }
 .wwa-bio-panel .wwa-bio-body p:last-child {
 	margin-bottom: 0 !important;
@@ -1930,8 +2196,9 @@ body.wwa-bio-open header.elementor-location-header .hdr-menu-main {
 	display: none !important;
 }
 
-/* Hide native Elementor popup chrome on leadership (we use slide panel) */
-body.elementor-page-1648 .elementor-location-popup {
+/* Hide native Elementor popup chrome on leadership (we use slide panel).
+   Bio sources use off-screen rules above — keep non-source popups fully hidden. */
+body.elementor-page-1648 .elementor-location-popup:not([data-wwa-bio-source="true"]) {
 	display: none !important;
 	visibility: hidden !important;
 	pointer-events: none !important;
@@ -3185,7 +3452,7 @@ body.elementor-page-21 header.elementor-location-header .hdr-menu-top {
 	visibility: visible !important;
 	position: relative !important;
 	z-index: 100061 !important;
-	min-height: 76px !important;
+	height: 40px !important; min-height: 40px !important; max-height: 40px !important;
 	background: #1a1a2e !important;
 }
 body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-main,
@@ -3217,11 +3484,14 @@ body.elementor-page-21 header.elementor-location-header .hdr-menu-top * {
 	color: #ffffff !important;
 	opacity: 1 !important;
 }
-body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon {
-	width: auto !important;
-	height: auto !important;
-	min-width: 0 !important;
-	min-height: 0 !important;
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon svg {
+	width: 20px !important;
+	height: 20px !important;
+	min-width: 24px !important;
+	min-height: 21px !important;
+	max-width: 26px !important;
+	max-height: 26px !important;
 	background: transparent !important;
 	border: 0 !important;
 	padding: 0 !important;
@@ -3233,8 +3503,9 @@ body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor
 	letter-spacing: 0 !important;
 }
 body.elementor-page-21 header.elementor-location-header .hdr-menu-top svg,
-body.elementor-page-21 header.elementor-location-header .hdr-menu-top svg path {
-	fill: #ffffff !important;
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top svg path,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top svg * {
+	fill: transparent !important;
 	stroke: #ffffff !important;
 }
 body.elementor-page-21 header.elementor-location-header .hdr-menu-main {
@@ -3284,19 +3555,22 @@ body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor
 body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon svg,
 body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon svg * {
 	color: #ffffff !important;
-	fill: #ffffff !important;
+	fill: transparent !important;
 	stroke: #ffffff !important;
 	background: transparent !important;
 	border-color: transparent !important;
 	box-shadow: none !important;
 }
-body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon {
-	width: 25px !important;
-	height: 26px !important;
-	min-width: 25px !important;
-	min-height: 26px !important;
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon svg {
+	width: 20px !important;
+	height: 20px !important;
+	min-width: 24px !important;
+	min-height: 21px !important;
+	max-width: 26px !important;
+	max-height: 26px !important;
 	padding: 0 !important;
-	margin-right: 10px !important;
+	margin-right: 8px !important;
 }
 body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-item {
 	align-items: center !important;
@@ -3333,7 +3607,7 @@ body.elementor-page-21 header.elementor-location-header .hdr-menu-top {
 	opacity: 1 !important;
 	visibility: visible !important;
 	background: #1a1a2e !important;
-	min-height: 76px !important;
+	height: 40px !important; min-height: 40px !important; max-height: 40px !important;
 }
 body.elementor-page-21 header.elementor-location-header .hdr-menu-main {
 	display: flex !important;
@@ -3378,104 +3652,503 @@ body.elementor-page-21 .elementor-element-69f8ecb .elementor-icon-list-icon svg 
 	stroke: #ffffff !important;
 }
 
-/* Global sticky header fallback for all live-clone pages. */
-body.wwa-live-clone header.elementor-location-header .hdr-menu-main,
-body.wwa-live-clone .hdr-menu-main {
+/* =========================================================
+   GLOBAL HEADER — reference: dark top bar + light-grey main nav
+   (screenshot 2026-08-03 141812). Home keeps glass overlay below.
+   ========================================================= */
+body.wwa-live-clone header.elementor-location-header,
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main-sec {
+	width: 100% !important;
+	max-width: 100% !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	background: transparent !important;
+	box-shadow: none !important;
+}
+
+/* Top utility bar — dark navy */
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top,
+body.wwa-live-clone .hdr-menu-top {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: flex-end !important;
+	height: 40px !important;
+	min-height: 40px !important;
+	max-height: 40px !important;
+	padding: 4px clamp(20px, 4vw, 72px) !important;
+	--padding-top: 4px !important;
+	--padding-bottom: 4px !important;
+	background: #1a1a2e !important;
+	background-color: #1a1a2e !important;
+	background-image: none !important;
+	color: #ffffff !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+	box-sizing: border-box !important;
+}
+body.wwa-live-clone .hdr-menu-top .elementor-icon-list-text,
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-icon-list-text {
+	color: #ffffff !important;
+	font-size: 13px !important;
+	line-height: 18px !important;
+	font-weight: 500 !important;
+}
+
+/* Main nav bar — light grey (reference) on all non-home pages */
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) header.elementor-location-header .hdr-menu-main,
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) .hdr-menu-main,
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) .hdr-menu-main.fixed-header,
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) .hdr-menu-main.sticky {
 	position: relative !important;
 	top: auto !important;
 	left: auto !important;
 	right: auto !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: space-between !important;
 	width: 100% !important;
 	max-width: 100% !important;
-	background: #1a1a2e !important;
+	height: 72px !important;
+	min-height: 72px !important;
+	max-height: 72px !important;
+	padding: 0 clamp(20px, 4vw, 72px) !important;
+	background: #aeb3b2 !important;
+	background-color: #aeb3b2 !important;
+	background-image: none !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+	box-shadow: none !important;
 	z-index: 9999 !important;
 	transform: none !important;
+	box-sizing: border-box !important;
 }
-body.wwa-live-clone header.elementor-location-header .hdr-menu-main.fixed-header,
-body.wwa-live-clone header.elementor-location-header .hdr-menu-main.sticky,
-body.wwa-live-clone .hdr-menu-main.fixed-header,
-body.wwa-live-clone .hdr-menu-main.sticky {
+/* Sticky/scrolled: denser grey so content scrolls under cleanly */
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) header.elementor-location-header .hdr-menu-main.fixed-header,
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) header.elementor-location-header .hdr-menu-main.sticky,
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) .hdr-menu-main.fixed-header,
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) .hdr-menu-main.sticky {
 	position: fixed !important;
 	top: 0 !important;
 	left: 0 !important;
 	right: 0 !important;
-	width: 100% !important;
-	max-width: 100% !important;
-	background: #1a1a2e !important;
 	z-index: 100500 !important;
-	box-shadow: 0 18px 40px rgba(7, 24, 47, 0.16) !important;
-}
-body.wwa-live-clone header.elementor-location-header .hdr-menu-top,
-body.wwa-live-clone .hdr-menu-top {
-	background: #1a1a2e !important;
-	color: #ffffff !important;
-}
-body.wwa-live-clone .hdr-menu-top *,
-body.wwa-live-clone .hdr-menu-main * {
-	color: #ffffff !important;
-	fill: #ffffff !important;
-	stroke: #ffffff !important;
+	background: #aeb3b2 !important;
+	background-color: #aeb3b2 !important;
+	box-shadow: 0 12px 28px rgba(7, 12, 24, 0.14) !important;
 }
 
-/* Preserve bio source nodes for JS without adding them to document flow. */
-body.wwa-live-clone [data-wwa-bio-source="true"] {
-	display: none !important;
+/* White nav labels on grey bar */
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) .hdr-menu-main .elementskit-navbar-nav > li > a,
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) .hdr-menu-main a.ekit-menu-nav-link,
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) .hdr-menu-main .elementskit-submenu-indicator {
+	color: #ffffff !important;
+	opacity: 1 !important;
+	font-size: 15px !important;
+	font-weight: 600 !important;
+	letter-spacing: 0.02em !important;
+}
+body.wwa-live-clone .hdr-menu-top * {
+	color: #ffffff !important;
+}
+
+/* Red Contact Us pill — all pages */
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main li.btn.btn-red,
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main li.btn.btn-red > a,
+body.wwa-live-clone .hdr-menu-main li.btn.btn-red,
+body.wwa-live-clone .hdr-menu-main li.btn.btn-red > a {
+	background: #ec2633 !important;
+	background-color: #ec2633 !important;
+	color: #ffffff !important;
+	border-radius: 999px !important;
+	padding: 10px 22px !important;
+	margin: 0 0 0 8px !important;
+	border: 0 !important;
+	box-shadow: none !important;
+	text-shadow: none !important;
+	line-height: 1.2 !important;
+}
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main li.btn.btn-red > a:hover,
+body.wwa-live-clone .hdr-menu-main li.btn.btn-red > a:hover {
+	background: #d41f2b !important;
+	background-color: #d41f2b !important;
+	color: #ffffff !important;
+}
+
+/* Logo visible on grey bar */
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) .hdr-menu-main .nav-logo img {
+	filter: none !important;
+	max-height: 44px !important;
+	width: auto !important;
+}
+
+/* =========================================================
+   Header top-bar icons — match homepage on ALL pages
+   26×26, fill transparent (outline/stroke icons only)
+   ========================================================= */
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon,
+body.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon,
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon svg,
+body.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon svg {
+	width: 20px !important;
+	height: 20px !important;
+	min-width: 24px !important;
+	min-height: 21px !important;
+	max-width: 26px !important;
+	max-height: 26px !important;
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	background: transparent !important;
+	border: 0 !important;
+	box-shadow: none !important;
+}
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon svg,
+body.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon svg {
+	display: block !important;
+	flex: 0 0 20px !important;
+}
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon svg *,
+body.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon svg *,
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon svg path,
+body.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon svg path,
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon svg g,
+body.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon svg g {
+	fill: transparent !important;
+	stroke: #ffffff !important;
+	color: #ffffff !important;
+}
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-icon-list-item,
+body.wwa-live-clone .hdr-menu-top .elementor-icon-list-item {
+	align-items: center !important;
+	gap: 8px !important;
+}
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon,
+body.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon {
+	margin-right: 8px !important;
+}
+
+/* Nav submenu chevrons stay stroke/outline style too */
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main .elementskit-submenu-indicator,
+body.wwa-live-clone .hdr-menu-main .elementskit-submenu-indicator {
+	color: #ffffff !important;
+	fill: transparent !important;
+}
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main .elementskit-submenu-indicator svg,
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main .elementskit-submenu-indicator svg * {
+	fill: transparent !important;
+	stroke: #ffffff !important;
+	width: 12px !important;
+	height: 12px !important;
+}
+
+/* Keep bio source nodes in the DOM for text extraction, but off-screen (not display:none). */
+body.wwa-live-clone [data-wwa-bio-source="true"],
+body.elementor-page-1648 .elementor-location-popup[data-wwa-bio-source="true"],
+body.wwa-live-clone .elementor-location-popup[data-wwa-bio-source="true"] {
+	position: absolute !important;
+	left: -99999px !important;
+	top: 0 !important;
+	width: 1px !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	opacity: 0 !important;
+	visibility: hidden !important;
+	pointer-events: none !important;
+	display: block !important;
+	clip: rect(0, 0, 0, 0) !important;
 }
 
 /* Home desktop polish: compact chrome, one-viewport hero, balanced sections. */
 @media (min-width: 1025px) {
+	/* 1) Top utility bar (email / phone) — tighter */
 	body.home.wwa-live-clone header.elementor-location-header .hdr-menu-top,
-	body.home.wwa-live-clone .hdr-menu-top {
-		height: 54px !important;
-		min-height: 54px !important;
+	body.home.wwa-live-clone .hdr-menu-top,
+	body.elementor-page-3616 header.elementor-location-header .hdr-menu-top {
+		height: 40px !important;
+		min-height: 40px !important;
+		max-height: 40px !important;
 		box-sizing: border-box !important;
-		padding-top: 8px !important;
-		padding-bottom: 8px !important;
-		background: rgba(26, 26, 46, 0.72) !important;
-		-webkit-backdrop-filter: blur(14px) saturate(120%);
-		backdrop-filter: blur(14px) saturate(120%);
+		padding-top: 4px !important;
+		padding-bottom: 4px !important;
+		--padding-top: 4px !important;
+		--padding-bottom: 4px !important;
+		background-color: rgba(26, 26, 46, 0.55) !important;
+		background-image: none !important;
+		-webkit-backdrop-filter: blur(10px) saturate(120%);
+		backdrop-filter: blur(10px) saturate(120%);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 	}
-	body.home.wwa-live-clone .hdr-menu-top .elementor-icon-list-text {
-		font-size: 14px !important;
-		line-height: 20px !important;
+	body.home.wwa-live-clone .hdr-menu-top .elementor-icon-list-text,
+	body.elementor-page-3616 .hdr-menu-top .elementor-icon-list-text {
+		font-size: 13px !important;
+		line-height: 18px !important;
 		font-weight: 500 !important;
-		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+		color: rgba(255, 255, 255, 0.95) !important;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
 	}
+	body.home.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon,
+	body.elementor-page-3616 .hdr-menu-top .elementor-icon-list-icon,
+	body.home.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon svg,
+	body.elementor-page-3616 .hdr-menu-top .elementor-icon-list-icon svg {
+		width: 20px !important;
+		height: 20px !important;
+		min-width: 24px !important;
+		min-height: 21px !important;
+		max-width: 26px !important;
+		max-height: 26px !important;
+		padding: 0 !important;
+	}
+	body.home.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon svg *,
+	body.elementor-page-3616 .hdr-menu-top .elementor-icon-list-icon svg *,
+	body.home.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon svg path,
+	body.elementor-page-3616 .hdr-menu-top .elementor-icon-list-icon svg path {
+		fill: transparent !important;
+		stroke: #ffffff !important;
+	}
+	body.home.wwa-live-clone .hdr-menu-top .elementor-icon-list-item,
+	body.elementor-page-3616 .hdr-menu-top .elementor-icon-list-item {
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
+
+	/* Main nav — more transparent glass + high-contrast labels */
 	body.home.wwa-live-clone header.elementor-location-header .hdr-menu-main,
 	body.home.wwa-live-clone .hdr-menu-main,
 	body.home.wwa-live-clone .hdr-menu-main.fixed-header,
-	body.home.wwa-live-clone .hdr-menu-main.sticky {
-		height: 82px !important;
-		min-height: 82px !important;
+	body.home.wwa-live-clone .hdr-menu-main.sticky,
+	body.elementor-page-3616 header.elementor-location-header .hdr-menu-main,
+	body.elementor-page-3616 .hdr-menu-main {
+		height: 72px !important;
+		min-height: 72px !important;
+		max-height: 72px !important;
 		box-sizing: border-box !important;
-		background: rgba(26, 26, 46, 0.38) !important;
-		-webkit-backdrop-filter: blur(12px) saturate(115%);
-		backdrop-filter: blur(12px) saturate(115%);
-		border-bottom: 1px solid rgba(255, 255, 255, 0.16) !important;
+		background-color: rgba(26, 26, 46, 0.22) !important;
+		background-image: none !important;
+		-webkit-backdrop-filter: blur(16px) saturate(130%);
+		backdrop-filter: blur(16px) saturate(130%);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
+		box-shadow: none !important;
 	}
-	body.home.wwa-live-clone .hdr-menu-main .elementskit-navbar-nav > li > a {
+	/* When scrolled / fixed — slightly denser for readability over content */
+	body.home.wwa-live-clone .hdr-menu-main.fixed-header,
+	body.home.wwa-live-clone .hdr-menu-main.sticky,
+	body.elementor-page-3616 .hdr-menu-main.fixed-header,
+	body.elementor-page-3616 .hdr-menu-main.sticky {
+		background-color: rgba(26, 26, 46, 0.78) !important;
+		box-shadow: 0 12px 28px rgba(7, 12, 24, 0.22) !important;
+	}
+	body.home.wwa-live-clone .hdr-menu-main .elementskit-navbar-nav > li > a,
+	body.elementor-page-3616 .hdr-menu-main .elementskit-navbar-nav > li > a,
+	body.home.wwa-live-clone .hdr-menu-main .elementskit-navbar-nav > li > a .elementskit-nav-link--text,
+	body.elementor-page-3616 .hdr-menu-main .ekit-menu-nav-link {
 		color: #ffffff !important;
-		text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+		font-size: 15px !important;
+		font-weight: 600 !important;
+		letter-spacing: 0.02em !important;
+		line-height: 1.2 !important;
+		opacity: 1 !important;
+		text-shadow:
+			0 1px 2px rgba(0, 0, 0, 0.55),
+			0 0 12px rgba(0, 0, 0, 0.25);
 	}
-	body.home.wwa-live-clone .hm-bnr-sec {
-		height: calc(100svh - 136px) !important;
-		min-height: calc(100svh - 136px) !important;
-		max-height: none !important;
+	body.home.wwa-live-clone .hdr-menu-main .elementskit-navbar-nav > li > a:hover,
+	body.elementor-page-3616 .hdr-menu-main .elementskit-navbar-nav > li > a:hover {
+		color: #ffffff !important;
+		opacity: 1 !important;
 	}
-	body.home.wwa-live-clone .hm-scnd-sec > .elementor-element-4254d62 {
+	body.home.wwa-live-clone .hdr-menu-main .elementskit-submenu-indicator,
+	body.elementor-page-3616 .hdr-menu-main .elementskit-submenu-indicator {
+		color: #ffffff !important;
+		opacity: 0.95 !important;
+	}
+
+	/* 2) Hero fills remaining viewport — desktop banner ONLY (never force mobile hero visible) */
+	body.home.wwa-live-clone .hm-bnr-sec.elementor-element-429593c,
+	body.elementor-page-3616 .hm-bnr-sec.elementor-element-429593c,
+	body.elementor-page-3616 .elementor-element-429593c.hm-bnr-sec {
+		height: calc(100svh - 112px) !important;
+		min-height: calc(100svh - 112px) !important;
+		max-height: calc(100svh - 112px) !important;
+		--min-height: calc(100svh - 112px) !important;
+		box-sizing: border-box !important;
+		padding-top: 0 !important;
+		--padding-top: 24px !important;
+		padding-bottom: clamp(28px, 4vh, 48px) !important;
+		--padding-bottom: clamp(28px, 4vh, 48px) !important;
+		display: flex !important;
+		flex-direction: column !important;
+		justify-content: flex-end !important;
+		align-items: flex-start !important;
+		overflow: hidden !important;
+	}
+	/* Hide mobile/tablet home hero on desktop/laptop (display:flex above was overriding Elementor) */
+	body.home.wwa-live-clone .hm-bnr-sec.elementor-hidden-desktop,
+	body.elementor-page-3616 .hm-bnr-sec.elementor-hidden-desktop,
+	body.elementor-page-3616 .elementor-element-6edd316.hm-bnr-sec,
+	body.elementor-page-3616 .elementor-element-6edd316 {
+		display: none !important;
+		visibility: hidden !important;
+		height: 0 !important;
+		min-height: 0 !important;
+		max-height: 0 !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		overflow: hidden !important;
+		pointer-events: none !important;
+	}
+
+	/* 3) At a Glance — middle-align text column to image */
+	body.home.wwa-live-clone .hm-scnd-sec .elementor-element-4254d62,
+	body.elementor-page-3616 .hm-scnd-sec .elementor-element-4254d62,
+	body.elementor-page-3616 .elementor-element-4254d62 {
+		display: flex !important;
+		flex-direction: row !important;
 		align-items: center !important;
+		--align-items: center !important;
+		justify-content: space-between !important;
 	}
-	body.home.wwa-live-clone .Global-Presenc-sec .delta-hm-map-btns {
-		margin-top: 24px !important;
+	body.home.wwa-live-clone .hm-scnd-sec .elementor-element-203375f,
+	body.elementor-page-3616 .elementor-element-203375f {
+		display: flex !important;
+		flex-direction: column !important;
+		justify-content: center !important;
+		--justify-content: center !important;
+		align-self: center !important;
+		--container-widget-align-self: center !important;
+	}
+	body.home.wwa-live-clone .hm-scnd-sec .elementor-element-fc66c4a,
+	body.elementor-page-3616 .elementor-element-fc66c4a {
+		align-self: center !important;
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+
+	/* 4) Global Presence — map tabs sit closer under the map */
+	body.home.wwa-live-clone .Global-Presenc-sec .delta-hm-map-btns,
+	body.elementor-page-3616 .Global-Presenc-sec .delta-hm-map-btns,
+	body.elementor-page-3616 .elementor-element-e6cb08c.delta-hm-map-btns,
+	body.elementor-page-3616 .elementor-element-e6cb08c {
+		position: relative !important;
+		z-index: 2 !important;
+		margin-top: -39px !important;
+		margin-bottom: 8px !important;
+		padding-top: 0 !important;
+		--margin-top: -39px !important;
+		--padding-top: 0 !important;
+		top: auto !important;
+		bottom: auto !important;
+		transform: none !important;
+		clear: both !important;
+		width: 100% !important;
+	}
+	body.home.wwa-live-clone .Global-Presenc-sec .container-dot-animation,
+	body.elementor-page-3616 .Global-Presenc-sec .container-dot-animation {
+		margin-bottom: 8px !important;
+		position: relative !important;
+		z-index: 1 !important;
+	}
+	body.home.wwa-live-clone .Global-Presenc-sec .elementor-element-9af9234,
+	body.elementor-page-3616 .elementor-element-9af9234 {
+		margin-bottom: 0 !important;
+		padding-bottom: 0 !important;
 	}
 }
 
 /* Final page-fix cascade: these must follow the imported Elementor overrides. */
-body.elementor-page-14 .sustainability-bnr-sec {
-	margin-top: -26px !important;
+
+/* Kill float-clear gaps between header and page content (live-theme floats hdr-menu-main) */
+body.wwa-live-clone header.elementor-location-header,
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main-sec,
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main,
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top,
+body.wwa-live-clone .hdr-menu-main,
+body.wwa-live-clone .hdr-menu-top {
+	float: none !important;
 }
-body.elementor-page-1648 main {
-	padding-bottom: 72px !important;
+body.wwa-live-clone main.site-main,
+body.wwa-live-clone .page-content,
+body.wwa-live-clone .site-main .page-content {
+	clear: both !important;
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+	border-top: 0 !important;
+}
+
+/* Who we are — kill white gap between menu and hero banner */
+body.elementor-page-14 main.site-main,
+body.elementor-page-14 .page-content,
+body.elementor-page-14 article,
+body.elementor-page-14 .elementor.elementor-14,
+body.elementor-page-14 .elementor-14,
+body.elementor-page-14 .elementor-14 > .e-con:first-child,
+body.elementor-page-14 .elementor-14 > .elementor-element:first-child {
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+	--margin-top: 0px !important;
+	--padding-top: 0px !important;
+}
+body.elementor-page-14 .sustainability-bnr-sec,
+body.elementor-page-14 .elementor-element-6d1c31f.sustainability-bnr-sec,
+body.elementor-page-14 .elementor-element-6d1c31f {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	--margin-top: 0px !important;
+	clear: both !important;
+	/* Keep content inset under header chrome, but no external white strip */
+	position: relative !important;
+}
+body.elementor-page-14 header.elementor-location-header + *,
+body.elementor-page-14 header.elementor-location-header + main,
+body.elementor-page-14 header.elementor-location-header ~ main {
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+}
+/* Collapse any empty text nodes / pseudo gaps before first section */
+body.elementor-page-14 .page-content::before,
+body.elementor-page-14 main.site-main::before,
+body.elementor-page-14 .elementor-14::before {
+	content: none !important;
+	display: none !important;
+}
+
+/* Tablet/mobile: still only one home hero (desktop hero is hidden-mobile/tablet) */
+@media (max-width: 1024px) {
+	body.home.wwa-live-clone .hm-bnr-sec.elementor-hidden-mobile,
+	body.home.wwa-live-clone .hm-bnr-sec.elementor-hidden-tablet,
+	body.elementor-page-3616 .hm-bnr-sec.elementor-hidden-mobile,
+	body.elementor-page-3616 .hm-bnr-sec.elementor-hidden-tablet,
+	body.elementor-page-3616 .elementor-element-429593c.hm-bnr-sec,
+	body.elementor-page-3616 .elementor-element-429593c {
+		display: none !important;
+		visibility: hidden !important;
+		height: 0 !important;
+		min-height: 0 !important;
+		max-height: 0 !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		overflow: hidden !important;
+		pointer-events: none !important;
+	}
+	body.home.wwa-live-clone .hm-bnr-sec.elementor-element-6edd316,
+	body.elementor-page-3616 .hm-bnr-sec.elementor-element-6edd316,
+	body.elementor-page-3616 .elementor-element-6edd316.hm-bnr-sec {
+		display: flex !important;
+		visibility: visible !important;
+		height: auto !important;
+		min-height: min(85vh, 720px) !important;
+		max-height: none !important;
+		pointer-events: auto !important;
+	}
+}
+
+body.elementor-page-1648 main,
+body.elementor-page-1648 main.site-main {
+	padding-bottom: 0 !important;
+}
+body.elementor-page-1648 footer.elementor-location-footer,
+body.elementor-page-1648 footer {
+	margin-top: 0 !important;
 }
 body.elementor-page-3423 .elementor-element-58a3f45,
 body.elementor-page-3423 .elementor-swiper-button-prev,
@@ -3483,21 +4156,48 @@ body.elementor-page-3423 .elementor-swiper-button-next {
 	display: none !important;
 }
 body.wwa-live-clone.elementor-page-1425 .elementor-element-e298c82 {
-	padding: 0 60px 100px !important;
+	padding: clamp(48px, 6vw, 100px) clamp(20px, 5vw, 80px) !important;
+	background: #ffffff !important;
 }
 body.wwa-live-clone.elementor-page-1425 .elementor-element-1a41d17 {
+	display: flex !important;
+	flex-direction: row !important;
+	align-items: center !important;
 	background: #f5f7fa !important;
 	padding: 21px 21px 21px 48px !important;
-	gap: 100px !important;
+	gap: 48px !important;
+	border-radius: 36px !important;
+	min-height: 0 !important;
 }
 body.wwa-live-clone.elementor-page-1425 .elementor-element-a43cf71 {
-	padding: 58px 48px !important;
+	width: 52% !important;
+	padding: 36px 24px !important;
 }
-body.wwa-live-clone.elementor-page-21 .elementor-element-dd5b6c1 {
-	min-height: 380px !important;
-	height: 380px !important;
-	padding-top: 92px !important;
-	padding-bottom: 72px !important;
+body.wwa-live-clone.elementor-page-1425 .elementor-element-a1c2e78 {
+	width: 48% !important;
+	min-height: 280px !important;
+}
+/* Contact hero — shorter, flush under header (no white gap) */
+body.wwa-live-clone.elementor-page-21 .elementor-element-dd5b6c1,
+body.elementor-page-21 .elementor-element-dd5b6c1 {
+	min-height: 220px !important;
+	height: auto !important;
+	max-height: 280px !important;
+	margin-top: 0 !important;
+	padding-top: 56px !important;
+	padding-bottom: 48px !important;
+}
+body.wwa-live-clone.elementor-page-21 .page-content,
+body.elementor-page-21 .page-content,
+body.wwa-live-clone.elementor-page-21 main.site-main,
+body.elementor-page-21 main.site-main {
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+}
+body.elementor-page-21 .elementor-sticky__spacer {
+	display: none !important;
+	height: 0 !important;
+	min-height: 0 !important;
 }
 body.wwa-live-clone.elementor-page-21 .elementor-element-d4322aa > .elementor-element-097f286 > .e-con-child {
 	min-height: 340px !important;
@@ -3506,20 +4206,6 @@ body.wwa-live-clone.elementor-page-21 .elementor-element-d4322aa > .elementor-el
 }
 body.elementor-page-1543 .elementor-element-b5296c2 {
 	align-items: stretch !important;
-}
-@media (min-width: 1025px) {
-	body.elementor-page-1543 .elementor-element-86cfb47 {
-	width: calc((100% - 32px) / 3) !important;
-	min-width: 0 !important;
-	height: 445.5px !important;
-	min-height: 445.5px !important;
-	}
-	body.elementor-page-1543 .elementor-element-86cfb47 > .elementor-element-90afefd {
-	width: 100% !important;
-	min-width: 0 !important;
-	height: 445.5px !important;
-	min-height: 445.5px !important;
-	}
 }
 @media (max-width: 1024px) {
 	body.wwa-live-clone.elementor-page-1425 .elementor-element-e298c82 {

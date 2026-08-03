@@ -1,8 +1,8 @@
-﻿/* UI/UX refresh for the contact page and Build Your Fleet CTA. */
+/* UI/UX refresh for the contact page and Build Your Fleet CTA. */
 :root{--wwa-refresh-ink:#101829;--wwa-refresh-navy:#07182f;--wwa-refresh-red:#ec2633;--wwa-refresh-paper:#f5f7fa;--wwa-refresh-line:rgba(16,24,41,.14)}
 
 /* Page background: use the requested dark backdrop across the viewport. */
-body.wwa-live-clone.elementor-page-21{background:#1a1a2e!important}
+body.wwa-live-clone.elementor-page-21{background:#ffffff!important}
 
 /* Contact hero: preserve the current banner asset, add stronger contrast and hierarchy. */
 .wwa-live-clone.elementor-page-21 .elementor-element-445621a{min-height:clamp(360px,40vw,560px)!important;padding:clamp(96px,12vw,170px) clamp(24px,7vw,112px) clamp(48px,6vw,88px)!important;background-position:center!important;position:relative;isolation:isolate}
@@ -20,11 +20,12 @@ body.wwa-live-clone.elementor-page-21{background:#1a1a2e!important}
 .wwa-live-clone.elementor-page-21 .elementor-element-c56b430,.wwa-live-clone.elementor-page-21 .elementor-element-ec378d4{padding:28px 30px 32px!important}
 .wwa-live-clone.elementor-page-21 .elementor-element-9148db4 .elementor-heading-title,.wwa-live-clone.elementor-page-21 .elementor-element-0fd4288 .elementor-heading-title,.wwa-live-clone.elementor-page-21 .elementor-element-215581f .elementor-heading-title,.wwa-live-clone.elementor-page-21 .elementor-element-68c8ea5 .elementor-heading-title{font-family:var(--font-syne)!important;font-size:clamp(24px,2vw,32px)!important;font-weight:600!important;letter-spacing:-.03em;line-height:1.15!important;color:var(--wwa-refresh-ink)!important}
 .wwa-live-clone.elementor-page-21 .elementor-element-9148db4 .elementor-heading-title,.wwa-live-clone.elementor-page-21 .elementor-element-0fd4288 .elementor-heading-title,.wwa-live-clone.elementor-page-21 .elementor-element-215581f .elementor-heading-title,.wwa-live-clone.elementor-page-21 .elementor-element-68c8ea5 .elementor-heading-title,.wwa-live-clone.elementor-page-21 .elementor-element-5a5e7bc .elementor-heading-title,.wwa-live-clone.elementor-page-21 .elementor-element-5a5e7bc .elementor-icon-list-text,.wwa-live-clone.elementor-page-21 .elementor-element-5a5e7bc p{background:transparent!important}
-.wwa-live-clone.elementor-page-21 .elementor-icon-list-items{display:grid;gap:18px}
+.wwa-live-clone.elementor-page-21 .elementor-icon-list-items{display:grid;gap:8px}
 .wwa-live-clone.elementor-page-21 .elementor-icon-list-item{align-items:flex-start}
 .wwa-live-clone.elementor-page-21 .elementor-element-d351e85 .elementor-icon-list-icon,.wwa-live-clone.elementor-page-21 .elementor-element-c483d07 .elementor-icon-list-icon{width:44px;height:44px;min-width:44px;margin-top:2px;margin-right:14px;border-radius:999px;background:rgba(236,38,51,.1);display:grid;place-items:center;flex:0 0 44px}
 .wwa-live-clone.elementor-page-21 .elementor-icon-list-icon svg{width:20px;height:20px;display:block}
-.wwa-live-clone.elementor-page-21 .elementor-icon-list-icon svg path,.wwa-live-clone.elementor-page-21 .elementor-icon-list-icon svg g,[class*="elementor-element-"] .elementor-icon-list-icon svg path{fill:var(--wwa-refresh-red)!important;stroke:var(--wwa-refresh-red)!important}
+.wwa-live-clone.elementor-page-21 .elementor-icon-list-icon svg path,.wwa-live-clone.elementor-page-21 .elementor-icon-list-icon svg g{fill:var(--wwa-refresh-red)!important;stroke:var(--wwa-refresh-red)!important}
+/* Do NOT paint header/footer chrome icons red via a global selector */
 .wwa-live-clone.elementor-page-21 .elementor-icon-list-text{font-size:16px!important;line-height:1.7!important;color:var(--wwa-refresh-ink)!important}
 .wwa-live-clone.elementor-page-21 .elementor-element-98740b3 .elementor-heading-title,.wwa-live-clone.elementor-page-21 .elementor-element-4f1c1e7 .elementor-heading-title{font-size:16px!important;line-height:1.75!important;color:rgba(16,24,41,.82)!important}
 
@@ -44,18 +45,20 @@ body.wwa-live-clone.elementor-page-21{background:#1a1a2e!important}
 .wwa-live-clone.elementor-page-21 .career-form input[type=submit]{min-height:50px;padding:12px 26px!important;border:1px solid var(--wwa-refresh-red)!important;border-radius:999px!important;background:var(--wwa-refresh-red)!important;font-weight:600!important;transition:transform 180ms ease,background 180ms ease,box-shadow 180ms ease}
 .wwa-live-clone.elementor-page-21 .career-form input[type=submit]:hover,.wwa-live-clone.elementor-page-21 .career-form input[type=submit]:focus-visible{background:#c91e2b!important;box-shadow:0 10px 24px rgba(236,38,51,.24);transform:translateY(-2px)}
 
-/* Service/support CTA: one signature split panel using the current excavator image and copy. */
-.wwa-live-clone.elementor-page-1425 .elementor-element-e298c82{padding:clamp(68px,8vw,120px) clamp(20px,6vw,96px)!important;background:#fff!important}
-.wwa-live-clone.elementor-page-1425 .elementor-element-1a41d17{max-width:1480px;min-height:420px;margin-inline:auto;padding:0!important;gap:0!important;align-items:stretch!important;border-radius:32px!important;background:var(--wwa-refresh-navy)!important;box-shadow:0 28px 80px rgba(7,24,47,.18);overflow:hidden}
-.wwa-live-clone.elementor-page-1425 .elementor-element-a43cf71{width:52%!important;padding:clamp(36px,6vw,86px) clamp(26px,5vw,78px)!important;align-items:flex-start;justify-content:center}
-.wwa-live-clone.elementor-page-1425 .elementor-element-254046b .elementor-heading-title{max-width:560px;font-family:var(--font-syne)!important;font-size:clamp(38px,4.3vw,68px)!important;font-weight:600!important;line-height:1.02!important;letter-spacing:-.05em;color:#fff!important}
-.wwa-live-clone.elementor-page-1425 .elementor-element-06d8068 .elementor-heading-title{max-width:560px;font-size:clamp(16px,1.4vw,20px)!important;line-height:1.6!important;color:rgba(255,255,255,.74)!important}
+/* Service/support CTA — match construction light fleet panel */
+.wwa-live-clone.elementor-page-1425 .elementor-element-e298c82{padding:clamp(48px,6vw,100px) clamp(20px,5vw,80px)!important;background:#fff!important}
+.wwa-live-clone.elementor-page-1425 .elementor-element-1a41d17{max-width:1480px;min-height:0;margin-inline:auto;padding:21px 21px 21px 48px!important;gap:48px!important;align-items:center!important;border-radius:36px!important;background:#f5f7fa!important;box-shadow:none;overflow:hidden;display:flex!important;flex-direction:row!important}
+.wwa-live-clone.elementor-page-1425 .elementor-element-a43cf71{width:52%!important;padding:clamp(28px,4vw,48px) clamp(20px,3vw,36px)!important;align-items:flex-start;justify-content:center}
+.wwa-live-clone.elementor-page-1425 .elementor-element-254046b .elementor-heading-title{max-width:560px;font-family:var(--font-syne)!important;font-size:clamp(32px,3.6vw,52px)!important;font-weight:600!important;line-height:1.1!important;letter-spacing:-.04em;color:#1a1a2e!important}
+.wwa-live-clone.elementor-page-1425 .elementor-element-06d8068 .elementor-heading-title{max-width:560px;font-size:clamp(15px,1.3vw,18px)!important;line-height:1.6!important;color:#4a4a5a!important}
 .wwa-live-clone.elementor-page-1425 .elementor-element-11f8655{margin-top:20px!important;gap:12px!important}
-.wwa-live-clone.elementor-page-1425 .elementor-element-3722d95 .elementor-button,.wwa-live-clone.elementor-page-1425 .elementor-element-13319dd .elementor-button{min-height:50px;padding:12px 22px!important;font-size:16px!important;font-weight:600!important;transition:transform 180ms ease,background 180ms ease,color 180ms ease,box-shadow 180ms ease}
-.wwa-live-clone.elementor-page-1425 .elementor-element-3722d95 .elementor-button:hover,.wwa-live-clone.elementor-page-1425 .elementor-element-13319dd .elementor-button:hover,.wwa-live-clone.elementor-page-1425 .elementor-element-3722d95 .elementor-button:focus-visible,.wwa-live-clone.elementor-page-1425 .elementor-element-13319dd .elementor-button:focus-visible{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.2)}
-.wwa-live-clone.elementor-page-1425 .elementor-element-a1c2e78{width:48%!important;min-height:420px}
+.wwa-live-clone.elementor-page-1425 .elementor-element-3722d95 .elementor-button,.wwa-live-clone.elementor-page-1425 .elementor-element-13319dd .elementor-button{min-height:50px;padding:12px 22px!important;font-size:16px!important;font-weight:600!important;border-radius:100px!important;transition:transform 180ms ease,background 180ms ease,color 180ms ease,box-shadow 180ms ease}
+.wwa-live-clone.elementor-page-1425 .elementor-element-3722d95 .elementor-button{background:#ec2633!important;color:#fff!important}
+.wwa-live-clone.elementor-page-1425 .elementor-element-13319dd .elementor-button{background:transparent!important;color:#1a1a2e!important;border:1px solid #1a1a2e!important}
+.wwa-live-clone.elementor-page-1425 .elementor-element-3722d95 .elementor-button:hover,.wwa-live-clone.elementor-page-1425 .elementor-element-13319dd .elementor-button:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.12)}
+.wwa-live-clone.elementor-page-1425 .elementor-element-a1c2e78{width:48%!important;min-height:280px;overflow:hidden;border-radius:24px}
 .wwa-live-clone.elementor-page-1425 .elementor-element-f681f8d,.wwa-live-clone.elementor-page-1425 .elementor-element-f681f8d .elementor-widget-container,.wwa-live-clone.elementor-page-1425 .elementor-element-f681f8d img{height:100%!important}
-.wwa-live-clone.elementor-page-1425 .elementor-element-f681f8d img{width:100%!important;object-fit:cover;filter:saturate(.95) contrast(1.08)}
+.wwa-live-clone.elementor-page-1425 .elementor-element-f681f8d img{width:100%!important;object-fit:cover;border-radius:16px}
 
 .wwa-live-clone.elementor-page-21 a:focus-visible,.wwa-live-clone.elementor-page-1425 a:focus-visible{outline:3px solid #f7c948;outline-offset:4px}
 @media(max-width:767px){.wwa-live-clone.elementor-page-21 .elementor-element-0bad4fd .elementor-heading-title{font-size:clamp(48px,15vw,72px)!important}.wwa-live-clone.elementor-page-21 .career-form{grid-template-columns:1fr!important}.wwa-live-clone.elementor-page-21 .career-form__submit{grid-column:auto!important}.wwa-live-clone.elementor-page-21 .elementor-element-e7cc60f,.wwa-live-clone.elementor-page-21 .elementor-element-12ed5ce{border-radius:22px!important}.wwa-live-clone.elementor-page-1425 .elementor-element-a43cf71,.wwa-live-clone.elementor-page-1425 .elementor-element-a1c2e78{width:100%!important}.wwa-live-clone.elementor-page-1425 .elementor-element-a1c2e78{min-height:260px}.wwa-live-clone.elementor-page-1425 .elementor-element-1a41d17{min-height:0;border-radius:24px!important}}
@@ -156,7 +159,7 @@ body.elementor-page-21 header.elementor-location-header {
 body.wwa-live-clone.elementor-page-21 .page-content,
 body.elementor-page-21 .page-content {
 	margin-top: 0 !important;
-	padding-top: 160px !important;
+	padding-top: 0 !important; /* was 160px — caused huge white gap under header */
 }
 body.elementor-page-21 header.elementor-location-header .hdr-menu-main-sec {
 	display: flex !important;
@@ -165,25 +168,30 @@ body.elementor-page-21 header.elementor-location-header .hdr-menu-main-sec {
 	max-width: 100% !important;
 }
 body.elementor-page-21 header.elementor-location-header .hdr-menu-top {
-	min-height: 76px !important;
-	padding: 14px clamp(20px, 4vw, 72px) 12px !important;
+	height: 40px !important;
+	min-height: 40px !important;
+	max-height: 40px !important;
+	padding: 4px clamp(20px, 4vw, 72px) !important;
 	background: #1a1a2e !important;
 	color: #ffffff !important;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+	box-sizing: border-box !important;
+	overflow: visible !important;
 }
 body.elementor-page-21 header.elementor-location-header .hdr-menu-top * {
 	color: #ffffff !important;
-	fill: #ffffff !important;
-	stroke: #ffffff !important;
 	opacity: 1 !important;
 	visibility: visible !important;
 }
 body.elementor-page-21 header.elementor-location-header .hdr-menu-main {
-	min-height: 90px !important;
+	height: 72px !important;
+	min-height: 72px !important;
+	max-height: 72px !important;
 	padding: 0 clamp(20px, 4vw, 72px) !important;
 	background: #aeb3b2 !important;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
-	box-shadow: 0 8px 28px rgba(7, 24, 47, 0.08) !important;
+	box-shadow: none !important;
+	box-sizing: border-box !important;
 }
 body.elementor-page-21 header.elementor-location-header .menu-items,
 body.elementor-page-21 header.elementor-location-header .menu-items .elementor-widget-container,
@@ -228,19 +236,21 @@ body.elementor-page-21 header.elementor-location-header .hdr-menu-top {
 	display: flex !important;
 	align-items: center !important;
 	justify-content: flex-end !important;
-	min-height: 76px !important;
-	padding: 14px clamp(20px, 4vw, 72px) 12px !important;
+	height: 40px !important;
+	min-height: 40px !important;
+	max-height: 40px !important;
+	padding: 4px clamp(20px, 4vw, 72px) !important;
 	background: #1a1a2e !important;
 	color: #ffffff !important;
 	opacity: 1 !important;
 	visibility: visible !important;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+	box-sizing: border-box !important;
+	overflow: visible !important;
 }
 body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-top *,
 body.elementor-page-21 header.elementor-location-header .hdr-menu-top * {
 	color: #ffffff !important;
-	fill: #ffffff !important;
-	stroke: #ffffff !important;
 	opacity: 1 !important;
 	visibility: visible !important;
 }
@@ -281,7 +291,7 @@ body.elementor-page-21 .page-content {
 body.elementor-page-21 .elementor-element-306cef6,
 body.wwa-live-clone.elementor-page-21 .elementor-element-306cef6 {
 	background-color: #1a1a2e !important;
-	padding-top: 80px !important;
+	padding-top: 0 !important;
 	padding-bottom: 80px !important;
 }
 body.elementor-page-21 .elementor-element-306cef6 .elementor-heading-title,
@@ -364,23 +374,25 @@ body.elementor-page-21 header.elementor-location-header .hdr-menu-top {
 	display: flex !important;
 	align-items: center !important;
 	justify-content: flex-end !important;
-	min-height: 76px !important;
-	padding: 14px clamp(20px, 4vw, 72px) 12px !important;
+	height: 40px !important;
+	min-height: 40px !important;
+	max-height: 40px !important;
+	padding: 4px clamp(20px, 4vw, 72px) !important;
 	background: #1a1a2e !important;
 	color: #ffffff !important;
 	opacity: 1 !important;
 	visibility: visible !important;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+	box-sizing: border-box !important;
 }
 body.wwa-live-clone header.elementor-location-header .hdr-menu-top *,
 body.elementor-page-21 header.elementor-location-header .hdr-menu-top * {
 	color: #ffffff !important;
-	fill: #ffffff !important;
-	stroke: #ffffff !important;
 	opacity: 1 !important;
 	visibility: visible !important;
 }
-body.wwa-live-clone header.elementor-location-header .hdr-menu-main,
+/* Inner pages main nav — light grey (reference screenshot) */
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) header.elementor-location-header .hdr-menu-main,
 body.elementor-page-21 header.elementor-location-header .hdr-menu-main {
 	position: relative !important;
 	top: auto !important;
@@ -390,13 +402,17 @@ body.elementor-page-21 header.elementor-location-header .hdr-menu-main {
 	align-items: center !important;
 	justify-content: space-between !important;
 	gap: 24px !important;
-	min-height: 90px !important;
+	height: 72px !important;
+	min-height: 72px !important;
+	max-height: 72px !important;
 	padding: 0 clamp(20px, 4vw, 72px) !important;
 	width: 100% !important;
 	background: #aeb3b2 !important;
+	background-color: #aeb3b2 !important;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
-	box-shadow: 0 8px 28px rgba(7, 24, 47, 0.08) !important;
+	box-shadow: none !important;
 	transform: none !important;
+	box-sizing: border-box !important;
 }
 body.wwa-live-clone header.elementor-location-header .menu-items,
 body.wwa-live-clone header.elementor-location-header .menu-items .elementor-widget-container,
@@ -715,7 +731,8 @@ body.wwa-live-clone.elementor-page-21 .elementor-element-68c8ea5 .elementor-head
 }
 body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-items,
 body.wwa-live-clone.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-items {
-	gap: 24px !important;
+	display: grid !important;
+	gap: 8px !important;
 }
 body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-item,
 body.elementor-page-21 .elementor-element-404abc3 .elementor-icon-list-item,
@@ -932,4 +949,1056 @@ body.wwa-live-clone.elementor-page-21 .elementor-element-b3cfd5a .elementor-icon
 	body.wwa-live-clone.elementor-page-21 .elementor-element-27d846b {
 		grid-template-columns: 1fr !important;
 	}
+}
+
+/* =========================================================
+   HOME (3616) — final cascade overrides (must win)
+   Compact top bar, glass nav readability, one-view hero,
+   At a Glance middle align, Global Presence tabs below map
+   ========================================================= */
+@media (min-width: 1025px) {
+	body.home.wwa-live-clone header.elementor-location-header .hdr-menu-top,
+	body.elementor-page-3616 header.elementor-location-header .hdr-menu-top,
+	body.home.wwa-live-clone .hdr-menu-top,
+	body.elementor-page-3616 .hdr-menu-top {
+		height: 40px !important;
+		min-height: 40px !important;
+		max-height: 40px !important;
+		padding: 4px clamp(20px, 4vw, 72px) !important;
+		background: rgba(26, 26, 46, 0.5) !important;
+		background-color: rgba(26, 26, 46, 0.5) !important;
+		-webkit-backdrop-filter: blur(12px) saturate(120%) !important;
+		backdrop-filter: blur(12px) saturate(120%) !important;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+	}
+	body.home.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-icon-list-text,
+	body.elementor-page-3616 header.elementor-location-header .hdr-menu-top .elementor-icon-list-text {
+		font-size: 13px !important;
+		line-height: 18px !important;
+		font-weight: 500 !important;
+		color: #ffffff !important;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+	}
+
+	body.home.wwa-live-clone header.elementor-location-header .hdr-menu-main,
+	body.elementor-page-3616 header.elementor-location-header .hdr-menu-main,
+	body.home.wwa-live-clone .hdr-menu-main,
+	body.elementor-page-3616 .hdr-menu-main,
+	body.home.wwa-live-clone .hdr-menu-main.fixed-header,
+	body.home.wwa-live-clone .hdr-menu-main.sticky,
+	body.elementor-page-3616 .hdr-menu-main.fixed-header,
+	body.elementor-page-3616 .hdr-menu-main.sticky {
+		height: 72px !important;
+		min-height: 72px !important;
+		max-height: 72px !important;
+		padding: 0 clamp(20px, 4vw, 72px) !important;
+		/* More transparent glass over hero */
+		background: rgba(26, 26, 46, 0.18) !important;
+		background-color: rgba(26, 26, 46, 0.18) !important;
+		-webkit-backdrop-filter: blur(18px) saturate(140%) !important;
+		backdrop-filter: blur(18px) saturate(140%) !important;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.16) !important;
+		box-shadow: none !important;
+	}
+	body.home.wwa-live-clone .hdr-menu-main.fixed-header,
+	body.home.wwa-live-clone .hdr-menu-main.sticky,
+	body.elementor-page-3616 .hdr-menu-main.fixed-header,
+	body.elementor-page-3616 .hdr-menu-main.sticky {
+		background: rgba(26, 26, 46, 0.82) !important;
+		background-color: rgba(26, 26, 46, 0.82) !important;
+		box-shadow: 0 14px 32px rgba(7, 12, 24, 0.28) !important;
+	}
+
+	/* Readable nav labels over transparent bar */
+	body.home.wwa-live-clone .hdr-menu-main .elementskit-navbar-nav > li > a,
+	body.elementor-page-3616 .hdr-menu-main .elementskit-navbar-nav > li > a,
+	body.home.wwa-live-clone .hdr-menu-main a.ekit-menu-nav-link,
+	body.elementor-page-3616 .hdr-menu-main a.ekit-menu-nav-link {
+		color: #ffffff !important;
+		font-size: 15px !important;
+		font-weight: 600 !important;
+		letter-spacing: 0.02em !important;
+		opacity: 1 !important;
+		text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65), 0 0 14px rgba(0, 0, 0, 0.35) !important;
+	}
+	body.home.wwa-live-clone .hdr-menu-main .elementskit-submenu-indicator,
+	body.elementor-page-3616 .hdr-menu-main .elementskit-submenu-indicator {
+		color: #ffffff !important;
+		opacity: 1 !important;
+		filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+	}
+	body.home.wwa-live-clone .hdr-menu-main .nav-logo img,
+	body.elementor-page-3616 .hdr-menu-main .nav-logo img {
+		filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
+	}
+
+	/* Hero one viewport (40 + 72 = 112 chrome) — desktop hero only */
+	body.home.wwa-live-clone .hm-bnr-sec.elementor-element-429593c,
+	body.elementor-page-3616 .hm-bnr-sec.elementor-element-429593c,
+	body.elementor-page-3616 .elementor-element-429593c {
+		height: calc(100svh - 112px) !important;
+		min-height: calc(100svh - 112px) !important;
+		max-height: calc(100svh - 112px) !important;
+		--min-height: calc(100svh - 112px) !important;
+		box-sizing: border-box !important;
+		display: flex !important;
+		flex-direction: column !important;
+		justify-content: flex-end !important;
+		overflow: hidden !important;
+		padding-bottom: clamp(28px, 4vh, 48px) !important;
+		--padding-bottom: clamp(28px, 4vh, 48px) !important;
+	}
+	body.home.wwa-live-clone .hm-bnr-sec.elementor-hidden-desktop,
+	body.elementor-page-3616 .hm-bnr-sec.elementor-hidden-desktop,
+	body.elementor-page-3616 .elementor-element-6edd316 {
+		display: none !important;
+		visibility: hidden !important;
+		height: 0 !important;
+		min-height: 0 !important;
+		max-height: 0 !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		overflow: hidden !important;
+		pointer-events: none !important;
+	}
+
+	/* At a Glance middle align */
+	body.home.wwa-live-clone .hm-scnd-sec .elementor-element-4254d62,
+	body.elementor-page-3616 .elementor-element-4254d62 {
+		display: flex !important;
+		flex-direction: row !important;
+		align-items: center !important;
+		--align-items: center !important;
+	}
+	body.home.wwa-live-clone .hm-scnd-sec .elementor-element-203375f,
+	body.elementor-page-3616 .elementor-element-203375f {
+		display: flex !important;
+		flex-direction: column !important;
+		justify-content: center !important;
+		--justify-content: center !important;
+		align-self: center !important;
+	}
+	body.home.wwa-live-clone .hm-scnd-sec .elementor-element-fc66c4a,
+	body.elementor-page-3616 .elementor-element-fc66c4a {
+		align-self: center !important;
+	}
+
+	/* Global Presence tabs below map */
+	body.home.wwa-live-clone .Global-Presenc-sec .delta-hm-map-btns,
+	body.elementor-page-3616 .Global-Presenc-sec .delta-hm-map-btns,
+	body.elementor-page-3616 .elementor-element-e6cb08c {
+		position: relative !important;
+		z-index: 3 !important;
+		margin-top: -39px !important;
+		padding-top: 0 !important;
+		--margin-top: -39px !important;
+		--padding-top: 0 !important;
+		top: auto !important;
+		bottom: auto !important;
+		transform: none !important;
+		width: 100% !important;
+		clear: both !important;
+	}
+	body.home.wwa-live-clone .Global-Presenc-sec .container-dot-animation,
+	body.elementor-page-3616 .Global-Presenc-sec .container-dot-animation,
+	body.elementor-page-3616 .elementor-element-12d26ea {
+		position: relative !important;
+		z-index: 1 !important;
+		margin-bottom: 0 !important;
+		overflow: hidden !important;
+	}
+}
+
+/* =========================================================
+   Site-wide header icons — same as homepage on every page
+   fill: transparent (stroke outline icons)
+   ========================================================= */
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon,
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon svg,
+body.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon,
+body.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon svg,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon svg,
+body.home.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon,
+body.home.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon svg,
+body.elementor-page-3616 .hdr-menu-top .elementor-icon-list-icon,
+body.elementor-page-3616 .hdr-menu-top .elementor-icon-list-icon svg {
+	width: 20px !important;
+	height: 20px !important;
+	min-width: 24px !important;
+	min-height: 21px !important;
+	max-width: 26px !important;
+	max-height: 26px !important;
+	padding: 0 !important;
+	background: transparent !important;
+	border: 0 !important;
+	box-shadow: none !important;
+	box-sizing: border-box !important;
+}
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon svg,
+body.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon svg {
+	display: block !important;
+}
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon svg,
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon svg *,
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon svg path,
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon svg g,
+body.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon svg,
+body.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon svg *,
+body.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon svg path,
+body.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon svg g,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top svg,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top svg *,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top svg path,
+body.home.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon svg *,
+body.elementor-page-3616 .hdr-menu-top .elementor-icon-list-icon svg * {
+	fill: transparent !important;
+	stroke: #ffffff !important;
+	color: #ffffff !important;
+}
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-icon-list-item,
+body.wwa-live-clone .hdr-menu-top .elementor-icon-list-item {
+	align-items: center !important;
+}
+body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon,
+body.wwa-live-clone .hdr-menu-top .elementor-icon-list-icon {
+	margin-right: 8px !important;
+}
+
+/* Contact page body icons stay red — re-assert after header transparent rule */
+body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-404abc3 .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-7e5483b .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-33a3c7d .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-cb8dd87 .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-e188f58 .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-3446650 .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-d351e85 .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-30c8c37 .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-b3cfd5a .elementor-icon-list-icon svg path,
+body.elementor-page-21 .elementor-element-c483d07 .elementor-icon-list-icon svg path {
+	fill: var(--wwa-refresh-red, #ec2633) !important;
+	stroke: var(--wwa-refresh-red, #ec2633) !important;
+}
+
+/* =========================================================
+   FINAL: reference header on ALL inner pages
+   Dark top bar + light-grey main + red Contact Us
+   Home keeps its own transparent glass rules above.
+   ========================================================= */
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) header.elementor-location-header .hdr-menu-top,
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) .hdr-menu-top {
+	height: 40px !important;
+	min-height: 40px !important;
+	max-height: 40px !important;
+	padding: 4px clamp(20px, 4vw, 72px) !important;
+	background: #1a1a2e !important;
+	background-color: #1a1a2e !important;
+}
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) header.elementor-location-header .hdr-menu-main,
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) .hdr-menu-main,
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) .hdr-menu-main.fixed-header,
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) .hdr-menu-main.sticky,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main,
+body.elementor-page-21 .hdr-menu-main,
+body.elementor-page-14 header.elementor-location-header .hdr-menu-main,
+body.elementor-page-1648 header.elementor-location-header .hdr-menu-main {
+	height: 72px !important;
+	min-height: 72px !important;
+	max-height: 72px !important;
+	background: #aeb3b2 !important;
+	background-color: #aeb3b2 !important;
+	background-image: none !important;
+	box-shadow: none !important;
+	float: none !important;
+}
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) .hdr-menu-main .elementskit-navbar-nav > li > a,
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) .hdr-menu-main a.ekit-menu-nav-link {
+	color: #ffffff !important;
+	font-size: 15px !important;
+	font-weight: 600 !important;
+}
+/* Contact Us button — same pill as homepage on ALL pages */
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main li.btn.btn-red,
+body.wwa-live-clone .hdr-menu-main li.btn.btn-red,
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main ul li.btn.btn-red {
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	margin: 0 0 0 12px !important;
+	padding: 0 !important;
+	background: #ec2633 !important;
+	background-color: #ec2633 !important;
+	border-radius: 50px !important;
+	border: 0 !important;
+	box-shadow: none !important;
+	list-style: none !important;
+	overflow: hidden !important;
+}
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main li.btn.btn-red > a,
+body.wwa-live-clone .hdr-menu-main li.btn.btn-red > a,
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main li.btn.btn-red > a.ekit-menu-nav-link {
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	margin: 0 !important;
+	padding: 10px 22px !important;
+	background: transparent !important;
+	background-color: transparent !important;
+	color: #ffffff !important;
+	border-radius: 50px !important;
+	font-size: 15px !important;
+	font-weight: 600 !important;
+	line-height: 1.2 !important;
+	text-transform: capitalize !important;
+	text-shadow: none !important;
+	opacity: 1 !important;
+	white-space: nowrap !important;
+}
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main li.btn.btn-red:hover,
+body.wwa-live-clone .hdr-menu-main li.btn.btn-red:hover {
+	background: #d41f2b !important;
+	background-color: #d41f2b !important;
+}
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main li.btn.btn-red > a:hover {
+	color: #ffffff !important;
+	background: transparent !important;
+}
+
+/* Contact page — compact hero (office cards fixed in FINAL LOCK below) */
+body.elementor-page-21 .elementor-element-445621a,
+body.elementor-page-21 .elementor-element-dd5b6c1 {
+	min-height: 200px !important;
+	height: auto !important;
+	max-height: 260px !important;
+	padding: 56px 20px 40px !important;
+	justify-content: center !important;
+}
+/* DO NOT style d4322aa > .elementor-element as a card — that targeted the
+   097f286 row wrapper (max-width:380px) and collapsed the whole office grid. */
+
+/* About second section — kill layout glitches (duplicate images on tablet, logo row) */
+body.elementor-page-14 .elementor-element-e289fec {
+	overflow: hidden !important;
+}
+/* Mobile image only <768; desktop image ≥768 — never both */
+body.elementor-page-14 .elementor-element-5b53f93 {
+	display: none !important;
+}
+body.elementor-page-14 .elementor-element-e2695cb {
+	display: flex !important;
+	overflow: hidden !important;
+}
+@media (max-width: 767px) {
+	body.elementor-page-14 .elementor-element-5b53f93 {
+		display: block !important;
+	}
+	body.elementor-page-14 .elementor-element-e2695cb {
+		display: none !important;
+	}
+}
+body.elementor-page-14 .elementor-element-e2695cb img,
+body.elementor-page-14 .elementor-element-f121e9f img,
+body.elementor-page-14 .elementor-element-5b53f93 img {
+	display: block !important;
+	width: 100% !important;
+	height: auto !important;
+	max-width: 100% !important;
+	object-fit: cover !important;
+}
+body.elementor-page-14 .abt-scnd-sec-logo-blks,
+body.elementor-page-14 .elementor-element-f9bb97d {
+	display: flex !important;
+	flex-wrap: wrap !important;
+	gap: 16px !important;
+	align-items: center !important;
+	width: 100% !important;
+}
+body.elementor-page-14 .abt-scnd-sec-logo-blk {
+	flex: 1 1 140px !important;
+	min-width: 120px !important;
+	max-width: 220px !important;
+}
+body.elementor-page-14 .abt-scnd-sec-logo-blk img {
+	width: auto !important;
+	max-width: 100% !important;
+	height: auto !important;
+	max-height: 48px !important;
+	object-fit: contain !important;
+}
+
+/* =========================================================
+   Contact page FINAL — match other pages header + fix grid
+   ========================================================= */
+/* Kill white gap under header (no spacer padding on page-content) */
+body.elementor-page-21 main.site-main,
+body.elementor-page-21 .page-content,
+body.elementor-page-21 .elementor-21,
+body.wwa-live-clone.elementor-page-21 main.site-main,
+body.wwa-live-clone.elementor-page-21 .page-content {
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+}
+
+/* Keep broken mobile clones hidden; use desktop sections.
+   Also kill any earlier display:flex overrides that forced them visible. */
+body.elementor-page-21 .elementor-element-445621a,
+body.wwa-live-clone.elementor-page-21 .elementor-element-445621a,
+body.elementor-page-21 .elementor-element-5ba657a,
+body.wwa-live-clone.elementor-page-21 .elementor-element-5ba657a,
+body.elementor-page-21 .elementor-element-b678b9f,
+body.wwa-live-clone.elementor-page-21 .elementor-element-b678b9f {
+	display: none !important;
+	visibility: hidden !important;
+	height: 0 !important;
+	min-height: 0 !important;
+	max-height: 0 !important;
+	overflow: hidden !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	pointer-events: none !important;
+	opacity: 0 !important;
+	position: absolute !important;
+	left: -99999px !important;
+	width: 1px !important;
+}
+
+/* Contact top bar / main nav — match other inner pages (see FINAL LOCK) */
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon svg *,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-icon svg path {
+	fill: transparent !important;
+	stroke: #ffffff !important;
+}
+
+/* Contact hero (desktop) — flush under header, no white strip above */
+body.elementor-page-21 .elementor-element-dd5b6c1 {
+	display: flex !important;
+	min-height: 220px !important;
+	height: auto !important;
+	max-height: 280px !important;
+	margin-top: 0 !important;
+	padding: 56px 20px 48px !important;
+	justify-content: center !important;
+	align-items: center !important;
+	background: #1a1a2e !important;
+	--margin-top: 0px !important;
+	--padding-top: 56px !important;
+}
+
+/* Office cards grid — see FINAL LOCK at end of file (authoritative) */
+/* Page background not full navy */
+body.elementor-page-21,
+body.wwa-live-clone.elementor-page-21 {
+	background: #ffffff !important;
+}
+body.elementor-page-21 main.site-main,
+body.elementor-page-21 .page-content {
+	background: #ffffff !important;
+}
+
+/* Service CTA final — light panel like construction */
+.wwa-live-clone.elementor-page-1425 .elementor-element-1a41d17,
+body.wwa-live-clone.elementor-page-1425 .elementor-element-1a41d17 {
+	background: #f5f7fa !important;
+	background-color: #f5f7fa !important;
+	min-height: 0 !important;
+	padding: 21px 21px 21px 48px !important;
+	gap: 48px !important;
+	border-radius: 36px !important;
+	box-shadow: none !important;
+}
+.wwa-live-clone.elementor-page-1425 .elementor-element-254046b .elementor-heading-title,
+.wwa-live-clone.elementor-page-1425 .elementor-element-a43cf71 .elementor-heading-title {
+	color: #1a1a2e !important;
+}
+.wwa-live-clone.elementor-page-1425 .elementor-element-06d8068 .elementor-heading-title {
+	color: #4a4a5a !important;
+}
+@media (max-width: 1024px) {
+	body.elementor-page-21 .elementor-element-2cb371c,
+	body.elementor-page-21 .elementor-element-8ab9e8f,
+	body.elementor-page-21 .elementor-element-c483d07 {
+		flex: 1 1 100% !important;
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+	body.wwa-live-clone.elementor-page-1425 .elementor-element-1a41d17 {
+		flex-direction: column !important;
+		padding: 20px !important;
+	}
+	body.wwa-live-clone.elementor-page-1425 .elementor-element-a43cf71,
+	body.wwa-live-clone.elementor-page-1425 .elementor-element-a1c2e78 {
+		width: 100% !important;
+	}
+}
+
+/* Service CTA mobile stack */
+@media (max-width: 1024px) {
+	body.wwa-live-clone.elementor-page-1425 .elementor-element-1a41d17 {
+		flex-direction: column !important;
+		min-height: 0 !important;
+	}
+	body.wwa-live-clone.elementor-page-1425 .elementor-element-a43cf71,
+	body.wwa-live-clone.elementor-page-1425 .elementor-element-a1c2e78 {
+		width: 100% !important;
+		min-height: 240px !important;
+	}
+}
+
+/* About banner flush under header — no white strip */
+body.elementor-page-14 main.site-main,
+body.elementor-page-14 .page-content,
+body.elementor-page-14 .elementor-14,
+body.elementor-page-14 .sustainability-bnr-sec,
+body.elementor-page-14 .elementor-element-6d1c31f {
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+	--margin-top: 0px !important;
+}
+/* Hero content inset only (internal), not external gap */
+body.elementor-page-14 .elementor-element-6d1c31f {
+	--padding-top: 0 !important;
+	padding-top: 0 !important;
+}
+body.wwa-live-clone header.elementor-location-header .hdr-menu-main,
+body.wwa-live-clone .hdr-menu-main {
+	float: none !important;
+}
+body.wwa-live-clone main.site-main {
+	clear: both !important;
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+}
+
+/* =========================================================
+   FINAL LOCK — 3 fixes (construction brochures + contact)
+   Loads last so it wins over earlier contact/page-1543 rules.
+   ========================================================= */
+
+/* 1) Construction Download Brochure cards = mining design */
+body.elementor-page-1543 .elementor-element-ebaa2dc,
+body.elementor-page-1543 .elementor-element-86cfb47 {
+	display: flex !important;
+	flex-direction: row !important;
+	flex-wrap: wrap !important;
+	align-items: stretch !important;
+	justify-content: space-between !important;
+	gap: 26px !important;
+	width: 100% !important;
+	height: auto !important;
+	min-height: 0 !important;
+	max-height: none !important;
+}
+body.elementor-page-1543 .elementor-element-99bc71a,
+body.elementor-page-1543 .elementor-element-a908d3c,
+body.elementor-page-1543 .elementor-element-27f87d5,
+body.elementor-page-1543 .elementor-element-3f08a0c,
+body.elementor-page-1543 .elementor-element-90afefd {
+	display: flex !important;
+	flex-direction: column !important;
+	flex: 1 1 0 !important;
+	min-width: 0 !important;
+	width: auto !important;
+	max-width: none !important;
+	height: auto !important;
+	min-height: 0 !important;
+	max-height: none !important;
+	overflow: visible !important;
+	padding: 16px !important;
+	gap: 26px !important;
+	border-radius: 16px !important;
+	background-color: #f5f7fa !important;
+	box-sizing: border-box !important;
+}
+body.elementor-page-1543 .elementor-element-50ea84a,
+body.elementor-page-1543 .elementor-element-b74ff03,
+body.elementor-page-1543 .elementor-element-614e122,
+body.elementor-page-1543 .elementor-element-7406d81,
+body.elementor-page-1543 .elementor-element-dcdcfbc {
+	display: flex !important;
+	flex-direction: row !important;
+	flex-wrap: nowrap !important;
+	justify-content: space-between !important;
+	width: 100% !important;
+}
+body.elementor-page-1543 .elementor-element-99bc71a .elementor-widget-image img,
+body.elementor-page-1543 .elementor-element-a908d3c .elementor-widget-image img,
+body.elementor-page-1543 .elementor-element-27f87d5 .elementor-widget-image img,
+body.elementor-page-1543 .elementor-element-3f08a0c .elementor-widget-image img,
+body.elementor-page-1543 .elementor-element-90afefd .elementor-widget-image img {
+	width: 100% !important;
+	height: auto !important;
+	max-height: none !important;
+	object-fit: cover !important;
+	display: block !important;
+}
+body.elementor-page-1543 .elementor-element-99bc71a .elementor-button,
+body.elementor-page-1543 .elementor-element-a908d3c .elementor-button,
+body.elementor-page-1543 .elementor-element-27f87d5 .elementor-button,
+body.elementor-page-1543 .elementor-element-3f08a0c .elementor-button,
+body.elementor-page-1543 .elementor-element-90afefd .elementor-button,
+body.elementor-page-1543 a.elementor-button[download],
+body.elementor-page-1543 a.elementor-button[href*=".pdf"] {
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	background-color: #ec2633 !important;
+	color: #ffffff !important;
+	border: 1px solid #ec2633 !important;
+	border-radius: 100px !important;
+	padding: 10px 16px !important;
+	font-weight: 600 !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+body.elementor-page-1543 a.elementor-button[download]:hover,
+body.elementor-page-1543 a.elementor-button[href*=".pdf"]:hover {
+	background-color: #ffffff !important;
+	color: #ec2633 !important;
+}
+
+/* 2) Contact office second blocks — real 3-card grid (kill max-width:380 on row) */
+body.elementor-page-21 .elementor-element-445621a,
+body.wwa-live-clone.elementor-page-21 .elementor-element-445621a,
+body.elementor-page-21 .elementor-element-5ba657a,
+body.wwa-live-clone.elementor-page-21 .elementor-element-5ba657a,
+body.elementor-page-21 .elementor-element-b678b9f,
+body.wwa-live-clone.elementor-page-21 .elementor-element-b678b9f {
+	display: none !important;
+	visibility: hidden !important;
+	height: 0 !important;
+	min-height: 0 !important;
+	max-height: 0 !important;
+	overflow: hidden !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	pointer-events: none !important;
+	opacity: 0 !important;
+	position: absolute !important;
+	left: -99999px !important;
+	width: 1px !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa,
+body.wwa-live-clone.elementor-page-21 .elementor-element-d4322aa {
+	display: flex !important;
+	flex-direction: column !important;
+	flex-wrap: nowrap !important;
+	align-items: stretch !important;
+	justify-content: flex-start !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	background: #f5f7fa !important;
+	padding: clamp(48px, 6vw, 80px) clamp(20px, 5vw, 80px) !important;
+	gap: 0 !important;
+	box-sizing: border-box !important;
+}
+/* Row wrapper must be FULL width — earlier rules capped it at 380px */
+body.elementor-page-21 .elementor-element-d4322aa > .elementor-element-097f286,
+body.elementor-page-21 .elementor-element-d4322aa > .e-con,
+body.elementor-page-21 .elementor-element-d4322aa > .elementor-element,
+body.wwa-live-clone.elementor-page-21 .elementor-element-d4322aa > .elementor-element-097f286,
+body.wwa-live-clone.elementor-page-21 .elementor-element-d4322aa > .e-con,
+body.wwa-live-clone.elementor-page-21 .elementor-element-d4322aa > .elementor-element {
+	flex: 0 0 auto !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	min-width: 0 !important;
+	min-height: 0 !important;
+	height: auto !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	box-sizing: border-box !important;
+}
+body.elementor-page-21 .elementor-element-097f286,
+body.wwa-live-clone.elementor-page-21 .elementor-element-097f286 {
+	display: grid !important;
+	grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+	gap: clamp(20px, 2.4vw, 28px) !important;
+	align-items: stretch !important;
+	justify-content: stretch !important;
+	width: 100% !important;
+	max-width: 1480px !important;
+	margin-inline: auto !important;
+	flex-wrap: nowrap !important;
+}
+/* Only the three office cards — not the row wrapper */
+body.elementor-page-21 .elementor-element-097f286 > .elementor-element-2cb371c,
+body.elementor-page-21 .elementor-element-097f286 > .elementor-element-8ab9e8f,
+body.elementor-page-21 .elementor-element-097f286 > .elementor-element-c483d07,
+body.wwa-live-clone.elementor-page-21 .elementor-element-097f286 > .elementor-element-2cb371c,
+body.wwa-live-clone.elementor-page-21 .elementor-element-097f286 > .elementor-element-8ab9e8f,
+body.wwa-live-clone.elementor-page-21 .elementor-element-097f286 > .elementor-element-c483d07 {
+	display: flex !important;
+	flex-direction: column !important;
+	width: 100% !important;
+	max-width: none !important;
+	min-width: 0 !important;
+	min-height: 0 !important;
+	height: auto !important;
+	flex: unset !important;
+	padding: 0 !important;
+	background: #ffffff !important;
+	border-radius: 20px !important;
+	border: 1px solid rgba(26, 26, 46, 0.08) !important;
+	box-shadow: 0 12px 40px rgba(16, 24, 41, 0.08) !important;
+	overflow: hidden !important;
+	box-sizing: border-box !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-widget-image img {
+	width: 100% !important;
+	height: 200px !important;
+	object-fit: cover !important;
+	display: block !important;
+}
+body.elementor-page-21 .elementor-element-92c2164,
+body.elementor-page-21 .elementor-element-d6a998c,
+body.elementor-page-21 .elementor-element-ec378d4 {
+	display: flex !important;
+	flex-direction: column !important;
+	padding: 24px 24px 28px !important;
+	gap: 14px !important;
+	width: 100% !important;
+	box-sizing: border-box !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa h3.elementor-heading-title {
+	color: #1a1a2e !important;
+	font-size: 1.25rem !important;
+	margin: 0 0 8px !important;
+	padding: 0 !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-text {
+	color: #5c5d6a !important;
+	white-space: normal !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-icon {
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	width: 36px !important;
+	height: 36px !important;
+	min-width: 36px !important;
+	border-radius: 50% !important;
+	background: rgba(236, 38, 51, 0.08) !important;
+	flex-wrap: nowrap !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-icon-list-icon svg path {
+	fill: #ec2633 !important;
+	stroke: #ec2633 !important;
+}
+@media (max-width: 1024px) {
+	body.elementor-page-21 .elementor-element-097f286,
+	body.wwa-live-clone.elementor-page-21 .elementor-element-097f286 {
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
+}
+@media (max-width: 767px) {
+	body.elementor-page-21 .elementor-element-097f286,
+	body.wwa-live-clone.elementor-page-21 .elementor-element-097f286 {
+		grid-template-columns: 1fr !important;
+	}
+	body.elementor-page-1543 .elementor-element-99bc71a,
+	body.elementor-page-1543 .elementor-element-a908d3c,
+	body.elementor-page-1543 .elementor-element-27f87d5,
+	body.elementor-page-1543 .elementor-element-3f08a0c,
+	body.elementor-page-1543 .elementor-element-90afefd {
+		flex: 1 1 100% !important;
+		width: 100% !important;
+	}
+}
+
+/* 3) Contact topbar list items side-by-side like other pages */
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top,
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-top,
+body.elementor-page-21 .hdr-menu-top {
+	display: flex !important;
+	flex-direction: row !important;
+	align-items: center !important;
+	justify-content: flex-end !important;
+	height: 40px !important;
+	min-height: 40px !important;
+	max-height: 40px !important;
+	padding: 4px clamp(20px, 4vw, 72px) !important;
+	background: #1a1a2e !important;
+	overflow: visible !important;
+	box-sizing: border-box !important;
+}
+/* Desktop email+phone list only — do not force-show mobile phone widget */
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-element-055998b,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-element-055998b .elementor-widget-container,
+body.elementor-page-21 .hdr-menu-top .elementor-element-055998b,
+body.elementor-page-21 .hdr-menu-top .elementor-element-055998b .elementor-widget-container {
+	display: flex !important;
+	flex-direction: row !important;
+	align-items: center !important;
+	width: auto !important;
+	max-width: none !important;
+	overflow: visible !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-items,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-items.elementor-inline-items,
+body.elementor-page-21 .hdr-menu-top .elementor-icon-list-items,
+body.elementor-page-21 .hdr-menu-top .elementor-icon-list-items.elementor-inline-items {
+	display: flex !important;
+	flex-direction: row !important;
+	flex-wrap: nowrap !important;
+	align-items: center !important;
+	justify-content: flex-end !important;
+	gap: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: auto !important;
+	list-style: none !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-item,
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-inline-item,
+body.elementor-page-21 .hdr-menu-top .elementor-icon-list-item,
+body.elementor-page-21 .hdr-menu-top .elementor-inline-item {
+	display: inline-flex !important;
+	flex-direction: row !important;
+	align-items: center !important;
+	flex: 0 0 auto !important;
+	width: auto !important;
+	max-width: none !important;
+	margin: 0 8px !important;
+	padding: 0 !important;
+	white-space: nowrap !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-item a,
+body.elementor-page-21 .hdr-menu-top .elementor-icon-list-item a {
+	display: inline-flex !important;
+	flex-direction: row !important;
+	align-items: center !important;
+	white-space: nowrap !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-text,
+body.elementor-page-21 .hdr-menu-top .elementor-icon-list-text {
+	color: #ffffff !important;
+	font-size: 13px !important;
+	white-space: nowrap !important;
+	opacity: 1 !important;
+}
+body.elementor-page-21 header.elementor-location-header .hdr-menu-main,
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-main,
+body.elementor-page-21 .hdr-menu-main {
+	height: 72px !important;
+	min-height: 72px !important;
+	max-height: 72px !important;
+	background: #aeb3b2 !important;
+	background-color: #aeb3b2 !important;
+}
+
+/* =========================================================
+   FINAL LOCK 2 — contact topbar dup phone, scroll glitch,
+   footer top-align, sticky blur nav (keep current colors)
+   ========================================================= */
+
+/* 1) Contact topbar: hide mobile-only phone list on desktop
+   (FINAL LOCK forced display:flex on ALL icon-list widgets,
+   which un-hid elementor-hidden-desktop bbc424a → duplicate phone) */
+@media (min-width: 1025px) {
+	body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-element-bbc424a,
+	body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-hidden-desktop,
+	body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-element-bbc424a,
+	body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-hidden-desktop,
+	body.wwa-live-clone .hdr-menu-top .elementor-element-bbc424a,
+	body.elementor-page-21 .hdr-menu-top .elementor-element-bbc424a {
+		display: none !important;
+		visibility: hidden !important;
+		opacity: 0 !important;
+		width: 0 !important;
+		height: 0 !important;
+		max-height: 0 !important;
+		overflow: hidden !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		pointer-events: none !important;
+	}
+	/* Only show desktop email+phone list on large screens */
+	body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-element-055998b,
+	body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-element-055998b {
+		display: flex !important;
+		visibility: visible !important;
+		opacity: 1 !important;
+	}
+}
+@media (max-width: 1024px) {
+	/* Tablet/mobile: hide desktop list, show phone-only list */
+	body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-element-055998b,
+	body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-element-055998b,
+	body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-hidden-tablet,
+	body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-hidden-mobile {
+		display: none !important;
+	}
+	body.wwa-live-clone header.elementor-location-header .hdr-menu-top .elementor-element-bbc424a,
+	body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-element-bbc424a {
+		display: flex !important;
+		visibility: visible !important;
+		opacity: 1 !important;
+	}
+}
+/* 2) Contact second-section scroll glitch — no sticky/transform paint thrash */
+body.elementor-page-21 .elementor-element-dd5b6c1,
+body.elementor-page-21 .elementor-element-d4322aa,
+body.elementor-page-21 .elementor-element-097f286,
+body.elementor-page-21 .elementor-element-2cb371c,
+body.elementor-page-21 .elementor-element-8ab9e8f,
+body.elementor-page-21 .elementor-element-c483d07,
+body.wwa-live-clone.elementor-page-21 .elementor-element-dd5b6c1,
+body.wwa-live-clone.elementor-page-21 .elementor-element-d4322aa {
+	position: relative !important;
+	top: auto !important;
+	bottom: auto !important;
+	inset: auto !important;
+	transform: none !important;
+	will-change: auto !important;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+/* De-sticky hero/offices without hiding them */
+body.elementor-page-21 .elementor-element-dd5b6c1.elementor-sticky--active,
+body.elementor-page-21 .elementor-element-dd5b6c1.elementor-sticky,
+body.elementor-page-21 .elementor-element-d4322aa.elementor-sticky--active,
+body.elementor-page-21 .elementor-element-d4322aa.elementor-sticky {
+	position: relative !important;
+	top: auto !important;
+	left: auto !important;
+	right: auto !important;
+	width: 100% !important;
+	transform: none !important;
+	z-index: auto !important;
+}
+/* Only hide Elementor sticky spacers (not the sections themselves) */
+body.elementor-page-21 .elementor-sticky__spacer,
+body.wwa-live-clone.elementor-page-21 .elementor-sticky__spacer {
+	display: none !important;
+	height: 0 !important;
+	min-height: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	pointer-events: none !important;
+	overflow: hidden !important;
+}
+body.elementor-page-21 .elementor-element-dd5b6c1,
+body.wwa-live-clone.elementor-page-21 .elementor-element-dd5b6c1 {
+	display: flex !important;
+	height: auto !important;
+	min-height: 200px !important;
+	max-height: 280px !important;
+}
+/* Office cards: no hover lift (causes flicker while scrolling past) */
+body.elementor-page-21 .elementor-element-2cb371c,
+body.elementor-page-21 .elementor-element-8ab9e8f,
+body.elementor-page-21 .elementor-element-c483d07,
+body.elementor-page-21 .elementor-element-2cb371c:hover,
+body.elementor-page-21 .elementor-element-8ab9e8f:hover,
+body.elementor-page-21 .elementor-element-c483d07:hover {
+	transform: none !important;
+	transition: box-shadow 0.2s ease, border-color 0.2s ease !important;
+}
+body.elementor-page-21 .elementor-element-d4322aa .elementor-widget-image img,
+body.elementor-page-21 .elementor-element-2cb371c:hover .elementor-widget-image img,
+body.elementor-page-21 .elementor-element-8ab9e8f:hover .elementor-widget-image img,
+body.elementor-page-21 .elementor-element-c483d07:hover .elementor-widget-image img {
+	transform: none !important;
+	opacity: 1 !important;
+}
+/* Isolation so fixed header + section paint cleanly */
+body.elementor-page-21 .elementor-element-d4322aa {
+	isolation: isolate !important;
+	z-index: 1 !important;
+	overflow: visible !important;
+	contain: layout style !important;
+}
+
+/* 3) Footer — top-align only; restore previous widths (15% / 18% / 30%)
+   Undo contact-only center + gap:100px overrides without changing site widths */
+body.wwa-live-clone footer .footer-main-sec-rt,
+body.wwa-live-clone footer .elementor-element-1d46b54,
+body.elementor-page-21 .footer-main-sec-rt,
+body.wwa-live-clone.elementor-page-21 .footer-main-sec-rt,
+.elementor-element.elementor-element-1d46b54.e-con-full.footer-main-sec-rt.e-flex.e-con.e-child {
+	display: flex !important;
+	flex-direction: row !important;
+	flex-wrap: nowrap !important;
+	align-items: flex-start !important;
+	--align-items: flex-start !important;
+	justify-content: space-evenly !important;
+	--justify-content: space-evenly !important;
+	gap: 32px 48px !important;
+	--gap: 32px 48px !important;
+	--width: 100% !important;
+	width: 100% !important;
+	max-width: 100% !important;
+}
+body.wwa-live-clone footer .footer-main-sec-rt-1,
+body.wwa-live-clone footer .footer-main-sec-rt-2,
+body.wwa-live-clone footer .footer-main-sec-rt-4,
+body.wwa-live-clone footer .elementor-element-1e740dc,
+body.wwa-live-clone footer .elementor-element-e0cf75e,
+body.wwa-live-clone footer .elementor-element-13adc7a {
+	align-self: flex-start !important;
+	align-items: flex-start !important;
+	--align-items: flex-start !important;
+	flex: 0 0 auto !important;
+	max-width: none !important;
+	min-width: 0 !important;
+}
+/* Previous column widths — Quick Links / Our Businesses / Contact Us */
+body.wwa-live-clone footer .elementor-element-1e740dc,
+body.wwa-live-clone footer .footer-main-sec-rt-1 {
+	--width: 15% !important;
+	width: 15% !important;
+}
+body.wwa-live-clone footer .elementor-element-e0cf75e,
+body.wwa-live-clone footer .footer-main-sec-rt-2 {
+	--width: 18% !important;
+	width: 18% !important;
+}
+body.wwa-live-clone footer .elementor-element-13adc7a,
+body.wwa-live-clone footer .footer-main-sec-rt-4 {
+	--width: 30% !important;
+	width: 30% !important;
+}
+
+/* 1b) Contact page icon lists — grid gap 8px (user spec) */
+.wwa-live-clone.elementor-page-21 .elementor-icon-list-items,
+body.wwa-live-clone.elementor-page-21 .elementor-icon-list-items,
+body.elementor-page-21 .elementor-icon-list-items {
+	display: grid !important;
+	gap: 8px !important;
+}
+/* Keep topbar email/phone horizontal (not grid) */
+body.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-items,
+body.elementor-page-21 .hdr-menu-top .elementor-icon-list-items,
+body.wwa-live-clone.elementor-page-21 header.elementor-location-header .hdr-menu-top .elementor-icon-list-items {
+	display: flex !important;
+	flex-direction: row !important;
+	flex-wrap: nowrap !important;
+	gap: 0 !important;
+}
+
+/* Sticky nav glass — all pages EXCEPT homepage (home keeps its own rules) */
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) .hdr-menu-main.fixed-header,
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) .hdr-menu-main.sticky,
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) .hdr-menu-main.is-scrolled,
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) header.elementor-location-header .hdr-menu-main.fixed-header,
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) header.elementor-location-header .hdr-menu-main.sticky,
+body.wwa-live-clone:not(.home):not(.elementor-page-3616) header.elementor-location-header .hdr-menu-main.is-scrolled {
+	position: fixed !important;
+	top: 0px !important;
+	left: 0px !important;
+	right: 0px !important;
+	width: 100% !important;
+	z-index: 100500 !important;
+	height: 72px !important;
+	min-height: 72px !important;
+	max-height: 72px !important;
+	padding: 0px clamp(20px, 4vw, 72px) !important;
+	background: rgba(26, 26, 46, 0.18) !important;
+	background-color: rgba(26, 26, 46, 0.18) !important;
+	-webkit-backdrop-filter: blur(18px) saturate(140%) !important;
+	backdrop-filter: blur(18px) saturate(140%) !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.16) !important;
+	box-shadow: none !important;
+	transform: none !important;
 }

@@ -451,21 +451,63 @@
 	}
 
 	/* ---------- Leadership bio slide panel ---------- */
+	/* Fallback bios when popup DOM is missing or empty (from live popup fragments). */
+	var WWA_BIO_BY_ID = {
+		'2663': {
+			name: 'Ahmed Mohiuddin',
+			role: 'Chairman / Founder',
+			body:
+				'Every great enterprise is built twice — first in vision, then in perseverance.\n\n' +
+				'At Group Delta, we started with a clear purpose: to deliver port services of the highest standard, with integrity at every step. Over the years, that purpose has expanded across industries and geographies, but the core of who we are has never changed. We build on trust. We grow through people. And we measure success not just by what we achieve, but by the value we create for those we serve.\n\n' +
+				'To our clients, partners, and teams: you are the reason we strive for more. The journey ahead is our most exciting yet.',
+		},
+		'2666': {
+			name: 'Shamil Ahmed',
+			role: 'Director',
+			body:
+				'The businesses that endure are not those that resist change, they are those that lead it.\n\n' +
+				'At Group Delta, innovation is not a department or a strategy. It is a mindset that runs through everything we do. We invest in technology, in people, and in ideas that keep us ahead, so that our clients always have a partner who is ready for what comes next.\n\n' +
+				'We are grateful for the trust that has brought us this far, and energised by the possibilities that lie ahead.',
+		},
+		'2669': {
+			name: 'Mohammed Shahzeer',
+			role: 'Director',
+			body:
+				'Diversification is often seen as a business strategy. For us, it is a reflection of curiosity, a genuine desire to learn, adapt and contribute across new frontiers.\n\n' +
+				'Paired with a deep commitment to technology, it has allowed Group Delta to grow in ways that are both broad and meaningful. We are present across sectors and markets that matter and we are constantly asking how we can do more, serve better and reach further.\n\n' +
+				'The future belongs to those willing to build it. We intend to be among them, and we are honoured to have you alongside us as we do.',
+		},
+	};
+	var WWA_BIO_BY_NAME = {
+		'ahmed mohiuddin': WWA_BIO_BY_ID['2663'],
+		'shamil ahmed': WWA_BIO_BY_ID['2666'],
+		'mohammed shahzeer': WWA_BIO_BY_ID['2669'],
+		'mohammed shahzeer\n': WWA_BIO_BY_ID['2669'],
+	};
+
 	function decodePopupId(href) {
 		if (!href) return null;
 		try {
 			var raw = href;
 			// Fully URI-encoded hash (common in Elementor markup)
 			if (raw.indexOf('%3A') !== -1 || raw.indexOf('%3D') !== -1) {
-				raw = decodeURIComponent(raw);
+				try {
+					raw = decodeURIComponent(raw);
+				} catch (e1) {
+					/* keep raw */
+				}
 			}
 			raw = raw.replace(/^#/, '');
 			// elementor-action:action=popup:open&settings=BASE64
-			var m = raw.match(/settings=([A-Za-z0-9+/=]+)/i);
+			var m = raw.match(/settings=([A-Za-z0-9+/=_-]+)/i);
 			if (!m) {
-				m = href.match(/settings%3D([A-Za-z0-9%+/=]+)/i);
+				m = href.match(/settings%3D([A-Za-z0-9%+/=_-]+)/i);
 				if (m) {
-					m[1] = decodeURIComponent(m[1]);
+					try {
+						m[1] = decodeURIComponent(m[1]);
+					} catch (e2) {
+						/* keep */
+					}
 				}
 			}
 			if (!m) return null;
@@ -483,9 +525,11 @@
 		if (!popupId) return null;
 		return (
 			qs('[data-wwa-bio-source="true"][data-elementor-id="' + popupId + '"]') ||
+			qs('.elementor-' + popupId + '[data-wwa-bio-source="true"]') ||
 			qs('[data-elementor-type="popup"][data-elementor-id="' + popupId + '"]') ||
 			qs('.elementor-' + popupId + '[data-elementor-type="popup"]') ||
 			qs('.elementor-' + popupId + '.elementor-location-popup') ||
+			qs('.elementor.elementor-' + popupId) ||
 			qs('[data-elementor-id="' + popupId + '"]')
 		);
 	}
@@ -494,9 +538,11 @@
 		if (!popupEl) return null;
 		var clone = popupEl.cloneNode(true);
 		// Strip media only — keep text nodes
-		qsa('img, picture, video, svg, .elementor-widget-image', clone).forEach(function (n) {
-			n.remove();
-		});
+		qsa('img, picture, video, svg, .elementor-widget-image, script, link, style', clone).forEach(
+			function (n) {
+				n.remove();
+			}
+		);
 
 		var name = '';
 		var role = '';
@@ -505,13 +551,14 @@
 		if (hTag) name = (hTag.textContent || '').replace(/\s+/g, ' ').trim();
 
 		// Titles in Elementor often use span/div/p.elementor-heading-title
-		var titles = qsa('.elementor-heading-title', clone).map(function (el) {
-			return (el.textContent || '').replace(/\s+/g, ' ').trim();
-		}).filter(Boolean);
+		var titles = qsa('.elementor-heading-title', clone)
+			.map(function (el) {
+				return (el.textContent || '').replace(/\s+/g, ' ').trim();
+			})
+			.filter(Boolean);
 
 		if (!name && titles[0]) name = titles[0];
-		// Role: first non-name title that is NOT inside a long bio paragraph
-		// Prefer short span/div titles after the name heading
+		// Role: first non-name title that is NOT a long bio paragraph
 		var shortTitles = qsa(
 			'h1 .elementor-heading-title, h2 .elementor-heading-title, h3 .elementor-heading-title, h4 .elementor-heading-title, h5 .elementor-heading-title, h6 .elementor-heading-title, span.elementor-heading-title, div.elementor-heading-title',
 			clone
@@ -539,19 +586,35 @@
 		}
 
 		// Body: all paragraph text (including p.elementor-heading-title used as body copy)
-		var bodyParts = qsa('p, .elementor-text-editor, .elementor-widget-text-editor', clone)
+		var bodyParts = qsa('p, .elementor-text-editor, .elementor-widget-text-editor, .elementor-heading-title', clone)
 			.map(function (p) {
 				return (p.textContent || '').replace(/\s+/g, ' ').trim();
 			})
 			.filter(function (t) {
-				return t && t !== name && t !== role && t.length > 20;
+				return t && t !== name && t !== role && t.length > 40;
 			});
+
+		// Dedupe
+		var seen = {};
+		bodyParts = bodyParts.filter(function (t) {
+			if (seen[t]) return false;
+			seen[t] = true;
+			return true;
+		});
 
 		// Fallback: long heading-title nodes as body
 		if (!bodyParts.length) {
 			bodyParts = titles.filter(function (t) {
 				return t !== name && t !== role && t.length > 40;
 			});
+		}
+
+		// Last resort: full text content
+		if (!bodyParts.length) {
+			var full = (clone.textContent || '').replace(/\s+/g, ' ').trim();
+			if (name) full = full.replace(name, '').trim();
+			if (role) full = full.replace(role, '').trim();
+			if (full.length > 40) bodyParts = [full];
 		}
 
 		if (!name && !role && !bodyParts.length) return null;
@@ -569,8 +632,8 @@
 			btn.closest('.e-con.e-child');
 		if (!card) return { name: '', role: '', body: '' };
 
-		// Prefer the info column next to the portrait (contains h4/h5 + role + button)
-		var scope = btn.closest('.e-con') || card;
+		// Prefer the card root so we get name + role from the whole card
+		var scope = card;
 		var heads = qsa('h1,h2,h3,h4,h5,h6,.elementor-heading-title', scope).filter(function (el) {
 			// ignore the Read Bio control itself
 			return !el.closest('a.elementor-button');
@@ -592,6 +655,17 @@
 			role: uniq[1] || '',
 			body: uniq.slice(2).filter(function (t) { return t.length > 20; }).join('\n\n') || '',
 		};
+	}
+
+	function resolveBioFallback(popupId, fromCard) {
+		if (popupId && WWA_BIO_BY_ID[popupId]) {
+			return WWA_BIO_BY_ID[popupId];
+		}
+		var key = ((fromCard && fromCard.name) || '').replace(/\s+/g, ' ').trim().toLowerCase();
+		if (key && WWA_BIO_BY_NAME[key]) {
+			return WWA_BIO_BY_NAME[key];
+		}
+		return null;
 	}
 
 	function openBioPanel(bio) {
@@ -686,6 +760,18 @@
 				e.stopPropagation();
 
 				var href = btn.getAttribute('href') || '';
+				// Some cards put the popup action on a parent anchor, not the button
+				if (!href || href === '#' || href.indexOf('popup') === -1) {
+					var parentLink = btn.closest('a[href*="popup"], a[href*="elementor-action"]');
+					if (parentLink) href = parentLink.getAttribute('href') || href;
+					// Also check sibling/parent card image link
+					if ((!href || href === '#' || href.indexOf('popup') === -1) && btn.closest('.team-card-updated, .popup-main-sec-blks')) {
+						var cardA = btn.closest('.team-card-updated, .popup-main-sec-blks');
+						var actionA = cardA && qs('a[href*="popup"], a[href*="elementor-action"]', cardA);
+						if (actionA) href = actionA.getAttribute('href') || href;
+					}
+				}
+
 				var popupId = decodePopupId(href);
 				var bio = null;
 
@@ -700,6 +786,18 @@
 					if (!bio.name) bio.name = fromCard.name;
 					if (!bio.role) bio.role = fromCard.role;
 					if (!bio.body) bio.body = fromCard.body;
+				}
+
+				// Hard fallback when popup markup is missing or stripped
+				if (!bio || !bio.body) {
+					var fb = resolveBioFallback(popupId, fromCard || bio);
+					if (fb) {
+						bio = {
+							name: (bio && bio.name) || fb.name,
+							role: (bio && bio.role) || fb.role,
+							body: (bio && bio.body) || fb.body,
+						};
+					}
 				}
 
 				openBioPanel(bio || { name: 'Bio', role: '', body: '' });
