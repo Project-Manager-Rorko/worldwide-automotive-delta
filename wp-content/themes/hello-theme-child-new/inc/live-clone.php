@@ -223,6 +223,14 @@ function wwa_live_clone_get_fragment( $name ) {
 		$html = str_replace( 'href="#"', 'href="' . esc_url( home_url( '/contact/' ) ) . '"', $html );
 	}
 
+	if ( in_array( $name, array( 'page-about', 'gutenberg-about' ), true ) ) {
+		$html = str_replace(
+			array( 'ahmed-mohiuddin.png', 'shamil-ahmed.png', 'mohammed-shahzeer.png' ),
+			array( 'leader-new1.webp', 'leader-new2.webp', 'leader-new3.webp' ),
+			$html
+		);
+	}
+
 	return $html;
 }
 
